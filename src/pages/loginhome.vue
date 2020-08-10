@@ -14,7 +14,7 @@
 
             <div align="center">
               <div class="row q-py-md" style="width:100%;max-width:1000px">
-                <div class="col-4">
+                <div class="col-3">
                   <transition
                     appear
                     enter-active-class="animated1 fadeInUp"
@@ -42,7 +42,7 @@
                   </transition>
                 </div>
 
-                <div class="col-4">
+                <div class="col-3">
                   <transition
                     appear
                     enter-active-class="animated2 fadeInUp"
@@ -70,7 +70,7 @@
                   </transition>
                 </div>
 
-                <div class="col-4">
+                <div class="col-3">
                   <transition
                     appear
                     enter-active-class="animated3 fadeInUp"
@@ -87,6 +87,29 @@
                     <q-btn v-if="cardOpen" to="/winneronet" push class="boxpc shadow-10 hvr-grow">
                       <q-img
                         src="../statics/image/login/winner-onet.png"
+                        style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                      />
+                    </q-btn>
+                  </transition>
+                </div>
+
+                <div class="col-3">
+                  <transition
+                    appear
+                    enter-active-class="animated3 fadeInUp"
+                    leave-active-class="animated1 flipOutY"
+                  >
+                    <q-img
+                      v-if="cardDisable"
+                      class="boxpc shadow-10"
+                      src="../statics/image/login/disable.png"
+                      style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                    />
+                  </transition>
+                  <transition appear enter-active-class="animated2 flipInY">
+                    <q-btn v-if="cardOpen" to="/winnerwork" push class="boxpc shadow-10 hvr-grow">
+                      <q-img
+                        src="../statics/image/login/work.png"
                         style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                       />
                     </q-btn>
@@ -129,6 +152,16 @@
                 <q-btn to="/winneronet" push class="shadow-10 boxmb q-my-md hvr-grow">
                   <q-img
                     src="../statics/image/login/onet-mobile.png"
+                    style="width:400px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                  />
+                </q-btn>
+              </transition>
+            </div>
+            <div class="col-12">
+              <transition appear enter-active-class="animated3 fadeInLeft">
+                <q-btn to="/winnerwork" push class="shadow-10 boxmb q-my-md hvr-grow">
+                  <q-img
+                    src="../statics/image/login/work-mobile.png"
                     style="width:400px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                   />
                 </q-btn>

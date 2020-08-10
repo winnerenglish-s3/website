@@ -1,45 +1,58 @@
-
 const routes = [
   {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    path: "/",
+    component: () => import("layouts/MainLayout.vue"),
     children: [
       // { path: '', component: () => import('pages/Index.vue') },
       {
-        path: '/', component: () => import('pages/home.vue'),
+        path: "/",
+        component: () => import("pages/home.vue"),
         name: "home"
       },
       {
-        path: '/discovery', component: () => import('pages/discovery.vue'),
+        path: "/discovery",
+        component: () => import("pages/discovery.vue"),
         name: "discovery"
       },
       {
-        path: '/adventures', component: () => import('pages/adventures.vue'),
+        path: "/adventures",
+        component: () => import("pages/adventures.vue"),
         name: "adventures"
       },
       {
-        path: '/o-net', component: () => import('pages/onet.vue'),
+        path: "/o-net",
+        component: () => import("pages/onet.vue"),
         name: "o-net"
       },
       {
-        path: '/aboutus', component: () => import('pages/aboutus.vue'),
+        path: "/aboutus",
+        component: () => import("pages/aboutus.vue"),
         name: "aboutus"
       },
       {
-        path: '/loginhome', component: () => import('pages/loginhome.vue'),
+        path: "/loginhome",
+        component: () => import("pages/loginhome.vue"),
         name: "loginhome"
       },
       {
-        path: '/winnerdiscovery', component: () => import('pages/winnerdiscovery.vue'),
+        path: "/winnerdiscovery",
+        component: () => import("pages/winnerdiscovery.vue"),
         name: "winnerdiscovery"
       },
       {
-        path: '/winneradventures', component: () => import('pages/winneradventures.vue'),
+        path: "/winneradventures",
+        component: () => import("pages/winneradventures.vue"),
         name: "winneradventures"
       },
       {
-        path: '/winneronet', component: () => import('pages/winneronet.vue'),
+        path: "/winneronet",
+        component: () => import("pages/winneronet.vue"),
         name: "winneronet"
+      },
+      {
+        path: "/winnerwork",
+        component: () => import("pages/winnerwork.vue"),
+        name: "winnerwork"
       },
       {
         path: "/manual",
@@ -113,8 +126,7 @@ const routes = [
         path: "/score",
         component: () => import("pages/help_score.vue"),
         name: "score"
-      }
-      ,
+      },
       {
         path: "/file",
         component: () => import("pages/help_file.vue"),
@@ -132,14 +144,14 @@ const routes = [
       }
     ]
   }
-]
+];
 
 // Always leave this as last one
-if (process.env.MODE !== 'ssr') {
+if (process.env.MODE !== "ssr") {
   routes.push({
-    path: '*',
-    component: () => import('pages/Error404.vue')
-  })
+    path: "*",
+    component: () => import("pages/Error404.vue")
+  });
 }
 
-export default routes
+export default routes;
