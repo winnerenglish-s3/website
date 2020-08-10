@@ -62,12 +62,12 @@
 
                   <router-link
                     class="text-decoration"
-                    :class="{'clblue1':tab == 'aboutus','text-blue-grey-10':tab != 'aboutus',}"
-                    to="/aboutus"
-                    @click="tab ='aboutus'"
+                    :class="{'clblue1':tab == 'hotel','text-blue-grey-10':tab != 'hotel',}"
+                    to="/hotel"
+                    @click="tab ='hotel'"
                   >
-                    <q-tab name="aboutus">
-                      <span>เกี่ยวกับเรา</span>
+                    <q-tab name="hotel">
+                      <span>คอร์สสำหรับโรงแรม</span>
                     </q-tab>
                   </router-link>
                 </q-tabs>
@@ -183,11 +183,11 @@
             <q-item
               clickable
               v-ripple
-              to="/aboutus"
-              @click="tab = 'aboutus',leftDrawerOpen = false"
-              :class="{'clblue1':tab == 'aboutus','text-blue-grey-7':tab !='aboutus'}"
+              to="/hotel"
+              @click="tab = 'hotel',leftDrawerOpen = false"
+              :class="{'clblue1':tab == 'hotel','text-blue-grey-7':tab !='hotel'}"
             >
-              <q-item-section class="font q-py-sm q-px-md">เกี่ยวกับเรา</q-item-section>
+              <q-item-section class="font q-py-sm q-px-md">คอร์สสำหรับโรงแรม</q-item-section>
             </q-item>
             <q-separator />
             <q-item
@@ -251,6 +251,8 @@ export default {
         this.tab = "onet";
       } else if (data == "login") {
         this.tab = "login";
+      } else if (data == "hotel") {
+        this.tab = "hotel";
       }
     },
   },
@@ -266,6 +268,8 @@ export default {
     } else if (this.$route.name == "loginhome") {
       this.tab = "login";
     } else if (this.$route.name == "admin") {
+      this.tab = "admin";
+    } else if (this.$route.name == "hotel") {
       this.tab = "admin";
     } else if (
       this.$route.name == "tutorial01a" ||

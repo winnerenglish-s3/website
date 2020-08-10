@@ -128,6 +128,14 @@ body{
   width: 100%;
   height: 500px;
 }
+.bghotel {
+  background-image: url("../statics/hotelheader.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 1280px;
+  width: 100%;
+  height: 500px;
+}
 .loginhome{
    background-image: url("../statics/image/login/bg-login.png");
    background-repeat: no-repeat;
