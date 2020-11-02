@@ -31,7 +31,7 @@
                     class="btn bgbrown text-white text-h5 text-bold"
                     style="max-width:500px;width:100%;"
                     label="Adventures Plus"
-                    onclick="window.open('https://adventures-plus.web.app', '_blank')"
+                    onclick="window.open('https://adventures-plus-teacher.web.app/', '_blank')"
                   />
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default {
   data() {
     return {
       innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight,
+      innerHeight: window.innerHeight
     };
   },
   methods: {
@@ -90,14 +90,14 @@ export default {
     comingSoon() {
       this.$q.dialog({
         title: "ไม่สามารถใช้งานได้",
-        message: "ระบบนี้จะสามารถใช้ได้เฉพาะช่วงเวลาเปิดเทอมเท่านั้น",
+        message: "ระบบนี้จะสามารถใช้ได้เฉพาะช่วงเวลาเปิดเทอมเท่านั้น"
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style  scoped>
+<style scoped>
 .btn {
   border-radius: 10px;
   width: 450px;
