@@ -57,9 +57,9 @@
                   </div>
                   <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
-                    class=" cursor-pointer txcl1"
+                    class="txcl1"
                   >
-                    <u>ดูตัวอย่างวิดีโอ</u>
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
                 <div
@@ -84,9 +84,9 @@
                   </div>
                   <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
-                    class=" cursor-pointer txcl1"
+                    class="txcl1"
                   >
-                    <u>ดูตัวอย่างวิดีโอ</u>
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
                 <div
@@ -112,9 +112,9 @@
                   </div>
                   <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
-                    class=" cursor-pointer txcl1"
+                    class="txcl1"
                   >
-                    <u>ดูตัวอย่างวิดีโอ</u>
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
               </div>
@@ -144,9 +144,9 @@
                   </div>
                   <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
-                    class=" cursor-pointer txcl1"
+                    class="txcl1"
                   >
-                    <u>ดูตัวอย่างวิดีโอ</u>
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
                 <div
@@ -171,9 +171,9 @@
                   </div>
                   <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
-                    class=" cursor-pointer txcl1"
+                    class="txcl1"
                   >
-                    <u>ดูตัวอย่างวิดีโอ</u>
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
               </div>
@@ -219,7 +219,9 @@
                   พร้อมทั้งพัฒนาทักษะการใช้เทคโนโลยี
                 </span>
               </div>
-              <div class="txcl1 q-mt-md cursor-pointer"><u>ดูตัวอย่าง</u></div>
+              <div class="txcl1 q-mt-md">
+                <u class="cursor-pointer">ดูตัวอย่าง</u>
+              </div>
             </div>
             <div class="q-pa-md col-md-4 col-sm-12 col-xs-12 q-px-md">
               <div>
@@ -237,7 +239,9 @@
                   ภาษาอังกฤษอย่างมีประสิทธิภาพ
                 </span>
               </div>
-              <div class="txcl1 q-mt-md cursor-pointer"><u>ดูตัวอย่าง</u></div>
+              <div class="txcl1 q-mt-md">
+                <u class="cursor-pointer">ดูตัวอย่าง</u>
+              </div>
             </div>
             <div class="q-pa-md col-md-4 col-sm-12 col-xs-12">
               <div>
@@ -255,8 +259,8 @@
                   กระบวนการ Self-Learning
                 </span>
               </div>
-              <div class="txcl1 q-mt-md cursor-pointer">
-                <u>ดูตัวอย่าง</u>
+              <div class="txcl1 q-mt-md">
+                <u class="cursor-pointer">ดูตัวอย่าง</u>
               </div>
             </div>
           </div>
