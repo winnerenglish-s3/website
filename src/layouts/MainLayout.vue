@@ -249,7 +249,7 @@
               }"
             >
               <q-item-section class="font q-px-md q-py-sm"
-                >คอร์สออนไลน์</q-item-section
+                >สำหรับนักเรียน</q-item-section
               >
             </q-item>
             <q-separator />
@@ -264,37 +264,52 @@
               }"
             >
               <q-item-section class="font q-px-md q-py-sm"
-                >คอร์สสําหรับโรงเรียน</q-item-section
+                >สําหรับโรงเรียน</q-item-section
               >
             </q-item>
             <q-separator />
             <q-item
               clickable
               v-ripple
-              to="/o-net"
-              @click="(tab = 'onet'), (leftDrawerOpen = false)"
+              to="/business"
+              @click="(tab = 'business'), (leftDrawerOpen = false)"
               :class="{
-                clblue1: tab == 'onet',
-                'text-blue-grey-7': tab != 'onet'
+                clblue1: tab == 'business',
+                'text-blue-grey-7': tab != 'business'
               }"
             >
               <q-item-section class="font q-py-sm q-px-md"
-                >คอร์สติว O-NET</q-item-section
+                >สำหรับธุรกิจ</q-item-section
               >
             </q-item>
             <q-separator />
             <q-item
               clickable
               v-ripple
-              to="/hotel"
-              @click="(tab = 'hotel'), (leftDrawerOpen = false)"
+              to="/businesshare"
+              @click="(tab = 'businesshare'), (leftDrawerOpen = false)"
               :class="{
-                clblue1: tab == 'hotel',
-                'text-blue-grey-7': tab != 'hotel'
+                clblue1: tab == 'businesshare',
+                'text-blue-grey-7': tab != 'businesshare'
               }"
             >
               <q-item-section class="font q-py-sm q-px-md"
-                >คอร์สสำหรับโรงแรม</q-item-section
+                >สนใจร่วมธุรกิจ</q-item-section
+              >
+            </q-item>
+            <q-separator />
+            <q-item
+              clickable
+              v-ripple
+              to="/contact"
+              @click="(tab = 'contact'), (leftDrawerOpen = false)"
+              :class="{
+                clblue1: tab == 'contact',
+                'text-blue-grey-7': tab != 'contact'
+              }"
+            >
+              <q-item-section class="font q-py-sm q-px-md"
+                >ติดต่อเรา</q-item-section
               >
             </q-item>
             <q-separator />
