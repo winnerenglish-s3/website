@@ -20,6 +20,21 @@ const routes = [
         name: "adventures"
       },
       {
+        path: "/business",
+        component: () => import("pages/business.vue"),
+        name: "business"
+      },
+      {
+        path: "/businesshare",
+        component: () => import("pages/businesshare.vue"),
+        name: "businesshare"
+      },
+      {
+        path: "/contact",
+        component: () => import("pages/contact.vue"),
+        name: "contact"
+      },
+      {
         path: "/o-net",
         component: () => import("pages/onet.vue"),
         name: "o-net"
