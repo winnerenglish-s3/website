@@ -1,25 +1,44 @@
-<template >
+<template>
   <q-layout view="lHh Lpr lFf">
     <q-resize-observer @resize="onResize" />
     <div v-if="innerWidth > 1023">
       <q-header class="bg-white q-py-xs">
         <q-toolbar class="row justify-center">
-          <div class="row justify-between" style="width:100%;max-width: 1200px;">
+          <div
+            class="row justify-between"
+            style="width:100%;max-width: 1200px;"
+          >
             <div class="self-center row">
               <router-link
                 to="/"
                 @click="tab = 'home'"
-                :class="{'clblue1':tab == 'home','text-blue-grey-10':tab != 'home',}"
+                :class="{
+                  clblue1: tab == 'home',
+                  'text-blue-grey-10': tab != 'home'
+                }"
               >
-                <div class="self-center q-px-md" @click="tab = 'home'">
-                  <q-img src="../statics/image/logo-winner.png" style="width:100px;" />
+                <div class="self-center q-px-sm" @click="tab = 'home'">
+                  <q-img
+                    src="../statics/image/logo-winner.png"
+                    style="width:100px;"
+                  />
                 </div>
               </router-link>
               <div class="self-center">
-                <q-tabs class="titilebold" align="justify" narrow-indicator dense v-model="tab">
+                <q-tabs
+                  class="titilebold"
+                  align="justify"
+                  narrow-indicator
+                  dense
+                  v-model="tab"
+                >
+                  <!-- หน้าแรก -->
                   <router-link
                     class="text-decoration"
-                    :class="{'clblue1':tab == 'home','text-blue-grey-10':tab != 'home',}"
+                    :class="{
+                      clblue1: tab == 'home',
+                      'text-blue-grey-10': tab != 'home'
+                    }"
                     to="/"
                     @click="tab = 'home'"
                   >
@@ -27,58 +46,113 @@
                       <span>หน้าแรก</span>
                     </q-tab>
                   </router-link>
+                  <!-- นักเรียน -->
                   <router-link
                     class="text-decoration"
-                    :class="{'clblue1':tab == 'discovery','text-blue-grey-10':tab != 'discovery',}"
+                    :class="{
+                      clblue1: tab == 'discovery',
+                      'text-blue-grey-10': tab != 'discovery'
+                    }"
                     to="/discovery"
                     @click="tab = 'discovery'"
                   >
                     <q-tab name="discovery">
-                      <span>คอร์สออนไลน์</span>
+                      <span>สำหรับนักเรียน</span>
                     </q-tab>
                   </router-link>
-
+                  <!-- โรงเรียน -->
                   <router-link
                     class="text-decoration"
-                    :class="{'clblue1':tab == 'adventures','text-blue-grey-10':tab != 'adventures',}"
+                    :class="{
+                      clblue1: tab == 'adventures',
+                      'text-blue-grey-10': tab != 'adventures'
+                    }"
                     to="/adventures"
                     @click="tab = 'adventures'"
                   >
                     <q-tab name="adventures">
-                      <span>คอร์สสําหรับโรงเรียน</span>
+                      <span>สําหรับโรงเรียน</span>
+                    </q-tab>
+                  </router-link>
+                  <!-- ธุรกิจ -->
+                  <router-link
+                    class="text-decoration"
+                    :class="{
+                      clblue1: tab == 'business',
+                      'text-blue-grey-10': tab != 'business'
+                    }"
+                    to="/business"
+                    @click="tab = 'business'"
+                  >
+                    <q-tab name="business">
+                      <span>สำหรับธุรกิจ</span>
+                    </q-tab>
+                  </router-link>
+                  <!-- ร่วมธุรกิจ -->
+                  <router-link
+                    class="text-decoration"
+                    :class="{
+                      clblue1: tab == 'businesshare',
+                      'text-blue-grey-10': tab != 'businesshare'
+                    }"
+                    to="/businesshare"
+                    @click="tab = 'businesshare'"
+                  >
+                    <q-tab name="businesshare">
+                      <span>สนใจร่วมธุรกิจ</span>
+                    </q-tab>
+                  </router-link>
+                  <!-- ติดต่อเรา -->
+                  <router-link
+                    class="text-decoration"
+                    :class="{
+                      clblue1: tab == 'contact',
+                      'text-blue-grey-10': tab != 'contact'
+                    }"
+                    to="/contact"
+                    @click="tab = 'contact'"
+                  >
+                    <q-tab name="contact">
+                      <span>ติดต่อเรา</span>
                     </q-tab>
                   </router-link>
 
-                  <router-link
+                  <!-- <router-link
                     class="text-decoration"
-                    :class="{'clblue1':tab == 'onet','text-blue-grey-10':tab != 'onet',}"
+                    :class="{
+                      clblue1: tab == 'onet',
+                      'text-blue-grey-10': tab != 'onet'
+                    }"
                     to="/o-net"
-                    @click="tab ='onet'"
+                    @click="tab = 'onet'"
                   >
                     <q-tab name="onet">
                       <span>คอร์สติว O-NET</span>
                     </q-tab>
-                  </router-link>
+                  </router-link> -->
 
-                  <router-link
+                  <!-- <router-link
                     class="text-decoration"
-                    :class="{'clblue1':tab == 'hotel','text-blue-grey-10':tab != 'hotel',}"
+                    :class="{
+                      clblue1: tab == 'hotel',
+                      'text-blue-grey-10': tab != 'hotel'
+                    }"
                     to="/hotel"
-                    @click="tab ='hotel'"
+                    @click="tab = 'hotel'"
                   >
                     <q-tab name="hotel">
                       <span>คอร์สสำหรับโรงแรม</span>
                     </q-tab>
-                  </router-link>
+                  </router-link> -->
                 </q-tabs>
               </div>
             </div>
             <!--   v-if="tab =='home'||tab =='discovery'||tab =='adventures'||tab =='onet'" -->
-            <div class="self-center q-px-sm">
+            <div class="self-center q-px-xs">
               <q-btn
                 push
                 unelevated
-                class="q-px-md bgblue2 text-white"
+                class="q-px-xs bgblue2 text-white"
                 rounded
                 @click="login()"
                 to="/loginhome"
@@ -114,10 +188,16 @@
               <router-link
                 to="/"
                 @click="tab = 'home'"
-                :class="{'clblue1':tab == 'home','text-blue-grey-10':tab != 'home',}"
+                :class="{
+                  clblue1: tab == 'home',
+                  'text-blue-grey-10': tab != 'home'
+                }"
               >
                 <div class="self-center" @click="tab = 'home'">
-                  <q-img src="../statics/image/logo-winner.png" style="width:100px;" />
+                  <q-img
+                    src="../statics/image/logo-winner.png"
+                    style="width:100px;"
+                  />
                 </div>
               </router-link>
             </div>
@@ -135,7 +215,10 @@
         <q-scroll-area class="fit">
           <div align="center">
             <div class="q-pt-md q-pb-sm">
-              <q-img src="../statics/image/logo-winner.png" style="width:100px;" />
+              <q-img
+                src="../statics/image/logo-winner.png"
+                style="width:100px;"
+              />
             </div>
             <q-separator />
           </div>
@@ -144,60 +227,90 @@
               clickable
               v-ripple
               to="/"
-              @click="tab = 'home',leftDrawerOpen = false"
-              :class="{'clblue1':tab == 'home','text-blue-grey-7':tab !='home'}"
+              @click="(tab = 'home'), (leftDrawerOpen = false)"
+              :class="{
+                clblue1: tab == 'home',
+                'text-blue-grey-7': tab != 'home'
+              }"
             >
-              <q-item-section class="font q-px-md q-py-sm">หน้าแรก</q-item-section>
+              <q-item-section class="font q-px-md q-py-sm"
+                >หน้าแรก</q-item-section
+              >
             </q-item>
             <q-separator />
             <q-item
               clickable
               v-ripple
               to="/discovery"
-              @click="tab = 'discovery',leftDrawerOpen = false"
-              :class="{'clblue1':tab == 'discovery','text-blue-grey-7':tab !='discovery'}"
+              @click="(tab = 'discovery'), (leftDrawerOpen = false)"
+              :class="{
+                clblue1: tab == 'discovery',
+                'text-blue-grey-7': tab != 'discovery'
+              }"
             >
-              <q-item-section class="font q-px-md q-py-sm">คอร์สออนไลน์</q-item-section>
+              <q-item-section class="font q-px-md q-py-sm"
+                >คอร์สออนไลน์</q-item-section
+              >
             </q-item>
             <q-separator />
             <q-item
               clickable
               v-ripple
               to="/adventures"
-              @click="tab = 'adventures',leftDrawerOpen = false"
-              :class="{'clblue1':tab == 'adventures','text-blue-grey-7':tab !='adventures'}"
+              @click="(tab = 'adventures'), (leftDrawerOpen = false)"
+              :class="{
+                clblue1: tab == 'adventures',
+                'text-blue-grey-7': tab != 'adventures'
+              }"
             >
-              <q-item-section class="font q-px-md q-py-sm">คอร์สสําหรับโรงเรียน</q-item-section>
+              <q-item-section class="font q-px-md q-py-sm"
+                >คอร์สสําหรับโรงเรียน</q-item-section
+              >
             </q-item>
             <q-separator />
             <q-item
               clickable
               v-ripple
               to="/o-net"
-              @click="tab = 'onet',leftDrawerOpen = false"
-              :class="{'clblue1':tab == 'onet','text-blue-grey-7':tab !='onet'}"
+              @click="(tab = 'onet'), (leftDrawerOpen = false)"
+              :class="{
+                clblue1: tab == 'onet',
+                'text-blue-grey-7': tab != 'onet'
+              }"
             >
-              <q-item-section class="font q-py-sm q-px-md">คอร์สติว O-NET</q-item-section>
+              <q-item-section class="font q-py-sm q-px-md"
+                >คอร์สติว O-NET</q-item-section
+              >
             </q-item>
             <q-separator />
             <q-item
               clickable
               v-ripple
               to="/hotel"
-              @click="tab = 'hotel',leftDrawerOpen = false"
-              :class="{'clblue1':tab == 'hotel','text-blue-grey-7':tab !='hotel'}"
+              @click="(tab = 'hotel'), (leftDrawerOpen = false)"
+              :class="{
+                clblue1: tab == 'hotel',
+                'text-blue-grey-7': tab != 'hotel'
+              }"
             >
-              <q-item-section class="font q-py-sm q-px-md">คอร์สสำหรับโรงแรม</q-item-section>
+              <q-item-section class="font q-py-sm q-px-md"
+                >คอร์สสำหรับโรงแรม</q-item-section
+              >
             </q-item>
             <q-separator />
             <q-item
               clickable
               v-ripple
               to="/loginhome"
-              @click="tab = 'login',leftDrawerOpen = false"
-              :class="{'clblue1':tab == 'login','text-blue-grey-7':tab !='login'}"
+              @click="(tab = 'login'), (leftDrawerOpen = false)"
+              :class="{
+                clblue1: tab == 'login',
+                'text-blue-grey-7': tab != 'login'
+              }"
             >
-              <q-item-section class="font q-py-sm q-px-md">เข้าสู่ระบบ</q-item-section>
+              <q-item-section class="font q-py-sm q-px-md"
+                >เข้าสู่ระบบ</q-item-section
+              >
             </q-item>
             <q-separator />
           </q-list>
@@ -216,7 +329,7 @@ import EssentialLink from "components/EssentialLink";
 export default {
   name: "MainLayout",
   components: {
-    EssentialLink,
+    EssentialLink
   },
 
   data() {
@@ -224,7 +337,7 @@ export default {
       tab: "home",
       innerWidth: window.innerWidth,
       innerHeight: window.innerHeight,
-      leftDrawerOpen: false,
+      leftDrawerOpen: false
     };
   },
   methods: {
@@ -237,10 +350,10 @@ export default {
     },
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
-    },
+    }
   },
   watch: {
-    "$route.name": function (data) {
+    "$route.name": function(data) {
       if (data == "home") {
         this.tab = "home";
       } else if (data == "discovery") {
@@ -254,7 +367,7 @@ export default {
       } else if (data == "hotel") {
         this.tab = "hotel";
       }
-    },
+    }
   },
   mounted() {
     if (this.$route.name == "home") {
@@ -290,10 +403,10 @@ export default {
     ) {
       this.tab = "adventures";
     }
-  },
+  }
 };
 </script>
-<style  scoped>
+<style scoped>
 .text-decoration {
   text-decoration: none;
 }
