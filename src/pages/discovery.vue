@@ -203,7 +203,8 @@
           </div>
           <!-- ข้อความส่วนสาม ระดับการเรียนรู้-->
           <div
-            class="row q-py-md q-my-xl q-mb-lg"
+            :class="$q.platform.is.desktop ? 'q-py-md q-my-xl' : ''"
+            class="row q-mb-lg"
             style="width:90%;max-width:1200px;"
           >
             <div class="q-pa-md col-md-4 col-sm-12 col-xs-12">
