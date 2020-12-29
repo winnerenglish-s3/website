@@ -28,13 +28,18 @@
             </div>
           </div>
           <!-- ข้อความส่วนแรก ทักษะทั้งหมด-->
-          <div class="row q-pt-md q-mb-xl " style="width:90%;max-width:1200px;">
+          <div
+            class="row justify-center q-pt-md q-mb-xl "
+            style="width:90%;max-width:1200px;"
+          >
             <div class="self-center q-px-md q-mb-lg" align="left">
               <div class="row justify-center">
                 <div
                   class="q-pa-md relative-position"
                   align="center"
-                  style="width:370px;height:350px"
+                  :style="
+                    $q.platform.is.desktop ? 'width:370px;height:350px' : ''
+                  "
                 >
                   <div>
                     <q-img
@@ -50,7 +55,10 @@
                       ผ่านแบบฝึกหัดคำศัพท์ที่หลากหลาย
                     </div>
                   </div>
-                  <div class="absolute-bottom cursor-pointer txcl1">
+                  <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class=" cursor-pointer txcl1"
+                  >
                     <u>ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
@@ -74,14 +82,19 @@
                       เข้าใจง่ายและไม่น่าเบื่ออีกต่อไป
                     </div>
                   </div>
-                  <div class="absolute-bottom cursor-pointer txcl1">
+                  <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class=" cursor-pointer txcl1"
+                  >
                     <u>ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
                 <div
                   class="q-pa-md relative-position"
                   align="center"
-                  style="width:370px;height:350px"
+                  :style="
+                    $q.platform.is.desktop ? 'width:370px;height:350px' : ''
+                  "
                 >
                   <div>
                     <q-img
@@ -97,12 +110,18 @@
                       ที่ทำให้การอ่านสนุก และเข้าใจง่ายมากขึ้น
                     </div>
                   </div>
-                  <div class="absolute-bottom cursor-pointer txcl1">
+                  <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class=" cursor-pointer txcl1"
+                  >
                     <u>ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
               </div>
-              <div class="row  justify-center q-mt-lg">
+              <div
+                :class="$q.platform.is.desktop ? 'q-mt-lg' : ''"
+                class="row justify-center"
+              >
                 <div
                   class="q-pa-md relative-position"
                   align="center"
@@ -123,7 +142,10 @@
                       ด้วยระบบการตรวจสอบความถูกต้อง
                     </div>
                   </div>
-                  <div class="absolute-bottom cursor-pointer txcl1">
+                  <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class=" cursor-pointer txcl1"
+                  >
                     <u>ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
@@ -147,7 +169,10 @@
                       มั่นใจในการใช้ภาษามากยิ่งขึ้น
                     </div>
                   </div>
-                  <div class="absolute-bottom cursor-pointer txcl1">
+                  <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class=" cursor-pointer txcl1"
+                  >
                     <u>ดูตัวอย่างวิดีโอ</u>
                   </div>
                 </div>
