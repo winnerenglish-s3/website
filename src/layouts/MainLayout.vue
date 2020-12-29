@@ -67,29 +67,45 @@
                       clblue1: tab == 'adventures',
                       'text-blue-grey-10': tab != 'adventures'
                     }"
-                    to="/adventures"
-                    @click="tab = 'adventures'"
+                    to=""
                   >
-                    <q-tab name="adventures">
+                    <q-tab name="adventures" @mouseover="select = true">
                       <span>สําหรับโรงเรียน</span>
+                      <q-menu v-model="select" @mouseleave="select = false">
+                        <q-list align="center" style="width:200px">
+                          <q-item to="/adventures" clickable v-close-popup>
+                            <q-item-section
+                              ><b>Winner Adventures</b></q-item-section
+                            >
+                          </q-item>
+                          <q-separator />
+                          <q-item
+                            to="/o-net"
+                            @click="tab = 'adventures'"
+                            v-close-popup
+                          >
+                            <q-item-section><b>Winner O-net</b></q-item-section>
+                          </q-item>
+                        </q-list>
+                      </q-menu>
                     </q-tab>
                   </router-link>
                   <!-- ธุรกิจ -->
                   <router-link
                     class="text-decoration"
                     :class="{
-                      clblue1: tab == 'business',
-                      'text-blue-grey-10': tab != 'business'
+                      clblue1: tab == 'hotel',
+                      'text-blue-grey-10': tab != 'hotel'
                     }"
-                    to="/business"
-                    @click="tab = 'business'"
+                    to="/hotel"
+                    @click="tab = 'hotel'"
                   >
-                    <q-tab name="business">
+                    <q-tab name="hotel">
                       <span>สำหรับธุรกิจ</span>
                     </q-tab>
                   </router-link>
                   <!-- ร่วมธุรกิจ -->
-                  <router-link
+                  <!-- <router-link
                     class="text-decoration"
                     :class="{
                       clblue1: tab == 'businesshare',
@@ -101,7 +117,7 @@
                     <q-tab name="businesshare">
                       <span>สนใจร่วมธุรกิจ</span>
                     </q-tab>
-                  </router-link>
+                  </router-link> -->
                   <!-- ติดต่อเรา -->
                   <router-link
                     class="text-decoration"
@@ -254,35 +270,51 @@
             </q-item>
             <q-separator />
             <q-item
-              clickable
               v-ripple
-              to="/adventures"
-              @click="(tab = 'adventures'), (leftDrawerOpen = false)"
+              @click="tab = 'adventures'"
               :class="{
                 clblue1: tab == 'adventures',
                 'text-blue-grey-7': tab != 'adventures'
               }"
             >
-              <q-item-section class="font q-px-md q-py-sm"
-                >สําหรับโรงเรียน</q-item-section
-              >
+              <q-item-section class="font">
+                <q-expansion-item
+                  v-model="expanded"
+                  :v-if="leftDrawerOpen == false ? (expanded = false) : null"
+                  label="สำหรับโรงเรียน"
+                >
+                  <q-separator />
+                  <q-list align="left" style="width:100%">
+                    <q-item to="/adventures" @click="leftDrawerOpen = false">
+                      <q-item-section>Winner Adventures</q-item-section>
+                    </q-item>
+                    <q-separator />
+                    <q-item
+                      to="/o-net"
+                      @click="(tab = 'adventures'), (leftDrawerOpen = false)"
+                    >
+                      <q-item-section>Winner O-net</q-item-section>
+                    </q-item>
+                  </q-list>
+                </q-expansion-item>
+              </q-item-section>
             </q-item>
             <q-separator />
             <q-item
               clickable
               v-ripple
-              to="/business"
-              @click="(tab = 'business'), (leftDrawerOpen = false)"
+              to="/hotel"
+              @click="(tab = 'hotel'), (leftDrawerOpen = false)"
               :class="{
-                clblue1: tab == 'business',
-                'text-blue-grey-7': tab != 'business'
+                clblue1: tab == 'hotel',
+                'text-blue-grey-7': tab != 'hotel'
               }"
             >
               <q-item-section class="font q-py-sm q-px-md"
                 >สำหรับธุรกิจ</q-item-section
               >
             </q-item>
-            <q-separator />
+            <!-- <q-separator />
             <q-item
               clickable
               v-ripple
@@ -296,7 +328,7 @@
               <q-item-section class="font q-py-sm q-px-md"
                 >สนใจร่วมธุรกิจ</q-item-section
               >
-            </q-item>
+            </q-item> -->
             <q-separator />
             <q-item
               clickable
@@ -349,6 +381,8 @@ export default {
 
   data() {
     return {
+      expanded: false,
+      select: false,
       tab: "home",
       innerWidth: window.innerWidth,
       innerHeight: window.innerHeight,
@@ -376,7 +410,7 @@ export default {
       } else if (data == "adventures") {
         this.tab = "adventures";
       } else if (data == "o-net") {
-        this.tab = "onet";
+        this.tab = "adventures";
       } else if (data == "login") {
         this.tab = "login";
       } else if (data == "hotel") {
@@ -392,7 +426,7 @@ export default {
     } else if (this.$route.name == "adventures") {
       this.tab = "adventures";
     } else if (this.$route.name == "o-net") {
-      this.tab = "onet";
+      this.tab = "adventures";
     } else if (this.$route.name == "loginhome") {
       this.tab = "login";
     } else if (this.$route.name == "admin") {
