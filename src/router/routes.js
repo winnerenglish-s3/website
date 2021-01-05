@@ -2,6 +2,7 @@ const routes = [
   {
     path: "/",
     component: () => import("layouts/MainLayout.vue"),
+
     children: [
       // { path: '', component: () => import('pages/Index.vue') },
       {
@@ -163,6 +164,16 @@ const routes = [
         name: "admin"
       }
     ]
+  },
+  {
+    path: "/policy",
+    component: () => import("pages/policy.vue"),
+    name: "policy"
+  },
+  {
+    path: "/condition",
+    component: () => import("pages/condition.vue"),
+    name: "condition"
   }
 ];
 

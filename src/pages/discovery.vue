@@ -27,8 +27,9 @@
               <br />
             </div>
           </div>
-          <!-- ข้อความส่วนแรก ทักษะทั้งหมด-->
+          <!-- ข้อความส่วนแรก ทักษะทั้งหมด DESKTOP -->
           <div
+           v-if="innerWidth > 1007"
             class="row justify-center q-pt-md q-mb-xl "
             style="width:90%;max-width:1200px;"
           >
@@ -55,12 +56,12 @@
                       ผ่านแบบฝึกหัดคำศัพท์ที่หลากหลาย
                     </div>
                   </div>
-                  <div
+                  <!-- <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
                     class="txcl1"
                   >
                     <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
-                  </div>
+                  </div> -->
                 </div>
                 <div
                   class="q-pa-md relative-position"
@@ -82,12 +83,12 @@
                       เข้าใจง่ายและไม่น่าเบื่ออีกต่อไป
                     </div>
                   </div>
-                  <div
+                  <!-- <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
                     class="txcl1"
                   >
                     <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
-                  </div>
+                  </div> -->
                 </div>
                 <div
                   class="q-pa-md relative-position"
@@ -110,12 +111,12 @@
                       ที่ทำให้การอ่านสนุก และเข้าใจง่ายมากขึ้น
                     </div>
                   </div>
-                  <div
+                  <!-- <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
                     class="txcl1"
                   >
                     <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <div
@@ -142,12 +143,12 @@
                       ด้วยระบบการตรวจสอบความถูกต้อง
                     </div>
                   </div>
-                  <div
+                  <!-- <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
                     class="txcl1"
                   >
                     <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
-                  </div>
+                  </div> -->
                 </div>
                 <div
                   class="q-pa-md relative-position"
@@ -169,17 +170,202 @@
                       มั่นใจในการใช้ภาษามากยิ่งขึ้น
                     </div>
                   </div>
-                  <div
+                  <!-- <div
                     :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
                     class="txcl1"
                   >
                     <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
           </div>
-          <!-- ข้อความส่วนสอง โครงสร้างบทเรียน-->
+          <!-- ข้อความส่วนแรก ทักษะทั้งหมด MOBILE -->
+          <div
+          v-if="innerWidth < 1008"
+          style="margin-top:-150px"
+          class="relative-position bgbottommb row justify-centers"
+        > 
+          <div
+            class="row absolute-bottom"
+            v-if="innerWidth < 1008"
+            style="width:100%;max-width:1200px;"
+          >
+           
+            <div class="self-center bgblue1 col-12">
+              
+              <div style="width:100% ">
+                <q-carousel
+                  swipeable
+                  animated
+                  v-model="slide"
+                  navigation
+                  infinite
+                  autoplay
+                  control-color="primary"
+                  style="width:100%;height:500px"
+                  transition-prev="slide-right"
+                  transition-next="slide-left"
+                >
+                  <q-carousel-slide :name="1">
+                    <div style="margin-top:50px;height:370px" class="boxmb q-pa-md shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                >
+                  <div>
+                    <q-img
+                      src="../statics/i-vocab.png"
+                      style="width:80px"
+                    ></q-img>
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>คำศัพท์</b></div>
+                    <div>
+                      เรียนรู้คำศัพท์ใหม่ๆ กว่า 3,000 คำ
+                      พร้อมฝึกฝนและทบทวนความแม่นยำ
+                      ผ่านแบบฝึกหัดคำศัพท์ที่หลากหลาย
+                    </div>
+                  </div>
+                  <!-- <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class="txcl1"
+                  >
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
+                  </div> -->
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                    <q-carousel-slide :name="2">
+                    <div style="margin-top:50px;height:370px" class="boxmb q-pa-md shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                 
+                >
+                  <div>
+                    <q-img
+                      src="../statics/i-grammar.png"
+                      style="width:80px"
+                    ></q-img>
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>ไวยากรณ์</b></div>
+                    <div>
+                      เข้าใจหลักไวยากรณ์กว่า 200 หัวข้อ
+                      สอดคล้องตามตัวชี้วัดหลักสูตรแกนกลาง
+                      ผ่าน VDO Animation ช่วยให้การเรียน
+                      เข้าใจง่ายและไม่น่าเบื่ออีกต่อไป
+                    </div>
+                  </div>
+                  <!-- <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class="txcl1"
+                  >
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
+                  </div> -->
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                    <q-carousel-slide :name="3">
+                    <div style="margin-top:50px;height:370px" class="boxmb q-pa-md shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                
+                >
+                  <div>
+                    <q-img
+                      src="../statics/i-reading.png"
+                      style="width:80px"
+                    ></q-img>
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>การอ่าน</b></div>
+                    <div>
+                      เปิดโลกการอ่านด้วยเนื้อเรื่อง ที่มีความ
+                      หลากหลาย พร้อมตัวช่วยคำศัพท์เสริม
+                      ที่ทำให้การอ่านสนุก เพลิดเพลิน และเข้าใจง่ายมากขึ้น
+                    </div>
+                  </div>
+                  <!-- <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class="txcl1"
+                  >
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
+                  </div> -->
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                    <q-carousel-slide :name="4">
+                    <div style="margin-top:50px;height:370px" class="boxmb q-pa-md shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                 
+                >
+                  <div>
+                    <q-img
+                      src="../statics/i-writing.png"
+                      style="width:80px"
+                    ></q-img>
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>การเขียน</b></div>
+                    <div>
+                      ฝึกการแต่งประโยคภาษาอังกฤษตาม 
+                      คำศัพท์และหลักโครงสร้างไวยากรณ์
+                      ที่ถูกต้อง ช่วยเพิ่มความเข้าใจของนักเรียน
+                      ด้วยระบบการตรวจสอบความถูกต้อง
+                    </div>
+                  </div>
+                  <!-- <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class="txcl1"
+                  >
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
+                  </div> -->
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                    <q-carousel-slide :name="5">
+                    <div style="margin-top:50px;height:370px" class="boxmb q-pa-md shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                 
+                >
+                  <div>
+                    <q-img
+                      src="../statics/i-litten.png"
+                      style="width:80px"
+                    ></q-img>
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>การพูด และการฟัง</b></div>
+                    <div>
+                      นักเรียนจะได้ฝึกการฟังและการพูดเทียบเสียงเจ้าของภาษาผ่าน VDO จำลอง 
+                      สถานการณ์ต่างๆในชีวิตประจำวัน ช่วยให้
+                      มั่นใจในการใช้ภาษามากยิ่งขึ้น
+                    </div>
+                  </div>
+                  <!-- <div
+                    :class="$q.platform.is.desktop ? 'absolute-bottom' : ''"
+                    class="txcl1"
+                  >
+                    <u class="cursor-pointer">ดูตัวอย่างวิดีโอ</u>
+                  </div> -->
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                  
+                 
+                </q-carousel>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ข้อความส่วนสอง โครงสร้างบทเรียน-->
           <div class="row q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
             <div class="self-center col-md-6 col-sm-12 col-xs-12 q-px-md">
               <q-img :src="graph" style="max-width:500px;" />
@@ -188,22 +374,22 @@
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md"
             >
               <div class="q-py-md">
-                <div class="text-h4 cl1 titile q-py-md">
+                <div class="text-h4  titile q-py-md">
                   โครงสร้างบทเรียนของ Winner Discovery
                 </div>
                 <span
-                  ><dd>
-                    โครงสร้างบทเรียนแบ่งออกเป็น 12 Level ตามระดับความยาก</dd>
+                  >
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โครงสร้างบทเรียนแบ่งออกเป็น 12 Level ตามระดับความยาก
                     โดยแต่ละ Level จะมีเนื้อหาให้เลือกเรียนมากถึง 16 Unit แต่ละ
                     Unit สามารถเรียนรู้ได้ครบทุกทักษะ
                   </dd></span
                 ><br />
                 <span class="block q-mt-sm"
-                  ><dd>เรามีการทดสอบวัดระดับภาษา(Placement Test) เพื่อจัด Level</dd>
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เรามีการทดสอบวัดระดับภาษา (Placement Test) เพื่อจัด Level
                   ที่เหมาะสมให้กับนักเรียนทุกคน
-                  ซึ่งจะช่วยพัฒนาทักษะภาษาอังกฤษ<br>
-                  ของนักเรียนแต่ละคนที่มีพื้นฐานแตกต่างกันได้อย่างมี
-                  ประสิทธิภาพ
+                  ซึ่งจะช่วยพัฒนาทักษะภาษาอังกฤษ
+                  ของนักเรียนแต่ละคนที่มีพื้นฐานแตกต่างกันได้อย่างมีประสิทธิภาพ
+                 
                 </span>
               </div>
             </div>
@@ -214,102 +400,150 @@
             class="row q-mb-lg"
             style="width:90%;max-width:1200px;"
           >
-            <div class="q-pa-md col-md-4 col-sm-12 col-xs-12">
-              <div>
-                <q-img src="../statics/i-basic.png" style="width:180px"></q-img>
+            <div class="q-pa-md col-md-4 col-sm-12 col-xs-12 " :class="$q.platform.is.mobile?'row':''">
+              <div :class="$q.platform.is.mobile?'col-xs-4 col-sm-4 col-md-12 q-pr-md ':''">
+                <q-img src="../statics/i-basic.png" :style="$q.platform.is.desktop?'width:180px':'width:80px'"></q-img>
               </div>
-              <div class="q-mt-md">
-                <span><b>Basic</b></span
-                ><br />
-                <span>
-                  เนื้อหาเหมาะสำหรับนักเรียนวัย 6-10 ปี<br />
-                  ที่ต้องการปูพื้นฐานทักษะภาษาอังกฤษ<br />
+              <div :class="$q.platform.is.mobile?'col-xs col-sm col-md-12':'q-mt-md'">
+                <span class="block" :align="$q.platform.is.mobile && innerWidth < 1024?'left':''"><b>Basic</b></span
+                ><br class="desktop-only" />
+                <span class="block" :align="$q.platform.is.mobile?'left':''">
+                  เนื้อหาเหมาะสำหรับนักเรียนวัย 6-10 ปี<br class="desktop-only" />
+                  ที่ต้องการปูพื้นฐานทักษะภาษาอังกฤษ<br class="desktop-only" />
                   พร้อมทั้งพัฒนาทักษะการใช้เทคโนโลยี
-                </span>
+                </span> 
               </div>
-              <div class="txcl1 q-mt-md">
-                <u class="cursor-pointer">ดูตัวอย่าง</u>
+              <div :class="$q.platform.is.mobile?'col-12 ':'q-mt-md'" class="txcl1">
+                <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
+                  <div class="col-4"></div>
+                  <div>ดูตัวอย่าง</div>
+                  </u>
               </div>
             </div>
-            <div class="q-pa-md col-md-4 col-sm-12 col-xs-12 q-px-md">
-              <div>
+            <div class="q-pa-md col-md-4 col-sm-12 col-xs-12 q-px-md" :class="$q.platform.is.mobile?'row':''">
+              <div :class="$q.platform.is.mobile?'col-xs-4 col-sm-4 col-md-12 q-pr-md ':''">
                 <q-img
                   src="../statics/i-intermediate.png"
-                  style="width:180px"
+                  :style="$q.platform.is.desktop?'width:180px':'width:80px'"
                 ></q-img>
               </div>
-              <div class="q-mt-md">
-                <span><b>Intermediate</b></span
-                ><br />
-                <span class="block">
-                  เนื้อหาเหมาะสำหรับนักเรียนวัย 8-12 ปี <br />
-                  เสริมความมั่นใจ ต่อยอดการเรียนรู้ทักษะ<br />
+              <div :class="$q.platform.is.mobile?'col-xs col-sm col-md-12':'q-mt-md'">
+                <span class="block" :align="$q.platform.is.mobile && innerWidth < 1024?'left':''"><b>Intermediate</b></span
+                ><br class="desktop-only"  />
+                <span class="block" :align="$q.platform.is.mobile?'left':''">
+                  เนื้อหาเหมาะสำหรับนักเรียนวัย 8-12 ปี <br class="desktop-only"  />
+                  เสริมความมั่นใจ ต่อยอดการเรียนรู้ทักษะ<br class="desktop-only"  />
                   ภาษาอังกฤษอย่างมีประสิทธิภาพ
                 </span>
               </div>
-              <div class="txcl1 q-mt-md">
-                <u class="cursor-pointer">ดูตัวอย่าง</u>
+              <div :class="$q.platform.is.mobile?'col-12 ':'q-mt-md'" class="txcl1">
+                <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
+                  <div class="col-4"></div>
+                  <div>ดูตัวอย่าง</div>
+                  </u>
               </div>
             </div>
-            <div class="q-pa-md col-md-4 col-sm-12 col-xs-12">
-              <div>
+            <div class="q-pa-md col-md-4 col-sm-12 col-xs-12" :class="$q.platform.is.mobile?'row':''">
+              <div :class="$q.platform.is.mobile?'col-xs-4 col-sm-4 col-md-12 q-pr-md ':''">
                 <q-img
                   src="../statics/i-advance.png"
-                  style="width:180px"
+                  :style="$q.platform.is.desktop?'width:180px':'width:80px'"
                 ></q-img>
               </div>
-              <div class="q-mt-md">
-                <span><b>Advance</b></span
-                ><br />
-                <span>
-                  เนื้อหาเหมาะสำหรับนักเรียนวัย 10-15 ปี<br />
-                  พัฒนาภาษาอังกฤษระดับสูงควบคู่กับ <br />
+             <div :class="$q.platform.is.mobile?'col-xs col-sm col-md-12':'q-mt-md'">
+                <span class="block" :align="$q.platform.is.mobile && innerWidth < 1024?'left':''"><b>Advance</b></span
+                ><br class="desktop-only"   />
+                <span class="block" :align="$q.platform.is.mobile?'left':''">
+                  เนื้อหาเหมาะสำหรับนักเรียนวัย 10-15 ปี<br class="desktop-only"   />
+                  พัฒนาภาษาอังกฤษระดับสูงควบคู่กับ <br class="desktop-only"   />
                   กระบวนการ Self-Learning
                 </span>
               </div>
-              <div class="txcl1 q-mt-md">
-                <u class="cursor-pointer">ดูตัวอย่าง</u>
+              <div :class="$q.platform.is.mobile?'col-12 ':'q-mt-md'" class="txcl1">
+                <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
+                  <div class="col-4"></div>
+                  <div>ดูตัวอย่าง</div>
+                  </u>
               </div>
             </div>
           </div>
-          <!-- ข้อความส่วนสี่ ทดสอบ placement-->
-          <div class="row q-my-xl q-mb-lg">
+          <!-- ข้อความส่วนสี่ สมัครทดสอบ placement-->
+          <div  v-if="innerWidth > 1007" class="row justify-center q-my-xl q-mb-lg">
             <q-img
-              style="width:100%;height:520px"
-              src="../statics/bg-placement.png"
+              style="width:100%;max-width:800px;height:500px"
+              src="../statics/image/discovery/register.png"
               class="relative-position"
             >
-              <div
-                class="row justify-center items-center brd-radius bg-white absolute-center shadow-3"
-                style="width:90%;max-width:480px;height:350px"
-                cover
-              >
-                <div class="relative-position" style="width:100%">
-                  <div class="fixed-top q-mt-xl q-px-sm">
-                    <div
-                      class="txcl1 titile"
-                      :style="$q.platform.is.desktop ? 'font-size:36px' : ''"
-                    >
-                      <b>อยากทราบระดับภาษาอังกฤษ<br />ของคุณหรือไม่?</b>
-                    </div>
-                    <div class="text-black">
-                      สอบวัดระดับภาษาออังกฤษฟรีไม่มีค่าใช้จ่ายเพิ่มเติม
-                    </div>
-                  </div>
-                  <div class="q-my-xl fixed-bottom">
-                    <q-btn
-                      dense
-                      class="bgcl1 btn-radius"
-                      style="font-size:22px;width:260px"
-                    >ลงทะเบียน</q-btn
-                    >
-                  </div>
+            <div class="row full-width full-height transparent">
+              <div class="row col justify-center text-primary">
+                <div class="self-start text-h3 titile  q-mt-sm">วัดระดับภาษา ฟรี!!<br><div class="text-h5">สอบถามข้อมูลเพิ่มเติม</div></div>
+                <div class="self-end q-mb-lg" style="font-size:21px">ข้อมูลส่วนบุคคลที่ท่านให้ บริษัทจะนำไปใช้เพื่อการติดต่อ <br>
+                และการให้บริการแก่ท่าน ท่านสามารถอ่านข้อมูลเพิ่มเติม<br>
+                <u class="cursor-pointer" @click="openNewWindows(policyOrCondition = 'policy')">นโยบายความเป็นส่วนตัว</u> | <u class="cursor-pointer" @click="openNewWindows(policyOrCondition = 'condition')">เงื่อนไขและข้อตกลงในการใช้บริการ</u></div>
+              </div>
+              <div class="col txcl2 q-pl-sm">
+                <div align="left" class="q-mt-sm">
+                  <div style="font-size:20px">ชื่อ-นามสกุล (ผู้ปกครอง)</div>
+                  <div><q-input outlined v-model="name" dense bg-color="white" style="width:350px"/></div>
+                </div>
+                <div align="left" class="q-mt-sm">
+                  <div style="font-size:20px">เบอร์โทรศัพท์ (ผู้ปกครอง)</div>
+                  <div><q-input outlined v-model="tel" dense bg-color="white" style="width:350px"/></div>
+                </div>
+                <div align="left" class="q-mt-sm">
+                  <div style="font-size:20px">อีเมล์ (ผู้ปกครอง)</div>
+                  <div><q-input outlined v-model="email" dense bg-color="white" style="width:350px"/></div>
+                </div>
+                <div align="left" class="q-mt-sm">
+                  <div style="font-size:20px">จังหวัด</div>
+                  <div><q-select outlined v-model="province" dense bg-color="white" style="width:350px" :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
+                </div>
+                 <div align="left" class="q-mt-sm">
+                  <div style="font-size:20px">ระดับชั้นที่กำลังศึกษา (ผู้เรียน)</div>
+                  <div><q-select outlined v-model="studentClass" dense bg-color="white" style="width:350px" :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
+                </div>
+                <div class="q-mt-md">
+                  <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" style="width:200px;font-size:20px" />
                 </div>
               </div>
+            </div>
             </q-img>
           </div>
-          <!-- ข้อความส่วนที่ห้า ความสามารถของ winner-->
-          <div class="row q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
+           <div  v-if="innerWidth < 1008" class="q-my-xl q-mb-lg q-pa-md bg-block">
+              <div class="text-primary">
+                <div class=" text-h4 titile  q-mb-md">วัดระดับภาษา ฟรี!!<br><div class="text-h5">สอบถามข้อมูลเพิ่มเติม</div></div>
+              </div>
+              <div class="txcl2 q-pl-sm">
+                <div align="center" style="max-width:450px;width:100%" class="q-mt-sm ">
+                  <div style="font-size:20px" align="left">ชื่อ-นามสกุล (ผู้ปกครอง)</div>
+                  <div><q-input outlined v-model="name" dense bg-color="white" /></div>
+                </div>
+                <div align="center" style="max-width:450px;width:100%" class="q-mt-sm">
+                  <div style="font-size:20px" align="left">เบอร์โทรศัพท์ (ผู้ปกครอง)</div>
+                  <div><q-input outlined v-model="tel" dense bg-color="white" /></div>
+                </div>
+                <div align="center" style="max-width:450px;width:100%" class="q-mt-sm">
+                  <div style="font-size:20px" align="left">อีเมล์ (ผู้ปกครอง)</div>
+                  <div><q-input outlined v-model="email" dense bg-color="white" /></div>
+                </div>
+                <div align="center" style="max-width:450px;width:100%" class="q-mt-sm">
+                  <div style="font-size:20px" align="left">จังหวัด</div>
+                  <div><q-select outlined v-model="province" dense bg-color="white"  :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
+                </div>
+                 <div align="center" style="max-width:450px;width:100%" class="q-mt-sm">
+                  <div style="font-size:20px" align="left">ระดับชั้นที่กำลังศึกษา (ผู้เรียน)</div>
+                  <div><q-select outlined v-model="studentClass" dense bg-color="white"  :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
+                </div>
+                <div class="q-my-lg">
+                  <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" style="width:200px;font-size:20px" />
+                </div>
+              </div>
+              <div class="q-mb-lg txcl1" style="font-size:16px">ข้อมูลส่วนบุคคลที่ท่านให้ บริษัทจะนำไปใช้เพื่อการติดต่อ <br>
+                และการให้บริการแก่ท่าน ท่านสามารถอ่านข้อมูลเพิ่มเติม<br>
+                <u class="cursor-pointer" @click="openNewWindows(policyOrCondition = 'policy')">นโยบายความเป็นส่วนตัว</u> | <u class="cursor-pointer" @click="openNewWindows(policyOrCondition = 'condition')">เงื่อนไขและข้อตกลงในการใช้บริการ</u></div>
+          </div>
+          <!-- ข้อความส่วนที่ห้า ความสามารถของ winner DESKTOP-->
+          <div v-if="innerWidth > 1007" class="row q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
             <div
               class="self-center row col-md-12 col-sm-12 col-xs-12 text-left"
             >
@@ -319,79 +553,193 @@
               >
                 ความสามารถของ Winner Discovery
               </div>
-              <div class="q-py-md row col-md-6 col-sm-12 col-xs-12">
+              <div class="q-py-md row q-pa-md col-md-6 col-sm-12 col-xs-12">
                 <q-icon class="round" size="25px" name="fab fa-react" />
                 <span class="col q-px-sm">
                   <div class="titilebold clblue2">ครบทุกทักษะ</div>
                   <div>
-                    เราครอบคลุมทุกทักษะภาษาอังกฤษไม่ว่าจะเป็น คำศัพท์<br />
+                    เราครอบคลุมทุกทักษะภาษาอังกฤษไม่ว่าจะเป็น คำศัพท์
                     ไวยากรณ์
-                    ฟัง พูด อ่าน และเขียน ให้เด็ก ๆ ได้ฝึกฝนจนเกิด<br>
+                    ฟัง พูด อ่าน และเขียน ให้เด็ก ๆ ได้ฝึกฝนจนเกิด
                     ความชำนาญและสามารถนำไปใช้ได้จริงในชีวิตประจำวัน
                   </div>
                 </span>
               </div>
-              <div class="q-py-md q-pl-md row col-md-6 col-sm-12 col-xs-12">
+              <div class="q-py-md q-pa-md  row col-md-6 col-sm-12 col-xs-12">
                 <q-icon class="round" size="25px" name="fas fa-brain" />
                 <div class="col q-px-sm">
                   <div class="titilebold clblue2">เรียนรู้ได้ด้วยตัวเอง</div>
                   <div>
-                    ด้วยระบบที่ไม่ซับซ้อน และมีฟังก์ชันสนับสนุนการเรียน<br />
+                    ด้วยระบบที่ไม่ซับซ้อน และมีฟังก์ชันสนับสนุนการเรียน
                     นักเรียนสามารถเรียนรู้ได้ด้วยตนเองแม้ไม่มีผู้สอน
                   </div>
                 </div>
               </div>
-              <div class="q-py-md row col-md-6 col-sm-12 col-xs-12">
+              <div class="q-py-md q-pa-md row col-md-6 col-sm-12 col-xs-12">
                 <q-icon class="round" size="25px" name="fas fa-cogs" />
                 <div class="col q-px-sm">
                   <div class="titilebold clblue2">
                     จัดรูปแบบการเรียนของคุณ
                   </div>
                   <div>
-                    นักเรียนสามารถเลือกหัวข้อการเรียนที่ตรงกับหลักสูตรของ<br>
-                    ตนเองได้อย่างตรงประเด็น และตรงตามมาตราฐานการศึกษา<br />
+                    นักเรียนสามารถเลือกหัวข้อการเรียนที่ตรงกับหลักสูตรของ
+                    ตนเองได้อย่างตรงประเด็น และตรงตามมาตราฐานการศึกษา
                     ที่ควรได้รับภายในโรงเรียน
                   </div>
                 </div>
               </div>
-              <div class="q-py-md q-pl-md row col-md-6 col-sm-12 col-xs-12">
+              <div class="q-py-md q-pa-md row col-md-6 col-sm-12 col-xs-12">
                 <q-icon class="round" size="25px" name="far fa-gem" />
                 <div class="col q-px-sm">
                   <div class="titilebold clblue2">สนุกกับการเรียน</div>
                   <div>
                     ด้วยระบบการเรียนที่นำ แอนิเมชั่นตัวการ์ตูน
                     วิดีโอภาพเคลื่อนไหว และ ระบบเสียงมาช่วยสอน
-                    นักเรียนจะได้สัมผัสกับการเรียนรู้<br />
+                    นักเรียนจะได้สัมผัสกับการเรียนรู้
                     ที่สนุกและต่างจากหนังสือทั่วไป
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- ข้อความส่วนที่หก box three-->
-          <div
-            class="row  justify-center q-py-md q-mb-xl"
-            style="width:90%;max-width:1200px;"
+        <!-- ข้อความส่วนที่ห้า ความสามารถของ winner MOBILE-->
+           <div
+          v-if="innerWidth < 1008"
+          class=" relative-position row justify-centers"
+        > 
+        <div
+                class=" text-h4 cl1 titile  full-width"
+                align="center"
+              >
+                ความสามารถของ Winner Discovery
+              </div>
+          <div class=""
+            v-if="innerWidth < 1008"
+            style="width:100%;max-width:1200px;"
           >
-            <div class="col-md-4 col-sm-12 col-xs-12">
-              <div
-                style="width:300px;height:350px"
-                class="  q-ma-md shadow-3 bg-block brd-radius"
-              ></div>
-            </div>
-            <div class="col-md-4 col-sm-12 col-xs-12">
-              <div
-                style="width:300px;height:350px"
-                class="  q-ma-md shadow-3 bg-block brd-radius"
-              ></div>
-            </div>
-            <div class="col-md-4 col-sm-12 col-xs-12">
-              <div
-                style="width:300px;height:350px"
-                class="  q-ma-md shadow-3 bg-block brd-radius"
-              ></div>
+           
+            <div class="self-center bgblue1 col-12">
+              
+              <div style="width:100% ">
+                <q-carousel
+                  swipeable
+                  animated
+                  v-model="slide2"
+                  navigation
+                  infinite
+                  autoplay
+                  control-color="primary"
+                  style="width:100%;height:450px"
+                  transition-prev="slide-right"
+                  transition-next="slide-left"
+                >
+                  <q-carousel-slide :name="1">
+                    <div style="height:370px" class="boxmb shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                
+                >
+                  <div>
+                   <q-icon style="width:80px;height:80px" class="round" size="45px" name="fab fa-react" />
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>ครบทุกทักษะ</b></div>
+                    <div>
+                    เราครอบคลุมทุกทักษะภาษาอังกฤษไม่ว่าจะเป็น คำศัพท์
+                    ไวยากรณ์
+                    ฟัง พูด อ่าน และเขียน ให้เด็ก ๆ ได้ฝึกฝนจนเกิด
+                    ความชำนาญและสามารถนำไปใช้ได้จริงในชีวิตประจำวัน
+                    </div>
+                  </div>
+                
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                    <q-carousel-slide :name="2">
+                    <div style="height:370px" class="boxmb  shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                  
+                >
+                  <div>
+                   <q-icon style="width:80px;height:80px" class="round" size="45px" name="fas fa-brain" />
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>เรียนรู้ได้ด้วยตัวเอง</b></div>
+                    <div>
+                      ด้วยระบบที่ไม่ซับซ้อน และมีฟังก์ชันสนับสนุนการเรียน
+                    นักเรียนสามารถเรียนรู้ได้ด้วยตนเองแม้ไม่มีผู้สอน
+                    </div>
+                  </div>
+                 
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                    <q-carousel-slide :name="3">
+                    <div style="height:370px" class="boxmb  shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                 
+                >
+                  <div>
+                   <q-icon style="width:80px;height:80px" class="round" size="45px" name="fas fa-cogs" />
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>จัดรูปแบบการเรียนของคุณ</b></div>
+                    <div>
+                     นักเรียนสามารถเลือกหัวข้อการเรียนที่ตรงกับหลักสูตรของ
+                    ตนเองได้อย่างตรงประเด็น และตรงตามมาตราฐานการศึกษา
+                    ที่ควรได้รับภายในโรงเรียน
+                    </div>
+                  </div>
+                
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                    <q-carousel-slide :name="4">
+                    <div style="height:370px" class="boxmb  shadow-3 brd-radius">
+                      <div
+                  class="q-pa-md relative-position"
+                  align="center"
+                 
+                >
+                  <div>
+                    <q-icon style="width:80px;height:80px" class="round" size="45px" name="far fa-gem" />
+                  </div>
+                  <div class="col q-mt-md">
+                    <div><b>สนุกกับการเรียน</b></div>
+                    <div>
+                     ด้วยระบบการเรียนที่นำ แอนิเมชั่นตัวการ์ตูน
+                    วิดีโอภาพเคลื่อนไหว และ ระบบเสียงมาช่วยสอน
+                    นักเรียนจะได้สัมผัสกับการเรียนรู้
+                    ที่สนุกและต่างจากหนังสือทั่วไป
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                  </q-carousel-slide>
+                </q-carousel>
+              </div>
             </div>
           </div>
+        </div>
+          <!-- ------------------------ -->
+          <!-- ข้อความส่วนที่หก Promotion-->
+         
+            <q-img style="height:400px" class="bg-block relative-position" src="../statics/image/discovery/bgPromotion.png">
+            <div class="shadow-5 absolute-center bg-white" :style="innerWidth > 750 ?'width:90%;max-width:900px;height:250px':'width:90%;max-width:330px;height:350px'" style="border-radius:10px">
+              <div class=" absolute-center full-width full-height" :class="innerWidth > 750 ?'q-pt-xl':'q-pt-md'">
+                  <div class="txcl2" :class="innerWidth > 750 ?'text-h4':'text-h5'"><b>มอบความรู้เป็นของขวัญสุดพิเศษ<br v-if="innerWidth < 750 "/> กับโปรโมชั่นตอนรับปี 2021</b></div>
+                 
+                    <span class="block txcl4" :class="innerWidth > 750  ?'text-h4 q-my-md':'text-h5 q-my-xl'"><b>จากราคา <strike>2,400</strike> ลดเหลือเพียง<br v-if="innerWidth < 750" /> <span class="txcl3 text-h2"><b>1,200 บาท</b></span> เท่านั้น !<sup>*</sup></b></span>
+                  <div class="txcl2" :class="innerWidth > 750  ?'text-h4':'text-h5'">*ระยะเวลาโปรโมชั่น <br v-if="innerWidth < 750" /> 1 มกราคม 2564 - 31 มกราคม 2564 นี้เท่านั้น!</div>
+              </div>
+            </div>
+            </q-img>
+          
           <!-- รูปภาพ สไลด์ -->
           <!-- <div>
             <div style="width:100%">
@@ -966,8 +1314,95 @@ export default {
       writing: "../statics/image/discovery/writing.png",
       conversation: "../statics/image/discovery/conversation.png",
       slide: 1,
+      slide2: 1,
       innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerHeight: window.innerHeight,
+      policyOrCondition:"",
+      name:"",
+      tel:"",
+      email:"",
+      studentClass:"",
+      studentList:[],
+      province:"",
+      provinceList:['กระบี่',
+'กรุงเทพมหานคร',
+'กาญจนบุรี',
+'กาฬสินธุ์',
+'กำแพงเพชร',
+'ขอนแก่น',
+'จันทบุรี',
+'ฉะเชิงเทรา',
+'ชลบุรี',
+'ชัยนาท',
+'ชัยภูมิ',
+'ชุมพร',
+'เชียงราย',
+'เชียงใหม่',
+'ตรัง',
+'ตราด',
+'ตาก',
+'นครนายก',
+'นครปฐม',
+'นครพนม',
+'นครราชสีมา',
+'นครศรีธรรมราช',
+'นครสวรรค์',
+'นนทบุรี',
+'นราธิวาส',
+'น่าน',
+'บึงกาฬ',
+'บุรีรัมย์',
+'ปทุมธานี',
+'ประจวบคีรีขันธ์',
+'ปราจีนบุรี',
+'ปัตตานี',
+'พระนครศรีอยุธยา',
+'พะเยา',
+'พังงา',
+'พัทลุง',
+'พิจิตร',
+'พิษณุโลก',
+'เพชรบุรี',
+'เพชรบูรณ์',
+'แพร่',
+'ภูเก็ต',
+'มหาสารคาม',
+'มุกดาหาร',
+'แม่ฮ่องสอน',
+'ยโสธร',
+'ยะลา',
+'ร้อยเอ็ด',
+'ระนอง',
+'ระยอง',
+'ราชบุรี',
+'ลพบุรี',
+'ลำปาง',
+'ลำพูน',
+'เลย',
+'ศรีสะเกษ',
+'สกลนคร',
+'สงขลา',
+'สตูล',
+'สมุทรปราการ',
+'สมุทรสงคราม',
+'สมุทรสาคร',
+'สระแก้ว',
+'สระบุรี',
+'สิงห์บุรี',
+'สุโขทัย',
+'สุพรรณบุรี',
+'สุราษฎร์ธานี',
+'สุรินทร์',
+'หนองคาย',
+'หนองบัวลำภู',
+'อ่างทอง',
+'อำนาจเจริญ',
+'อุดรธานี',
+'อุตรดิตถ์',
+'อุทัยธานี',
+'อุบลราชธานี',
+],
+      
     };
   },
   components: {
@@ -976,6 +1411,14 @@ export default {
   methods: {
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
+    },
+    openNewWindows(){
+      if (this.policyOrCondition == "policy") {
+         window.open("/policy")
+      }else{
+         window.open("/condition")
+      }
+    
     }
   }
 };
@@ -995,6 +1438,15 @@ export default {
 .txcl1 {
   color: #3f51b5;
 }
+.txcl2{
+  color: #5C5C5C;
+}
+.txcl3{
+  color: #FF7E36;
+}
+.txcl4{
+  color: #3183DF;
+}
 .bg-block {
   background: #e7f7ff;
 }
@@ -1006,5 +1458,11 @@ export default {
 }
 .brd-radius {
   border-radius: 10px;
+}
+.boxmb {
+  border-radius: 10px;
+  max-width: 300px;
+  background: #FFFFFF;
+  height: 300px;
 }
 </style>

@@ -8,21 +8,29 @@
           <div v-if="innerWidth > 1023" class="bghome"></div>
           <!-- ข้อความ หัวข้อหลัก -->
           <div class="q-pt-md" style="width:90%;max-width: 1200px">
-            <span v-if="innerWidth > 1023" class="text-h1 cl1 titile">WINNER ENGLISH</span>
+            <span v-if="innerWidth > 1023" class="text-h1 cl1 titile"
+              >WINNER ENGLISH</span
+            >
             <span
               v-if="innerWidth < 1024"
               style="font-size:calc(35px + 2vw);"
               class="cl1 titile"
-            >WINNER ENGLISH</span>
+              >WINNER ENGLISH</span
+            >
             <br />
             <div class="q-py-sm q-px-md q-pb-xl">
-              <div class="font" style="max-width: 800px;">
-                <span>นวัตกรรมการเรียนการสอนภาษาอังกฤษอัจฉริยะแบบครบวงจร ช่วยสนับสนุนทั้งการเรียนการสอนของคุณครูและนักเรียนภายในโรงเรียนหรือการเรียนรู้ด้วยตนเองแบบออนไลน์</span>
+              <div class="font" style="max-width: 1000px;">
+                <span
+                  >นวัตกรรมการเรียนภาษาอังกฤษอัจฉริยะแบบครบวงจร
+                  ช่วยสนับสนุนการเรียนการสอนของคุณครูและนักเรียนในโรงเรียน<br />
+                  ด้วยบรรยากาศห้องเรียนดิจิทัลที่ทันสมัย
+                  และช่วยพัฒนาการเรียนรู้ด้วยตนเองของนักเรียนแบบออนไลน์
+                </span>
               </div>
             </div>
           </div>
-          <!-- ข้อความส่วนแรก Winner Discovery-->
-          <div class="row q-py-md" style="width:90%;max-width:1200px;">
+          <!-- winner English เหมาะสมกับใคร-->
+          <div class="row reverse q-py-md" style="width:95%;max-width:1200px;">
             <div class="self-center col-md-6 col-sm-12 col-xs-12">
               <q-img :src="home2" style="max-width:700px;" />
             </div>
@@ -30,18 +38,170 @@
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md"
             >
               <div>
-                <div class="cl1 titilecenter">Winner Discovery</div>
-                <span>โปรแกรมเรียนภาษาอังกฤษออนไลน์ที่นักเรียนสามารถจัดรูปแบบการเรียนของตนเองได้ ออกแบบมาพร้อมฟังก์ชั่นสนับสนุนการเรียนให้นักเรียนสามารถเรียนได้แม้ไม่มีผู้สอน</span>
-                <div class="q-py-lg">
-                  <q-btn unelevated to="/discovery" rounded class="bgcl1 text-white">
-                    <span class="text-h5">เรียนรู้เพิ่มเติม</span>
-                  </q-btn>
+                <div class="cl1 titilecenter desktop-only">
+                  Winner English เหมาะกับใคร ?
                 </div>
+                <div class="cl1 titilecenter mobile-only q-mt-md">
+                  Winner English<br />
+                  เหมาะกับใคร ?
+                </div>
+                <span
+                  >Winner English
+                  เหมาะกับนักเรียนระดับชั้นประถมศึกษาและมัธยมศึกษา ตอนต้น คือ
+                  ช่วงอายุ 6-15 ปี เนื่องจากแพลตฟอร์มการเรียนการสอนของ Winner
+                  English เป็นการเรียนภาษาอังกฤษแบบออนไลน์ที่จะต้องเรียนกับ
+                  อุปกรณ์เทคโนโลยี
+                  ช่วงวัยที่เหมาะสมและมีสมาธิในการเรียนรู้ผ่านระบบ
+                  ออนไลน์จึงอยู่ในช่วงอายุ 6 ปี ขึ้นไป
+                  และเนื้อหาที่ได้รับการพัฒนาสำหรับ นักเรียนวัยนี้โดยเฉพาะ
+                  สอดคล้องตามหลักสูตรแกนกลางกระทรวงศึกษาธิการ
+                  เพื่อปูพืนฐานภาษาอังกฤษให้นักเรียนสามารถนำไปใช้ได้จริงในโรงเรียน<br />
+                  และการใช้ชีวิตประจำวันอย่างมั่นใจ</span
+                >
               </div>
             </div>
           </div>
-          <!-- ข้อความส่วนที่สอง Winner Adventures-->
-          <div class="row reverse q-py-md" style="width:90%;max-width:1200px;">
+          <!-- ทำไมต้องเรียน winnner English -->
+          <div class="row q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
+            <div
+              class="self-center row col-md-12 col-sm-12 col-xs-12 text-left"
+            >
+              <div
+                class=" text-h4 cl1 titile q-py-md full-width desktop-only"
+                align="center"
+              >
+                ทำไมต้องเลือกเรียน Winner English ?
+              </div>
+              <div class=" text-h4 cl1 titile q-py-md full-width mobile-only">
+                ทำไมต้องเลือกเรียน <br />
+                Winner English ?
+              </div>
+              <div class="q-py-md row col-md-4 col-sm-12 col-xs-12">
+                <q-img
+                  :style="
+                    $q.platform.is.desktop
+                      ? 'width:80px;height:80px'
+                      : 'width:60px;height:60px'
+                  "
+                  src="../statics/image/icon1.png"
+                ></q-img>
+                <span
+                  :class="
+                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
+                  "
+                >
+                  <div>
+                    เนื้อหาตรงตามหลักสูตรแกนกลาง<br />
+                    ผ่านการนำเสนอบทเรียนที่ต่อยอด<br />
+                    การเรียนรู้ในโรงเรียน
+                  </div>
+                </span>
+              </div>
+              <div class="q-py-md row col-md-4 col-sm-12 col-xs-12">
+                <q-img
+                  :style="
+                    $q.platform.is.desktop
+                      ? 'width:80px;height:80px'
+                      : 'width:60px;height:60px'
+                  "
+                  src="../statics/image/icon2.png"
+                ></q-img>
+                <span
+                  :class="
+                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
+                  "
+                >
+                  <div>
+                    เรียนได้ไม่จำกัด ทุกที่ ทุกเวลา<br />
+                    เพียงเชื่อมต่ออินเตอร์เน็ต<br />
+                    ไม่ต้องดาวน์โหลดโปรแกรม
+                  </div>
+                </span>
+              </div>
+              <div class="q-py-md row col-md-4 col-sm-12 col-xs-12">
+                <q-img
+                  :style="
+                    $q.platform.is.desktop
+                      ? 'width:80px;height:80px'
+                      : 'width:60px;height:60px'
+                  "
+                  src="../statics/image/icon3.png"
+                ></q-img>
+                <span
+                  :class="
+                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
+                  "
+                >
+                  <div>
+                    Practice-based Learning<br />
+                    เรียนรู้ทักษะภาษาอังกฤษ<br />ผ่านการฝึกฝนและลงมือทำ
+                  </div>
+                </span>
+              </div>
+              <div class="q-py-md row col-md-4 col-sm-12 col-xs-12">
+                <q-img
+                  :style="
+                    $q.platform.is.desktop
+                      ? 'width:80px;height:80px'
+                      : 'width:60px;height:60px'
+                  "
+                  src="../statics/image/icon4.png"
+                ></q-img>
+                <span
+                  :class="
+                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
+                  "
+                >
+                  <div>
+                    การวัดผลแม่นยำ <br />สามารถติดตามและรายงานผล<br />
+                    การเรียนรายบุคคลได้แบบ Real-time
+                  </div>
+                </span>
+              </div>
+              <div class="q-py-md row col-md-4 col-sm-12 col-xs-12">
+                <q-img
+                  :style="
+                    $q.platform.is.desktop
+                      ? 'width:80px;height:80px'
+                      : 'width:60px;height:60px'
+                  "
+                  src="../statics/image/icon5.png"
+                ></q-img>
+                <span
+                  :class="
+                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
+                  "
+                >
+                  <div>
+                    เรียนครบทุกทักษะภาษาอังกฤษ <br />ฟัง พูด อ่าน เขียน คำศัพท์
+                    ไวยากรณ์
+                  </div>
+                </span>
+              </div>
+              <div class="q-py-md row col-md-4 col-sm-12 col-xs-12">
+                <q-img
+                  :style="
+                    $q.platform.is.desktop
+                      ? 'width:80px;height:80px'
+                      : 'width:60px;height:60px'
+                  "
+                  src="../statics/image/icon6.png"
+                ></q-img>
+                <span
+                  :class="
+                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
+                  "
+                >
+                  <div>
+                    สอบวัดระดับภาษา (placement Test) ช่วยให้เนื้อหาเหมาะสมกับ<br />
+                    พื้นฐานนักเรียนแต่ละคน
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- สำหรับผู้ปกครอง และนักเรียน-->
+          <div class="row q-py-md" style="width:90%;max-width:1200px;">
             <div class="self-center col-md-6 col-sm-12 col-xs-12">
               <q-img :src="home3" style="max-width:500px;" />
             </div>
@@ -49,18 +209,33 @@
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md q-px-lg"
             >
               <div>
-                <div class="cl1 titilecenter">Winner Adventures</div>
-                <span>โปรแกรมการเรียนการสอนภาษาอังกฤษแบบครบวงจร ที่สนับสนุนการเรียนภายในห้องเรียนอย่างเต็มรูปแบบ ด้วยระบบห้องเรียนอัจฉริยะที่ช่วยให้คุณครูสามารถควบคุมการเรียนของนักเรียนได้ในทุก ๆ ขั้นตอน</span>
+                <div class="cl1 titilecenter desktop-only">
+                  สำหรับผู้ปกครอง และนักเรียน
+                </div>
+                <div class="cl1 titilecenter mobile-only">
+                  สำหรับผู้ปกครอง<br />
+                  และนักเรียน
+                </div>
+                <span
+                  >โปรแกรมเรียนภาษาอังกฤษออนไลน์ที่สามารถจัดรูปแบบเรียนรู้<br />
+                  และทำแบบฝึกหัดได้ด้วยตนเอง เรียนรู้ได้ทุกที่ ทุกเวลา สนุก
+                  เข้าใจง่าย ด้วยรูปแบบ VDO Animation และเทคโนโลยี Gamification
+                </span>
                 <div class="q-py-lg">
-                  <q-btn unelevated to="/adventures" rounded class="bgcl1 text-white">
+                  <q-btn
+                    unelevated
+                    to="/adventures"
+                    rounded
+                    class="bgcl1 text-white"
+                  >
                     <span class="text-h5">เรียนรู้เพิ่มเติม</span>
                   </q-btn>
                 </div>
               </div>
             </div>
           </div>
-          <!-- ข้อความส่วนที่สาม Winner O-NET-->
-          <div class="row q-pt-md" style="width:90%;max-width:1200px;">
+          <!-- สำหรับคุณครู และโรงเรียน-->
+          <div class="row reverse q-pt-md" style="width:90%;max-width:1200px;">
             <div class="self-center col-md-6 col-sm-12 col-xs-12 q-px-md">
               <q-img :src="home4" style="max-width:500px;" />
             </div>
@@ -68,10 +243,25 @@
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md q-px-lg"
             >
               <div>
-                <div class="cl1 titilecenter">Winner O-NET</div>
-                <span>โปรแกรมติวข้อสอบ ที่เจาะลึกวิธีการทำข้อสอบอย่างแท้จริงสำหรับนักเรียนที่เตรียมความพร้อมก่อนลงสนามสอบ O-net</span>
+                <div class="cl1 titilecenter">สำหรับคุณครู และโรงเรียน</div>
+                <span class="desktop-only"
+                  >แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ ผ่านเรื่องราวการผจญภัย<br />
+                  ที่สนุกสนาม กระตุ้นพัฒนาการเรียนรู้ของนักเรียน พร้อมระบบช่วย
+                  สนับสนุนการสอนของคุณครูอย่างมีประสิทธิภาพ
+                </span>
+                <span class="mobile-only"
+                  >แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ
+                  ผ่านเรื่องราวการผจญภัยที่สนุกสนาม
+                  กระตุ้นพัฒนาการเรียนรู้ของนักเรียนพร้อมระบบ
+                  ช่วยสนับสนุนการสอนของคุณครูอย่างมีประสิทธิภาพ
+                </span>
                 <div class="q-py-lg">
-                  <q-btn unelevated to="/o-net" rounded class="bgcl1 text-white">
+                  <q-btn
+                    unelevated
+                    to="/o-net"
+                    rounded
+                    class="bgcl1 text-white"
+                  >
                     <span class="text-h5">เรียนรู้เพิ่มเติม</span>
                   </q-btn>
                 </div>
@@ -85,7 +275,9 @@
             style="margin-bottom:-100px"
             v-if="innerWidth > 1007"
             class="text-h3 cl1 q-py-xl"
-          >ความคิดเห็นของผู้ใช้</div>
+          >
+            ความคิดเห็นของผู้ใช้
+          </div>
         </div>
         <div
           v-if="innerWidth > 1007"
@@ -115,7 +307,10 @@
                   </div>
                   <div>
                     <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
-                    <span>สะดวก ทันสมัย ช่วยให้ นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง</span>
+                    <span
+                      >สะดวก ทันสมัย ช่วยให้
+                      นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง</span
+                    >
                   </div>
                 </div>
               </div>
@@ -143,7 +338,9 @@
                   </div>
                   <div>
                     <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
-                    <span>ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษครูก็ได้รับประโยชน์จากการใช้สื่อใหม่ๆ</span>
+                    <span
+                      >ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษครูก็ได้รับประโยชน์จากการใช้สื่อใหม่ๆ</span
+                    >
                   </div>
                 </div>
               </div>
@@ -185,7 +382,10 @@
           </div>
         </div>
 
-        <div v-if="innerWidth < 1008" class="relative-position bgbottommb row justify-center">
+        <div
+          v-if="innerWidth < 1008"
+          class="relative-position bgbottommb row justify-center"
+        >
           <!-- ความคิดเห็น Mobile -->
           <div
             class="row absolute-bottom"
@@ -194,7 +394,9 @@
           >
             <!-- ความคิดเห็น Mobile -->
             <div class="self-center bgblue1 col-12">
-              <div class="bgblue1 text-h3 text-white q-pt-lg q-pb-lg">ความคิดเห็นของผู้ใช้</div>
+              <div class="bgblue1 text-h3 text-white q-pt-lg q-pb-lg">
+                ความคิดเห็นของผู้ใช้
+              </div>
               <div style="width:100% ">
                 <q-carousel
                   swipeable
@@ -229,8 +431,13 @@
                           </div>
                         </div>
                         <div>
-                          <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
-                          <span>สะดวก ทันสมัย ช่วยให้ นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง</span>
+                          <span class="titilebold q-px-sm"
+                            >วินเนอร์ อิงลิช</span
+                          >
+                          <span
+                            >สะดวก ทันสมัย ช่วยให้
+                            นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -258,8 +465,13 @@
                           </div>
                         </div>
                         <div>
-                          <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
-                          <span>ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษ ครูก็ได้รับประโยชน์จากการใช้สื่อการสอนใหม่ๆ</span>
+                          <span class="titilebold q-px-sm"
+                            >วินเนอร์ อิงลิช</span
+                          >
+                          <span
+                            >ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษ
+                            ครูก็ได้รับประโยชน์จากการใช้สื่อการสอนใหม่ๆ</span
+                          >
                         </div>
                       </div>
                     </div>
@@ -289,7 +501,9 @@
                         <div>
                           <span>
                             การเรียน
-                            <span class="titilebold q-px-xs">วินเนอร์ อิงลิช</span>
+                            <span class="titilebold q-px-xs"
+                              >วินเนอร์ อิงลิช</span
+                            >
                             <span>ทำให้วิชาภาษาอังกฤษสนุกขึ้น ง่ายขึ้น</span>
                           </span>
                         </div>
@@ -340,7 +554,7 @@ export default {
 };
 </script>
 
-<style  scoped>
+<style scoped>
 .box {
   border-radius: 10px;
   max-width: 300px;

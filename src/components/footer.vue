@@ -17,7 +17,7 @@
             </span>
           </div>
           <div class="row">
-            <div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
               <span class="q-pr-md">
                 <q-icon size="20px" name="fas fa-phone-alt" />
               </span>
@@ -29,7 +29,7 @@
               >
               (สำหรับนักเรียน)
             </div>
-            <div class="q-ml-xl">
+            <div class="col-md col-sm-12 col-xs-12">
               <span class="q-pr-md">
                 <q-icon size="20px" name="fas fa-phone-alt" />
               </span>

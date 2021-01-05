@@ -32,46 +32,64 @@ body{
   font-size: calc(25px + 0.5vw);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.font{
-   font-size: 30px;
+.font {
+  font-size: 30px;
 }
-.titilebold{
-   font-family: prompt-sarabun-bold;
+.titilebold {
+  font-family: prompt-sarabun-bold;
 }
-.titile{
-     font-family: prompt-regular;
-     color: #3f51b5;   
-     
+.titile {
+  font-family: prompt-regular;
+  color: #3f51b5;
 }
-.titilecenter{
-     font-family: prompt-regular;
-     color: #3f51b5;   
-     font-size: calc(30px + 0.5vw);
+.titilecenter {
+  font-family: prompt-regular;
+  color: #3f51b5;
+  font-size: calc(30px + 0.5vw);
 }
-.boxtitile{
-     font-family: prompt-regular;
-      color: white;
+.boxtitile {
+  font-family: prompt-regular;
+  color: white;
 }
-.brx{
-    border: 1px solid red;
-}
-
-.clblue{color:#3A9DFF;}
-.clblue1{color:#3f51b5;}
-.clblue2{color:#304147}
-
-.bggrey1{ background-color: #F3F4F5;}
-.bggrey2{ background-color: #DEDEDE;}
-.bggrey3{ background-color: #E5ECEF;}
-.bgblue{ background-color: #3A9DFF;}
-.bgblue1{ background-color: #64B2FF;}
-.bgblue2{ background-color: #3f51b5;}
-.bgbrown{ background-color: #662A10;}
-
-.bgbottomall{
-  background-color: #3A9DFF;
+.brx {
+  border: 1px solid red;
 }
 
+.clblue {
+  color: #3a9dff;
+}
+.clblue1 {
+  color: #3f51b5;
+}
+.clblue2 {
+  color: #304147;
+}
+
+.bggrey1 {
+  background-color: #f3f4f5;
+}
+.bggrey2 {
+  background-color: #dedede;
+}
+.bggrey3 {
+  background-color: #e5ecef;
+}
+.bgblue {
+  background-color: #3a9dff;
+}
+.bgblue1 {
+  background-color: #64b2ff;
+}
+.bgblue2 {
+  background-color: #3f51b5;
+}
+.bgbrown {
+  background-color: #662a10;
+}
+
+.bgbottomall {
+  background-color: #3a9dff;
+}
 
 .bgbottom {
   background-image: url("../statics/image/homepage4.png");
@@ -80,13 +98,11 @@ body{
   max-width: 1920px;
   width: 100%;
   height: 730px;
-  
 }
 .bgbottommb {
   background-repeat: no-repeat;
   width: 100%;
   height: 600px;
-  
 }
 .bghome {
   background-image: url("../statics/image/homepage-cover.jpg");
@@ -136,19 +152,18 @@ body{
   width: 100%;
   height: 500px;
 }
-.loginhome{
-   background-image: url("../statics/image/login/bg-login.png");
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
+.loginhome {
+  background-image: url("../statics/image/login/bg-login.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: scroll;
-   max-width: 1920px;
-   width: 100%;
-   min-height:900px;
-  height:  calc(100vh - 6ex);
- 
+  max-width: 1920px;
+  width: 100%;
+  min-height: 900px;
+  height: calc(100vh - 6ex);
 }
-.bgadmin{
+.bgadmin {
   background-image: url("../statics/gateway/gatewaybg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -156,18 +171,16 @@ body{
   background-attachment: scroll;
   max-width: 1920px;
   width: 100%;
-  min-height:900px;
-  height:  calc(100vh - 6ex);
-
+  min-height: 900px;
+  height: calc(100vh - 6ex);
 }
-.bgadminMB{
+.bgadminMB {
   background-image: url("../statics/gateway/gatewaybg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
-  height:  calc(100vh - 58px);
- 
+  height: calc(100vh - 58px);
 }
 .loginadventures {
   background-image: url("../statics/image/loginadventures/adventures.png");
@@ -177,9 +190,8 @@ body{
   background-attachment: scroll;
   max-width: 1920px;
   width: 100%;
-  min-height:900px;
-  height:  calc(100vh - 6ex);
-  
+  min-height: 900px;
+  height: calc(100vh - 6ex);
 }
 .logindiscovery {
   background-image: url("../statics/image/logindiscovery/discovery.png");
@@ -189,9 +201,8 @@ body{
   background-attachment: scroll;
   max-width: 1920px;
   width: 100%;
-  min-height:900px;
-   height:  calc(100vh - 6ex);
-  
+  min-height: 900px;
+  height: calc(100vh - 6ex);
 }
 .loginonet {
   background-image: url("../statics/image/loginonet/onet.png");
@@ -201,10 +212,9 @@ body{
   background-attachment: scroll;
   max-width: 1920px;
   width: 100%;
-  min-height:900px;
-  height:  calc(100vh - 6ex);
-
-} 
+  min-height: 900px;
+  height: calc(100vh - 6ex);
+}
 /* mind */
 .bg {
   background-image: url("../statics/bg.png");
@@ -244,7 +254,7 @@ body{
 .caption {
   width: calc(28px + 1vw);
   height: calc(28px + 1vw);
-  background-color: #027BE1;
+  background-color: #027be1;
   color: #ffffff;
   /* font-size: calc(10px + 1vw); */
   font-weight: bold;
@@ -316,5 +326,3 @@ body{
 .bg4 {
   background-color: #ff6f00;
 }
-
-
