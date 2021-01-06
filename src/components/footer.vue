@@ -74,7 +74,7 @@
                 lass="text-white"
                 onclick="window.open('https://www.google.com/maps/place/%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B8%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%9E%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%8B%E0%B9%8C/@13.7487136,100.5470682,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29ec3baece621:0xfc8b407be8f878bb!8m2!3d13.7487136!4d100.5492569', '_blank')"
                 >1673/26 อาคารวิทยุคอมเพล็กซ์ ถนนเพชรบุรีตัดใหม่ แขวงมักกะสัน
-                เขตราชเทวี 10400</span
+                เขตราชเทวี กรุงเทพฯ 10400</span
               >
             </span>
           </div>
