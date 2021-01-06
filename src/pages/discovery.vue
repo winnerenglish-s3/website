@@ -731,7 +731,7 @@
             <q-img style="height:400px" class="bg-block relative-position" src="../statics/image/discovery/bgPromotion.png">
             <div class="shadow-5 absolute-center bg-white" :style="innerWidth > 750 ?'width:90%;max-width:900px;height:250px':'width:90%;max-width:330px;height:350px'" style="border-radius:10px">
               <div class=" absolute-center full-width full-height" :class="innerWidth > 750 ?'q-pt-xl':'q-pt-md'">
-                  <div class="txcl2" :class="innerWidth > 750 ?'text-h4':'text-h5'"><b>มอบความรู้เป็นของขวัญสุดพิเศษ<br v-if="innerWidth < 750 "/> กับโปรโมชั่นตอนรับปี 2021</b></div>
+                  <div class="txcl2" :class="innerWidth > 750 ?'text-h4':'text-h5'"><b>มอบความรู้เป็นของขวัญสุดพิเศษ<br v-if="innerWidth < 750 "/> กับโปรโมชั่นต้อนรับปี 2021</b></div>
                  
                     <span class="block txcl4" :class="innerWidth > 750  ?'text-h4 q-my-md':'text-h5 q-my-xl'"><b>จากราคา <strike>2,400</strike> ลดเหลือเพียง<br v-if="innerWidth < 750" /> <span class="txcl3 text-h2"><b>1,200 บาท</b></span> เท่านั้น !<sup>*</sup></b></span>
                   <div class="txcl2" :class="innerWidth > 750  ?'text-h4':'text-h5'">*ระยะเวลาโปรโมชั่น <br v-if="innerWidth < 750" /> 1 มกราคม 2564 - 31 มกราคม 2564 นี้เท่านั้น!</div>
