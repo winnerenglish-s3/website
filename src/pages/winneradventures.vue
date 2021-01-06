@@ -2,7 +2,7 @@
   <q-page>
     <div align="center">
       <q-resize-observer @resize="onResize" />
-      <q-card>
+      <q-card v-if="innerWidth > 1023">
         <div class="loginadventures">
           <div>
             <div class="relative-position">
@@ -15,31 +15,49 @@
               </div>
             </div>
             <div align="center">
-              <div class="row" style="width:100%;max-width:1000px">
-                <div class="col-12 q-pa-md">
-                  <q-btn
-                    push
-                    class="btn bgbrown text-white text-h5 text-bold"
-                    style="max-width:500px;width:100%;"
-                    label="Winner Adventures"
-                    onclick="window.open('https://app.winner-english.com', '_blank')"
-                  />
+              <div class="row" style="width:100%;max-width:1000px;height:400px">
+                <div class="col-12">
+                  <a
+                    href="https://app.winner-english.com"
+                    target="_blank"
+                    style="text-decoration:none;"
+                  >
+                    <q-btn
+                      push
+                      class="q-my-sm btn text-white row transparent "
+                      style="width:210px;height:50px;margin-top:20px"
+                    >
+                      <span>
+                        <q-img
+                          class="q-my-md z-top"
+                          style="width:220px;margin-top:-20px"
+                          src="../statics/image/loginadventures/lessonAdventure.png"
+                        />
+                      </span>
+                    </q-btn>
+                  </a>
                 </div>
-                <div class="col-12 q-pa-md">
-                  <q-btn
-                    push
-                    class="btn bgbrown text-white text-h5 text-bold"
-                    style="max-width:500px;width:100%;"
-                    label="Adventures Plus"
-                    onclick="window.open('https://adventures-plus-teacher.web.app/', '_blank')"
-                  />
+                <div class="col-12 self-end">
+                  <a
+                    href="https://tas.winner-english.com/"
+                    target="_blank"
+                    style="text-decoration:none;"
+                  >
+                    <q-btn
+                      push
+                      class="q-my-sm btn bgbrown2 text-white"
+                      size="25px"
+                      style="width:300px"
+                      ><div class="itimfont">ระบบผู้ช่วยครู</div></q-btn
+                    >
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </q-card>
-      <!-- <div align="center" v-if="innerWidth < 1024" class="loginadventures">
+      <div align="center" v-if="innerWidth < 1024" class="loginadventures">
         <div class="row justify-center q-pt-xl">
           <q-img
             src="../statics/image/loginadventures/name-adventures.png"
@@ -47,30 +65,58 @@
           />
         </div>
         <div class="row q-pa-md">
-          <div class="col-12 q-pt-xl">
+          <div class="col-12">
             <div>
+              <a
+                v-if="!btnMB"
+                href="https://mainapp.winner-english.com/"
+                target="_blank"
+                style="text-decoration:none;"
+              >
+                <q-btn class="q-my-sm btnmb text-white bgbrown2" push>
+                  <div>
+                    <q-img
+                      src="../statics/image/logindiscovery/vector.png"
+                      style="width:48px;margin-left:20px;margin-top:-5px"
+                      class="z-top absolute-left"
+                    ></q-img>
+                  </div>
+                  <div class="itimfont">บทเรียน</div></q-btn
+                >
+              </a>
               <q-btn
+                v-if="btnMB"
+                :class="{ 'bg-grey': btnMB == false, bgbrown2: btnMB != false }"
                 push
-                no-caps
-                class="q-my-sm btnmb bgbrown text-white"
-                label="WINNER ADVENTURES"
-                @click="comingSoon()"
-              />
+                class="q-my-sm btnmb text-white"
+              >
+                <div class="itimfont">บทเรียน</div>
+              </q-btn>
             </div>
           </div>
           <div class="col-12">
             <div>
+              <a
+                v-if="!btnMB"
+                href="https://tas.winner-english.com/"
+                target="_blank"
+                style="text-decoration:none;"
+              >
+                <q-btn push class="q-my-sm btnmb bgbrown2 text-white"
+                  ><div class="itimfont">ระบบผู้ช่วยครู</div></q-btn
+                >
+              </a>
               <q-btn
+                v-if="btnMB"
+                :class="{ 'bg-grey': btnMB == false, bgbrown2: btnMB != false }"
                 push
-                no-caps
-                class="q-my-sm btnmb bgbrown text-white"
-                label="Adventures Plus"
-                @click="comingSoon()"
-              />
+                class="q-my-sm btnmb text-white"
+                ><div class="itimfont">ระบบผู้ช่วยครู</div></q-btn
+              >
             </div>
           </div>
         </div>
-      </div>-->
+      </div>
     </div>
   </q-page>
 </template>
@@ -79,6 +125,7 @@
 export default {
   data() {
     return {
+      btnMB: false,
       innerWidth: window.innerWidth,
       innerHeight: window.innerHeight
     };
@@ -116,5 +163,8 @@ export default {
   border-radius: 20px;
   width: 100%;
   max-width: 385px;
+}
+.bgbrown2 {
+  background-color: #a04e05;
 }
 </style>
