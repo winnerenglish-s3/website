@@ -366,10 +366,7 @@
           </div>
         </div>
         <!-- ข้อความส่วนสอง โครงสร้างบทเรียน-->
-          <div class="row q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
-            <div class="self-center col-md-6 col-sm-12 col-xs-12 q-px-md">
-              <q-img :src="graph" style="max-width:500px;" />
-            </div>
+          <div class="row reverse q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
             <div
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md"
             >
@@ -392,6 +389,9 @@
                  
                 </span>
               </div>
+            </div>
+            <div class="self-center col-md-6 col-sm-12 col-xs-12 q-px-md">
+              <q-img :src="graph" style="max-width:500px;" />
             </div>
           </div>
           <!-- ข้อความส่วนสาม ระดับการเรียนรู้-->
@@ -491,7 +491,7 @@
                   <div><q-input mask="##########" ref="tel" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="tel" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
-                  <div style="font-size:20px">อีเมล์ (ผู้ปกครอง)</div>
+                  <div style="font-size:20px">อีเมล (ผู้ปกครอง)</div>
                   <div><q-input ref="email" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="email" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
@@ -523,7 +523,7 @@
                   <div><q-input ref="tel" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="tel" mask="##########" dense bg-color="white" /></div>
                 </div>
                 <div align="center" style="max-width:400px;width:100%" class="q-mt-sm">
-                  <div style="font-size:20px" align="left">อีเมล์ (ผู้ปกครอง)</div>
+                  <div style="font-size:20px" align="left">อีเมล (ผู้ปกครอง)</div>
                   <div><q-input ref="email" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="email" dense bg-color="white" /></div>
                 </div>
                 <div align="center" style="max-width:400px;width:100%" class="q-mt-sm">
