@@ -1,28 +1,32 @@
 /* app global css */
-@font-face{
-font-family: prompt-regular;
-src:url(../assets/Arabica.ttf)
+@font-face {
+  font-family: prompt-regular;
+  src: url(../assets/Arabica.ttf);
 }
-@font-face{
-font-family: prompt-Italic;
-src:url(../assets/Arabica-Italic.ttf)
+@font-face {
+  font-family: prompt-Italic;
+  src: url(../assets/Arabica-Italic.ttf);
 }
-@font-face{
-font-family: prompt-sarabun;
-src:url(../assets/THSarabun.ttf)
+@font-face {
+  font-family: prompt-sarabun;
+  src: url(../assets/THSarabun.ttf);
 }
-@font-face{
-font-family: prompt-sarabun-bold;
-src:url(../assets/THSarabun-Bold.ttf)
+@font-face {
+  font-family: prompt-sarabun-bold;
+  src: url(../assets/THSarabun-Bold.ttf);
+}
+@font-face {
+  font-family: prompt-itim;
+  src: url(../assets/Itim-Regular.ttf);
 }
 
 /* html{
   scroll-behavior: smooth;
 } */
-body{
+body {
   /* font-family: prompt-regular; */
   font-family: prompt-sarabun;
-  color: #6E6B6B;
+  color: #6e6b6b;
   font-size: calc(25px + 0.2vw);
 }
 .fontphone {
@@ -34,6 +38,9 @@ body{
 }
 .font {
   font-size: 30px;
+}
+.itimfont {
+  font-family: prompt-itim;
 }
 .titilebold {
   font-family: prompt-sarabun-bold;
