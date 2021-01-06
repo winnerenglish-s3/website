@@ -8,13 +8,16 @@
             <div style="height:240px"></div>
             <div class="relative-position">
               <div class="absolute-bottom row justify-center q-pb-lg">
-                <q-img src="../statics/image/login/login-head.png" style="max-width:450px;" />
+                <q-img
+                  src="../statics/image/login/login-head.png"
+                  style="max-width:450px;"
+                />
               </div>
             </div>
 
             <div align="center">
-              <div class="row q-py-md" style="width:100%;max-width:1000px">
-                <div class="col-3">
+              <div class="row q-py-md" style="width:100%;max-width:1150px">
+                <div class="col">
                   <transition
                     appear
                     enter-active-class="animated1 fadeInUp"
@@ -24,7 +27,34 @@
                       v-if="cardDisable"
                       class="boxpc shadow-10"
                       src="../statics/image/login/disable.png"
-                      style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                      style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                    />
+                  </transition>
+                  <transition appear enter-active-class="animated2 flipInY">
+                    <q-btn
+                      v-if="cardOpen"
+                      @click="openPlacement()"
+                      push
+                      class="boxpc shadow-10 hvr-grow"
+                    >
+                      <q-img
+                        src="../statics/image/login/winner-placement.png"
+                        style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                      />
+                    </q-btn>
+                  </transition>
+                </div>
+                <div class="col">
+                  <transition
+                    appear
+                    enter-active-class="animated1 fadeInUp"
+                    leave-active-class="animated1 flipOutY"
+                  >
+                    <q-img
+                      v-if="cardDisable"
+                      class="boxpc shadow-10"
+                      src="../statics/image/login/disable.png"
+                      style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                     />
                   </transition>
                   <transition appear enter-active-class="animated2 flipInY">
@@ -36,13 +66,13 @@
                     >
                       <q-img
                         src="../statics/image/login/winner-discovery.png"
-                        style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                        style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                       />
                     </q-btn>
                   </transition>
                 </div>
 
-                <div class="col-3">
+                <div class="col">
                   <transition
                     appear
                     enter-active-class="animated2 fadeInUp"
@@ -52,7 +82,7 @@
                       v-if="cardDisable"
                       class="boxpc shadow-10"
                       src="../statics/image/login/disable.png"
-                      style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                      style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                     />
                   </transition>
                   <transition appear enter-active-class="animated2 flipInY">
@@ -64,13 +94,13 @@
                     >
                       <q-img
                         src="../statics/image/login/winner-adventures.png"
-                        style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                        style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                       />
                     </q-btn>
                   </transition>
                 </div>
 
-                <div class="col-3">
+                <div class="col">
                   <transition
                     appear
                     enter-active-class="animated3 fadeInUp"
@@ -80,20 +110,25 @@
                       v-if="cardDisable"
                       class="boxpc shadow-10"
                       src="../statics/image/login/disable.png"
-                      style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                      style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                     />
                   </transition>
                   <transition appear enter-active-class="animated2 flipInY">
-                    <q-btn v-if="cardOpen" to="/winneronet" push class="boxpc shadow-10 hvr-grow">
+                    <q-btn
+                      v-if="cardOpen"
+                      to="/winneronet"
+                      push
+                      class="boxpc shadow-10 hvr-grow"
+                    >
                       <q-img
                         src="../statics/image/login/winner-onet.png"
-                        style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                        style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                       />
                     </q-btn>
                   </transition>
                 </div>
 
-                <div class="col-3">
+                <div class="col">
                   <transition
                     appear
                     enter-active-class="animated3 fadeInUp"
@@ -103,14 +138,19 @@
                       v-if="cardDisable"
                       class="boxpc shadow-10"
                       src="../statics/image/login/disable.png"
-                      style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                      style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                     />
                   </transition>
                   <transition appear enter-active-class="animated2 flipInY">
-                    <q-btn v-if="cardOpen" to="/winnerwork" push class="boxpc shadow-10 hvr-grow">
+                    <q-btn
+                      v-if="cardOpen"
+                      to="/winnerwork"
+                      push
+                      class="boxpc shadow-10 hvr-grow"
+                    >
                       <q-img
                         src="../statics/image/login/work.png"
-                        style="width:220px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                        style="width:210px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
                       />
                     </q-btn>
                   </transition>
@@ -120,16 +160,28 @@
           </div>
         </div>
       </q-card>
-      <div align="center" style="height:100vh" v-if="innerWidth < 1024" class="loginhome">
+      <div
+        align="center"
+        style="height:100vh"
+        v-if="innerWidth < 1024"
+        class="loginhome"
+      >
         <div style="width:90%">
           <div style="height:20px"></div>
           <div class="row justify-center q-pt-lg">
-            <q-img src="../statics/image/login/login-head.png" style="max-width:450px;" />
+            <q-img
+              src="../statics/image/login/login-head.png"
+              style="max-width:450px;"
+            />
           </div>
           <div class="row q-py-md q-px-md" style="width:100%;max-width:1000px">
             <div class="col-12">
               <transition appear enter-active-class="animated1 fadeInLeft">
-                <q-btn to="/winnerdiscovery" push class="shadow-10 boxmb q-my-md hvr-grow">
+                <q-btn
+                  to="/winnerdiscovery"
+                  push
+                  class="shadow-10 boxmb q-my-md hvr-grow"
+                >
                   <q-img
                     src="../statics/image/login/discovery-mobile.png"
                     style="width:400px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
@@ -139,7 +191,11 @@
             </div>
             <div class="col-12">
               <transition appear enter-active-class="animated2 fadeInLeft">
-                <q-btn to="/winneradventures" push class="shadow-10 boxmb q-my-md hvr-grow">
+                <q-btn
+                  to="/winneradventures"
+                  push
+                  class="shadow-10 boxmb q-my-md hvr-grow"
+                >
                   <q-img
                     src="../statics/image/login/adventures-mobile.png"
                     style="width:400px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
@@ -149,7 +205,11 @@
             </div>
             <div class="col-12">
               <transition appear enter-active-class="animated3 fadeInLeft">
-                <q-btn to="/winneronet" push class="shadow-10 boxmb q-my-md hvr-grow">
+                <q-btn
+                  to="/winneronet"
+                  push
+                  class="shadow-10 boxmb q-my-md hvr-grow"
+                >
                   <q-img
                     src="../statics/image/login/onet-mobile.png"
                     style="width:400px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
@@ -159,7 +219,11 @@
             </div>
             <div class="col-12">
               <transition appear enter-active-class="animated3 fadeInLeft">
-                <q-btn to="/winnerwork" push class="shadow-10 boxmb q-my-md hvr-grow">
+                <q-btn
+                  to="/winnerwork"
+                  push
+                  class="shadow-10 boxmb q-my-md hvr-grow"
+                >
                   <q-img
                     src="../statics/image/login/work-mobile.png"
                     style="width:400px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
@@ -181,7 +245,7 @@ export default {
       innerWidth: window.innerWidth,
       innerHeight: window.innerHeight,
       cardDisable: true,
-      cardOpen: false,
+      cardOpen: false
     };
   },
   methods: {
@@ -201,18 +265,21 @@ export default {
     comingSoon() {
       this.$q.dialog({
         title: "ไม่สามารถใช้งานได้",
-        message: "ระบบนี้จะสามารถใช้ได้เฉพาะช่วงเวลาเปิดเทอมเท่านั้น",
+        message: "ระบบนี้จะสามารถใช้ได้เฉพาะช่วงเวลาเปิดเทอมเท่านั้น"
       });
     },
+    openPlacement() {
+      window.open("https://we2-placement.web.app/");
+    }
   },
   mounted() {
     this.cardOne();
     this.cardTwo();
-  },
+  }
 };
 </script>
 
-<style  scoped>
+<style scoped>
 .boxpc {
   border-radius: 20px;
   min-height: 300px;
