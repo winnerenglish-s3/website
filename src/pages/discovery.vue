@@ -198,7 +198,7 @@
                 <q-carousel
                   swipeable
                   animated
-                  v-model="slide"
+                  v-model="skillSlide"
                   navigation
                   infinite
                   autoplay
@@ -484,23 +484,23 @@
               <div class="col txcl2 q-pl-sm">
                 <div align="left" class="q-mt-sm">
                   <div style="font-size:20px">ชื่อ-นามสกุล (ผู้ปกครอง)</div>
-                  <div><q-input outlined v-model="name" dense bg-color="white" style="width:350px"/></div>
+                  <div><q-input ref="name" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="name" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
                   <div style="font-size:20px">เบอร์โทรศัพท์ (ผู้ปกครอง)</div>
-                  <div><q-input outlined v-model="tel" dense bg-color="white" style="width:350px"/></div>
+                  <div><q-input mask="##########" ref="tel" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="tel" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
                   <div style="font-size:20px">อีเมล์ (ผู้ปกครอง)</div>
-                  <div><q-input outlined v-model="email" dense bg-color="white" style="width:350px"/></div>
+                  <div><q-input ref="email" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="email" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
                   <div style="font-size:20px">จังหวัด</div>
-                  <div><q-select outlined v-model="province" dense bg-color="white" style="width:350px" :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
+                  <div><q-select ref="province" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="province" dense bg-color="white" style="width:350px" :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
                 </div>
                  <div align="left" class="q-mt-sm">
                   <div style="font-size:20px">ระดับชั้นที่กำลังศึกษา (ผู้เรียน)</div>
-                  <div><q-select outlined v-model="studentClass" dense bg-color="white" style="width:350px" :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
+                  <div><q-select ref="studentClass" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="studentClass" dense bg-color="white" style="width:350px" :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
                 </div>
                 <div class="q-mt-md">
                   <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" style="width:200px;font-size:20px" />
@@ -514,25 +514,25 @@
                 <div class=" text-h4 titile  q-mb-md">วัดระดับภาษา ฟรี!!<br><div class="text-h5">สอบถามข้อมูลเพิ่มเติม</div></div>
               </div>
               <div class="txcl2 q-pl-sm">
-                <div align="center" style="max-width:450px;width:100%" class="q-mt-sm ">
+                <div align="center" style="max-width:400px;width:100%" class="q-mt-sm ">
                   <div style="font-size:20px" align="left">ชื่อ-นามสกุล (ผู้ปกครอง)</div>
-                  <div><q-input outlined v-model="name" dense bg-color="white" /></div>
+                  <div><q-input ref="name" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="name" dense bg-color="white" /></div>
                 </div>
-                <div align="center" style="max-width:450px;width:100%" class="q-mt-sm">
+                <div align="center" style="max-width:400px;width:100%" class="q-mt-sm">
                   <div style="font-size:20px" align="left">เบอร์โทรศัพท์ (ผู้ปกครอง)</div>
-                  <div><q-input outlined v-model="tel" dense bg-color="white" /></div>
+                  <div><q-input ref="tel" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="tel" mask="##########" dense bg-color="white" /></div>
                 </div>
-                <div align="center" style="max-width:450px;width:100%" class="q-mt-sm">
+                <div align="center" style="max-width:400px;width:100%" class="q-mt-sm">
                   <div style="font-size:20px" align="left">อีเมล์ (ผู้ปกครอง)</div>
-                  <div><q-input outlined v-model="email" dense bg-color="white" /></div>
+                  <div><q-input ref="email" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="email" dense bg-color="white" /></div>
                 </div>
-                <div align="center" style="max-width:450px;width:100%" class="q-mt-sm">
+                <div align="center" style="max-width:400px;width:100%" class="q-mt-sm">
                   <div style="font-size:20px" align="left">จังหวัด</div>
-                  <div><q-select outlined v-model="province" dense bg-color="white"  :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
+                  <div><q-select ref="province" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="province" dense bg-color="white"  :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
                 </div>
-                 <div align="center" style="max-width:450px;width:100%" class="q-mt-sm">
+                 <div align="center" style="max-width:400px;width:100%" class="q-mt-sm">
                   <div style="font-size:20px" align="left">ระดับชั้นที่กำลังศึกษา (ผู้เรียน)</div>
-                  <div><q-select outlined v-model="studentClass" dense bg-color="white"  :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
+                  <div><q-select ref="studentClass" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="studentClass" dense bg-color="white"  :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
                 </div>
                 <div class="q-my-lg">
                   <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" style="width:200px;font-size:20px" />
@@ -624,7 +624,7 @@
                 <q-carousel
                   swipeable
                   animated
-                  v-model="slide2"
+                  v-model="abilitySlide"
                   navigation
                   infinite
                   autoplay
@@ -726,7 +726,6 @@
             </div>
           </div>
         </div>
-          <!-- ------------------------ -->
           <!-- ข้อความส่วนที่หก Promotion-->
          
             <q-img style="height:400px" class="bg-block relative-position" src="../statics/image/discovery/bgPromotion.png">
@@ -1304,6 +1303,9 @@
 <script>
 import appFooter from "../components/footer.vue";
 export default {
+   components: {
+    appFooter
+  },
   data() {
     return {
       graph: "../statics/image/discovery/graph.png",
@@ -1313,17 +1315,34 @@ export default {
       reading: "../statics/image/discovery/reading.png",
       writing: "../statics/image/discovery/writing.png",
       conversation: "../statics/image/discovery/conversation.png",
-      slide: 1,
-      slide2: 1,
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight,
-      policyOrCondition:"",
-      name:"",
-      tel:"",
-      email:"",
-      studentClass:"",
-      studentList:[],
-      province:"",
+      skillSlide: 1, //slide ทักษะทั้งหมด
+      abilitySlide: 1, //slide ความสามารถของโปรแกรม
+      innerWidth: window.innerWidth, //ความกว้างหน้า
+      innerHeight: window.innerHeight, //ความสูงหน้าจอ
+      policyOrCondition:"", //เปิดนโยบายหรือเงื่อนไข
+      name:"", //ชื่อผู้ปกครอง
+      tel:"", //เบอร์โทรผู้ปกครอง
+      email:"", //อีเมล์ผู้ปกครอง
+      studentClass:"", //ชั้นเรียนที่เลือก
+      province:"", //จังหวัดที่เลือก
+      studentList:['ไม่ระบุ',
+'ป.1',
+'ป.2',
+'ป.3',
+'ป.4',
+'ป.5',
+'ป.6',
+'ม.1',
+'ม.2',
+'ม.3',
+'ม.4',
+'ม.5',
+'ม.6',
+'ปวช.',
+'ปวส.',
+'ปริญญาตรี',
+], //ชั้นเรียนทั้งหมด
+    
       provinceList:['กระบี่',
 'กรุงเทพมหานคร',
 'กาญจนบุรี',
@@ -1401,21 +1420,21 @@ export default {
 'อุตรดิตถ์',
 'อุทัยธานี',
 'อุบลราชธานี',
-],
+], //จังหวัดทั้งหมด
       
     };
-  },
-  components: {
-    appFooter
   },
   methods: {
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
     },
+    //เปิดหน้าใหม่ นโยบาย or เงื่อนไข บริษัท
     openNewWindows(){
       if (this.policyOrCondition == "policy") {
+        //ถ้าเลือกนโยบาย
          window.open("/policy")
       }else{
+        //ถ้าเลือกเงื่อนไข
          window.open("/condition")
       }
     
