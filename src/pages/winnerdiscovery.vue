@@ -16,7 +16,7 @@
             </div>
             <div align="center">
               <div class="row q-py-md" style="width:100%;max-width:650px">
-                <div class="col-6">
+                <div class="col-6 ">
                   <div>
                     <a
                       href="https://mainapp.winner-english.com/"
@@ -25,39 +25,21 @@
                     >
                       <q-btn
                         push
-                        class="q-my-sm btn bgblue2 text-white row"
-                        style="width:300px"
-                        size="80px"
+                        class="q-my-sm btn bgblue2 text-white row transparent "
+                        style="width:210px;height:50px;margin-top:20px"
                       >
-                        <div>
+                        <span>
                           <q-img
-                            class="q-my-md"
-                            style="width:150px "
-                            src="../statics/image/logindiscovery/discovery-btn.png"
+                            class="q-my-md z-top"
+                            style="width:220px;margin-top:-20px"
+                            src="../statics/image/logindiscovery/lessondiscovery.png"
                           />
-                          <div class="text-h3">บทเรียน</div>
-                        </div>
-                      </q-btn>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="https://placement.winner-english.com/"
-                      target="_blank"
-                      style="text-decoration:none;"
-                    >
-                      <q-btn
-                        push
-                        class="q-my-sm btn bgblue2 text-white"
-                        size="55px"
-                        style="width:300px"
-                      >
-                        <div class="text-h3">สอบวัดระดับ</div>
+                        </span>
                       </q-btn>
                     </a>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 " style="height:320px">
                   <div>
                     <a
                       href="https://exam.winner-english.com/"
@@ -69,8 +51,8 @@
                         class="q-my-sm btn bgblue2 text-white"
                         size="25px"
                         style="width:300px"
-                        label="PRE-TEST / POST-TEST"
-                      />
+                        ><div class="itimfont">สอบก่อน / หลังเรียน</div></q-btn
+                      >
                     </a>
                   </div>
 
@@ -85,41 +67,11 @@
                         class="q-my-sm btn bgblue2 text-white"
                         size="25px"
                         style="width:300px"
-                        label="ประเมินความพึงพอใจ"
-                      />
+                        ><div class="itimfont">ประเมินความพึงพอใจ</div></q-btn
+                      >
                     </a>
                   </div>
-                  <div>
-                    <a
-                      href="https://app.review.winner-english.com/"
-                      target="_blank"
-                      style="text-decoration:none;"
-                    >
-                      <q-btn
-                        push
-                        class="q-my-sm btn bgblue2 text-white"
-                        size="25px"
-                        style="width:300px"
-                        label="ทบทวนสาระสำคัญ"
-                      />
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="https://review-winner.web.app/"
-                      target="_blank"
-                      style="text-decoration:none;"
-                    >
-                      <q-btn
-                        push
-                        class="q-my-sm btn bgblue2 text-white"
-                        size="25px"
-                        style="width:300px"
-                        label="ทบทวนบทเรียน"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-12 q-mb-md">
+                  <div class="">
                     <a
                       href="https://tas.winner-english.com/"
                       target="_blank"
@@ -130,8 +82,8 @@
                         class="q-my-sm btn bgblue2 text-white"
                         size="25px"
                         style="width:300px"
-                        label="ระบบผู้ช่วยครู"
-                      />
+                        ><div class="itimfont">ระบบผู้ช่วยครู</div></q-btn
+                      >
                     </a>
                   </div>
                 </div>
@@ -142,7 +94,10 @@
       </q-card>
       <div align="center" v-if="innerWidth < 1024" class="logindiscovery">
         <div class="row justify-center q-pt-xl">
-          <q-img src="../statics/image/logindiscovery/name-discovery.png" style="max-width:700px;" />
+          <q-img
+            src="../statics/image/logindiscovery/name-discovery.png"
+            style="max-width:700px;"
+          />
         </div>
         <div class="row q-pa-md">
           <div class="col-12">
@@ -153,74 +108,25 @@
                 target="_blank"
                 style="text-decoration:none;"
               >
-                <q-btn class="q-my-sm btnmb text-white bgblue2" push label="บทเรียน" />
+                <q-btn class="q-my-sm btnmb text-white bgblue2" push>
+                  <div>
+                    <q-img
+                      src="../statics/image/logindiscovery/vector.png"
+                      style="width:48px;margin-left:20px;margin-top:-5px"
+                      class="z-top absolute-left"
+                    ></q-img>
+                  </div>
+                  <div class="itimfont">บทเรียน</div></q-btn
+                >
               </a>
               <q-btn
                 v-if="btnMB"
-                :class="{'bg-grey':btnMB ==  false,'bgblue2':btnMB != false,}"
+                :class="{ 'bg-grey': btnMB == false, bgblue2: btnMB != false }"
                 push
                 class="q-my-sm btnmb text-white"
-                label="บทเรียน"
-              />
-            </div>
-          </div>
-          <div class="col-12">
-            <div>
-              <a
-                v-if="!btnMB"
-                aria-disabled
-                href="https://placement.winner-english.com/"
-                target="_blank"
-                style="text-decoration:none;"
               >
-                <q-btn push class="q-my-sm btnmb text-white bgblue2" label="สอบวัดระดับ" />
-              </a>
-              <q-btn
-                v-if="btnMB"
-                push
-                :class="{'bg-grey':btnMB ==  false,'bgblue2':btnMB != false,}"
-                class="q-my-sm btnmb text-white"
-                label="สอบวัดระดับ"
-              />
-            </div>
-          </div>
-          <div class="col-12">
-            <div>
-              <a
-                v-if="!btnMB"
-                :class="{'bg-grey':btnMB ==  false,'bgblue2':btnMB != false,}"
-                href="https://review-winner.web.app/"
-                target="_blank"
-                style="text-decoration:none;"
-              >
-                <q-btn push class="q-my-sm btnmb bgblue2 text-white" label="ทบทวนบทเรียน" />
-              </a>
-              <q-btn
-                v-if="btnMB"
-                :class="{'bg-grey':btnMB ==  false,'bgblue2':btnMB != false,}"
-                push
-                class="q-my-sm btnmb text-white"
-                label="ทบทวนบทเรียน"
-              />
-            </div>
-          </div>
-          <div class="col-12">
-            <div>
-              <a
-                v-if="!btnMB"
-                href="https://tas.winner-english.com/"
-                target="_blank"
-                style="text-decoration:none;"
-              >
-                <q-btn push class="q-my-sm btnmb bgblue2 text-white" label="ระบบผู้ช่วยครู" />
-              </a>
-              <q-btn
-                v-if="btnMB"
-                :class="{'bg-grey':btnMB ==  false,'bgblue2':btnMB != false,}"
-                push
-                class="q-my-sm btnmb text-white"
-                label="ระบบผู้ช่วยครู"
-              />
+                <div class="itimfont">บทเรียน</div>
+              </q-btn>
             </div>
           </div>
 
@@ -231,7 +137,9 @@
                 target="_blank"
                 style="text-decoration:none;"
               >
-                <q-btn push class="q-my-sm btnmb bgblue2 text-white" label="PRE-TEST / POST-TEST" />
+                <q-btn push class="q-my-sm btnmb bgblue2 text-white">
+                  <div class="itimfont">PRE-TEST / POST-TEST</div></q-btn
+                >
               </a>
               <!-- <q-btn push class="q-my-sm btnmb text-white" label="PRE-TEST / POST-TEST" /> -->
             </div>
@@ -239,39 +147,43 @@
           <div class="col-12">
             <div>
               <a
-                v-if="btnMB"
+                v-if="!btnMB"
                 href="https://questionnaire.winner-english.com/"
                 target="_blank"
                 style="text-decoration:none;"
               >
-                <q-btn push class="q-my-sm btnmb bgblue2 text-white" label="ประเมินความพึงพอใจ" />
+                <q-btn push class="q-my-sm btnmb bgblue2 text-white"
+                  ><div class="itimfont">ประเมินความพึงพอใจ</div></q-btn
+                >
               </a>
               <q-btn
-                v-if="!btnMB"
+                v-if="btnMB"
                 push
-                :class="{'bg-grey':btnMB ==  false,'bgblue2':btnMB != false,}"
+                :class="{ 'bg-grey': btnMB == false, bgblue2: btnMB != false }"
                 class="q-my-sm btnmb text-white"
-                label="ประเมินความพึงพอใจ"
-              />
+                ><div class="itimfont">ประเมินความพึงพอใจ</div></q-btn
+              >
             </div>
           </div>
           <div class="col-12">
             <div>
               <a
-                v-if="btnMB"
-                href="https://app.review.winner-english.com/"
+                v-if="!btnMB"
+                href="https://tas.winner-english.com/"
                 target="_blank"
                 style="text-decoration:none;"
               >
-                <q-btn push class="q-my-sm btnmb bgblue2 text-white" label="ทบทวนสาระสำคัญ" />
+                <q-btn push class="q-my-sm btnmb bgblue2 text-white"
+                  ><div class="itimfont">ระบบผู้ช่วยครู</div></q-btn
+                >
               </a>
               <q-btn
-                v-if="!btnMB"
+                v-if="btnMB"
+                :class="{ 'bg-grey': btnMB == false, bgblue2: btnMB != false }"
                 push
-                :class="{'bg-grey':btnMB ==  false,'bgblue2':btnMB != false,}"
                 class="q-my-sm btnmb text-white"
-                label="ทบทวนสาระสำคัญ"
-              />
+                ><div class="itimfont">ระบบผู้ช่วยครู</div></q-btn
+              >
             </div>
           </div>
         </div>
@@ -297,7 +209,7 @@ export default {
 };
 </script>
 
-<style  scoped>
+<style scoped>
 .btn {
   border-radius: 10px;
   width: 450px;
