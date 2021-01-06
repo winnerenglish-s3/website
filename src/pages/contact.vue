@@ -89,17 +89,18 @@
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5014670103938!2d100.54693251520547!3d13.74860539034953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f9adf53533b%3A0x1fbefba3c62206f3!2sEdutech%20Innovation!5e0!3m2!1sth!2sth!4v1609923598885!5m2!1sth!2sth"
                   frameborder="0"
-                  style="border:0;width:100%;max-width:600px;height:300px"
+                  style="border-radius:5px;border:0;width:100%;max-width:600px;height:300px"
                   allowfullscreen=""
                   aria-hidden="false"
                   tabindex="0"
+                  class="shadow-2"
                 ></iframe>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-sm-12 col-xs-12">
+      <div class="col-md-6 col-sm-12 col-xs-12 relative-position">
         <q-img
           :class="innerWidth > 1023 ? 'bg-block' : ''"
           class="relative-position"
