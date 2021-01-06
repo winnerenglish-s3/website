@@ -32,17 +32,17 @@
           <!-- winner English เหมาะสมกับใคร-->
           <div class="row reverse q-py-md" style="width:95%;max-width:1200px;">
             <div class="self-center col-md-6 col-sm-12 col-xs-12">
-              <q-img :src="home2" style="max-width:700px;" />
+              <q-img :src="home2" style="max-width:500px;width:85%" />
             </div>
             <div
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md"
             >
               <div>
-                <div class="cl1 titilecenter desktop-only">
-                  Winner English เหมาะกับใคร ?
-                </div>
-                <div class="cl1 titilecenter mobile-only q-mt-md">
-                  Winner English<br />
+                <div
+                  class="cl1 titilecenter"
+                  :class="$q.platform.is.desktop ? '' : 'q-mt-lg'"
+                >
+                  Winner English <br v-if="innerWidth < 550" />
                   เหมาะกับใคร ?
                 </div>
                 <span
@@ -55,7 +55,7 @@
                   ออนไลน์จึงอยู่ในช่วงอายุ 6 ปี ขึ้นไป
                   และเนื้อหาที่ได้รับการพัฒนาสำหรับ นักเรียนวัยนี้โดยเฉพาะ
                   สอดคล้องตามหลักสูตรแกนกลางกระทรวงศึกษาธิการ
-                  เพื่อปูพืนฐานภาษาอังกฤษให้นักเรียนสามารถนำไปใช้ได้จริงในโรงเรียน<br />
+                  เพื่อปูพืนฐานภาษาอังกฤษให้นักเรียนสามารถนำไปใช้ได้จริงในโรงเรียน
                   และการใช้ชีวิตประจำวันอย่างมั่นใจ</span
                 >
               </div>
@@ -67,13 +67,12 @@
               class="self-center row col-md-12 col-sm-12 col-xs-12 text-left"
             >
               <div
-                class=" text-h4 cl1 titile q-py-md full-width desktop-only"
-                align="center"
+                class=" text-h4 cl1 titile q-py-md full-width"
+                :align="
+                  $q.platform.is.desktop && innerWidth > 549 ? 'center' : ''
+                "
               >
-                ทำไมต้องเลือกเรียน Winner English ?
-              </div>
-              <div class=" text-h4 cl1 titile q-py-md full-width mobile-only">
-                ทำไมต้องเลือกเรียน <br />
+                ทำไมต้องเลือกเรียน<br v-if="innerWidth < 550" />
                 Winner English ?
               </div>
               <div class="q-py-md row col-md-4 col-sm-12 col-xs-12">
@@ -209,15 +208,12 @@
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md q-px-lg"
             >
               <div>
-                <div class="cl1 titilecenter desktop-only">
-                  สำหรับผู้ปกครอง และนักเรียน
-                </div>
-                <div class="cl1 titilecenter mobile-only">
-                  สำหรับผู้ปกครอง<br />
+                <div class="cl1 titilecenter">
+                  สำหรับผู้ปกครอง<br v-if="innerWidth < 550" />
                   และนักเรียน
                 </div>
                 <span
-                  >โปรแกรมเรียนภาษาอังกฤษออนไลน์ที่สามารถจัดรูปแบบเรียนรู้<br />
+                  >โปรแกรมเรียนภาษาอังกฤษออนไลน์ที่สามารถจัดรูปแบบเรียนรู้
                   และทำแบบฝึกหัดได้ด้วยตนเอง เรียนรู้ได้ทุกที่ ทุกเวลา สนุก
                   เข้าใจง่าย ด้วยรูปแบบ VDO Animation และเทคโนโลยี Gamification
                 </span>
@@ -243,17 +239,14 @@
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md q-px-lg"
             >
               <div>
-                <div class="cl1 titilecenter">สำหรับคุณครู และโรงเรียน</div>
+                <div class="cl1 titilecenter">
+                  สำหรับคุณครู <br v-if="innerWidth < 550" />
+                  และโรงเรียน
+                </div>
                 <span class="desktop-only"
-                  >แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ ผ่านเรื่องราวการผจญภัย<br />
+                  >แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ ผ่านเรื่องราวการผจญภัย
                   ที่สนุกสนาม กระตุ้นพัฒนาการเรียนรู้ของนักเรียน พร้อมระบบช่วย
                   สนับสนุนการสอนของคุณครูอย่างมีประสิทธิภาพ
-                </span>
-                <span class="mobile-only"
-                  >แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ
-                  ผ่านเรื่องราวการผจญภัยที่สนุกสนาม
-                  กระตุ้นพัฒนาการเรียนรู้ของนักเรียนพร้อมระบบ
-                  ช่วยสนับสนุนการสอนของคุณครูอย่างมีประสิทธิภาพ
                 </span>
                 <div class="q-py-lg">
                   <q-btn
