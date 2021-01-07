@@ -416,8 +416,10 @@
               <div :class="$q.platform.is.mobile?'col-12 ':'q-mt-md'" class="txcl1">
                 <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
                   <div class="col-4"></div>
-                  <div>ดูตัวอย่าง</div>
-                  </u>
+                  <div>
+                    <a href="../statics/pdf/lv1-2.pdf" download>ดูตัวอย่าง</a>
+                  </div>
+                </u>
               </div>
             </div>
             <div class="q-pa-md col-md-4 col-sm-12 col-xs-12 q-px-md" :class="$q.platform.is.mobile?'row':''">
@@ -439,7 +441,7 @@
               <div :class="$q.platform.is.mobile?'col-12 ':'q-mt-md'" class="txcl1">
                 <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
                   <div class="col-4"></div>
-                  <div>ดูตัวอย่าง</div>
+                   <a href="../statics/pdf/lv5-6.pdf" download>ดูตัวอย่าง</a>
                   </u>
               </div>
             </div>
@@ -462,7 +464,7 @@
               <div :class="$q.platform.is.mobile?'col-12 ':'q-mt-md'" class="txcl1">
                 <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
                   <div class="col-4"></div>
-                  <div>ดูตัวอย่าง</div>
+                   <a href="../statics/pdf/lv9-10.pdf" download>ดูตัวอย่าง</a>
                   </u>
               </div>
             </div>
