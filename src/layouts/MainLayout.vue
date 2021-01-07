@@ -415,6 +415,8 @@ export default {
         this.tab = "login";
       } else if (data == "hotel") {
         this.tab = "hotel";
+      } else if (data == "contact") {
+        this.tab == "contact";
       }
     }
   },
@@ -432,7 +434,9 @@ export default {
     } else if (this.$route.name == "admin") {
       this.tab = "admin";
     } else if (this.$route.name == "hotel") {
-      this.tab = "admin";
+      this.tab = "hotel";
+    } else if (this.$route.name == "contact") {
+      this.tab = "contact";
     } else if (
       this.$route.name == "tutorial01a" ||
       this.$route.name == "login" ||
