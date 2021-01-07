@@ -106,11 +106,10 @@
       </div>
       <div class="col-md-6 col-sm-12 col-xs-12 relative-position">
         <q-img
-          :class="innerWidth > 1023 ? 'bg-block' : ''"
-          class="relative-position"
-          style="height:calc(100vh - 60px)"
-          :src="
-            innerWidth > 1023 ? '../statics/image/contactUs/bgContact.png' : ''
+          class="relative-position bg-block"
+          style="height:calc(100vh - 58px)"
+          src="
+            ../statics/image/contactUs/bgContact.png
           "
         >
           <div
