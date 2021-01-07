@@ -178,6 +178,20 @@
             <div class="col-12">
               <transition appear enter-active-class="animated1 fadeInLeft">
                 <q-btn
+                  @click="openPlacement()"
+                  push
+                  class="shadow-10 boxmb q-my-md hvr-grow"
+                >
+                  <q-img
+                    src="../statics/image/login/placement-mobile.png"
+                    style="width:400px;margin-top:-5px;margin-bottom:-5px;margin-left:-17px;margin-right:-17px"
+                  />
+                </q-btn>
+              </transition>
+            </div>
+            <div class="col-12">
+              <transition appear enter-active-class="animated1 fadeInLeft">
+                <q-btn
                   to="/winnerdiscovery"
                   push
                   class="shadow-10 boxmb q-my-md hvr-grow"
