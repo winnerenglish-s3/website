@@ -35,7 +35,9 @@
                   href="tel:02-026-0177"
                   >02-026-0177</a
                 >
-                (สำหรับนักเรียน)
+                <div class="q-ml-sm">
+                  (สำหรับนักเรียน)
+                </div>
               </div>
               <div class="row">
                 <span style="width:40px"> </span>
@@ -45,7 +47,9 @@
                   href="tel:02-252-2489"
                   >02-252-2489</a
                 >
-                (สำหรับโรงเรียน)
+                <div class="q-ml-sm">
+                  (สำหรับโรงเรียน)
+                </div>
               </div>
             </div>
             <!-- EMAIL -->
@@ -138,8 +142,8 @@
                     >
                       ชื่อ
                     </div>
-                  </template></q-input
-                >
+                  </template>
+                </q-input>
               </div>
               <!-- เบอร์โทรศัพท์ -->
               <div class="q-my-md">
@@ -157,8 +161,8 @@
                     >
                       เบอร์โทรศัพท์
                     </div>
-                  </template></q-input
-                >
+                  </template>
+                </q-input>
               </div>
               <!-- อีเมล -->
               <div>
@@ -171,8 +175,8 @@
                 >
                   <template v-slot:label>
                     <span style="font-size:18px">อีเมล</span>
-                  </template></q-input
-                >
+                  </template>
+                </q-input>
               </div>
               <!-- ช่องทางการติดต่อกลับ -->
               <div class="q-mt-md q-mb-sm">
@@ -222,7 +226,7 @@
                   v-model="detail"
                   outlined=""
                   type="textarea"
-                  style="width:95%;max-width:365px"
+                  style="width:95%;max-width:365px;font-size:18px"
                 />
               </div>
               <div class="q-mt-md">
