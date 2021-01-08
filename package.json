@@ -13,6 +13,7 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "animate.css": "^3.7.2",
+    "axios": "^0.21.1",
     "firebase-tools": "^8.1.1",
     "hover.css": "^2.3.2",
     "quasar": "^1.0.0"

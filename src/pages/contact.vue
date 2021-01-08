@@ -228,8 +228,10 @@
                   style="width:95%;max-width:365px;font-size:18px"
                 />
               </div>
+              <!-- ปุ่มส่งข้อมูล -->
               <div class="q-mt-md">
                 <q-btn
+                  @click="sendData()"
                   rounded
                   class="bgcl1 text-white"
                   label="ส่งข้อมูล"
@@ -245,6 +247,7 @@
 </template>
 
 <script>
+const axios = require("axios").default;
 export default {
   data() {
     return {
@@ -268,6 +271,25 @@ export default {
   methods: {
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
+    },
+    async sendData() {
+      let postData = {};
+      postData.sendTo = this.email;
+      postData.subject =
+        "Contact from Website จาก: " + this.name + "หัวข้อ: " + this.titleCase;
+      postData.html =
+        "รายละเอียด: " +
+        this.detail +
+        "<br>ช่องทางการติดต่อ: " +
+        this.contactWith +
+        "<br>โทร: " +
+        this.tel;
+      let url =
+        "https://us-central1-winnerenglish2-e0f1b.cloudfunctions.net/wfunctions/sendEmail";
+
+      let res = await axios.post(url, postData);
+
+      console.log(res.data);
     }
   }
 };
