@@ -429,8 +429,8 @@
                   <a
                     class="clblue1 phone"
                     style="text-decoration: none; border-bottom: 2px solid #3f51b5;"
-                    href="tel:084-323-2206"
-                  >084-323-2206</a>
+                    href="tel:02-252-2489"
+                  >02-252-2489</a>
                 </div>
               </div>
             </div>
@@ -448,8 +448,8 @@
                       <a
                         class="clblue1 phone"
                         style="text-decoration: none; border-bottom: 2px solid #3f51b5;"
-                        href="tel:084-323-2206"
-                      >084-323-2206</a>
+                        href="tel:02-252-2489"
+                      >02-252-2489</a>
                     </div>
                   </div>
                 </div>
@@ -500,20 +500,20 @@ export default {
       adventures3: "../statics/image/adventures/adventures-3.png",
       slide: 1,
       innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerHeight: window.innerHeight,
     };
   },
   components: {
-    appFooter
+    appFooter,
   },
   methods: {
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
-    }
+    },
   },
   mounted() {
     console.clear();
-  }
+  },
 };
 </script>
 

@@ -12,19 +12,7 @@ Vue.use(VueRouter);
  * async/await or return a Promise which resolves
  * with the Router instance.
  */
-var firebaseConfig = {
-  apiKey: "AIzaSyAYLNGOWZtYLE0zS4nqVTVkvfilQ0QAraM",
-  authDomain: "winnerenglish2-e0f1b.firebaseapp.com",
-  databaseURL: "https://winnerenglish2-e0f1b.firebaseio.com",
-  projectId: "winnerenglish2-e0f1b",
-  storageBucket: "winnerenglish2-e0f1b.appspot.com",
-  messagingSenderId: "771031700651",
-  appId: "1:771031700651:web:a7f06b7595c5539a7b13ee",
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
-export const db = firebase.firestore();
 
 Vue.mixin({
   data() {
@@ -32,6 +20,26 @@ Vue.mixin({
       version: "1.0.01",
     };
   },
+  methods: {
+    notifyGreen(messages) {
+      this.$q.notify({
+        color: "secondary",
+        position: "top",
+        icon: "done",
+        message: messages,
+        timeout: 800
+      });
+    },
+    notifyRed(messages) {
+      this.$q.notify({
+        color: "negative",
+        position: "top",
+        icon: "error",
+        message: messages,
+        timeout: 800
+      });
+    },
+  }
 });
 export default function (/* { store, ssrContext } */) {
   const Router = new VueRouter({

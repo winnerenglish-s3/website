@@ -8,22 +8,19 @@
           <div v-if="innerWidth > 1023" class="bghome"></div>
           <!-- ข้อความ หัวข้อหลัก -->
           <div class="q-pt-md" style="width:90%;max-width: 1200px">
-            <span v-if="innerWidth > 1023" class="text-h1 cl1 titile"
-              >WINNER ENGLISH</span
-            >
+            <span v-if="innerWidth > 1023" class="text-h1 cl1 titile">WINNER ENGLISH</span>
             <span
               v-if="innerWidth < 1024"
               style="font-size:calc(35px + 2vw);"
               class="cl1 titile"
-              >WINNER ENGLISH</span
-            >
+            >WINNER ENGLISH</span>
             <br />
             <div class="q-py-sm q-px-md q-pb-xl">
               <div class="font" style="max-width: 1000px;">
-                <span
-                  >นวัตกรรมการเรียนภาษาอังกฤษอัจฉริยะแบบครบวงจร
-                  ช่วยสนับสนุนการเรียนการสอนของคุณครูและนักเรียนในโรงเรียน<br />
-                  ด้วยบรรยากาศห้องเรียนดิจิทัลที่ทันสมัย
+                <span>
+                  นวัตกรรมการเรียนภาษาอังกฤษอัจฉริยะแบบครบวงจร
+                  ช่วยสนับสนุนการเรียนการสอนของคุณครูและนักเรียนในโรงเรียน
+                  <br />ด้วยบรรยากาศห้องเรียนดิจิทัลที่ทันสมัย
                   และช่วยพัฒนาการเรียนรู้ด้วยตนเองของนักเรียนแบบออนไลน์
                 </span>
               </div>
@@ -38,15 +35,12 @@
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md"
             >
               <div>
-                <div
-                  class="cl1 titilecenter"
-                  :class="$q.platform.is.desktop ? '' : 'q-mt-lg'"
-                >
-                  Winner English <br v-if="innerWidth < 550" />
-                  เหมาะกับใคร ?
+                <div class="cl1 titilecenter" :class="$q.platform.is.desktop ? '' : 'q-mt-lg'">
+                  Winner English
+                  <br v-if="innerWidth < 550" />เหมาะกับใคร ?
                 </div>
-                <span
-                  >Winner English
+                <span>
+                  Winner English
                   เหมาะกับนักเรียนระดับชั้นประถมศึกษาและมัธยมศึกษา ตอนต้น คือ
                   ช่วงอายุ 6-15 ปี เนื่องจากแพลตฟอร์มการเรียนการสอนของ Winner
                   English เป็นการเรียนภาษาอังกฤษแบบออนไลน์ที่จะต้องเรียนกับ
@@ -56,24 +50,22 @@
                   และเนื้อหาที่ได้รับการพัฒนาสำหรับ นักเรียนวัยนี้โดยเฉพาะ
                   สอดคล้องตามหลักสูตรแกนกลางกระทรวงศึกษาธิการ
                   เพื่อปูพืนฐานภาษาอังกฤษให้นักเรียนสามารถนำไปใช้ได้จริงในโรงเรียน
-                  และการใช้ชีวิตประจำวันอย่างมั่นใจ</span
-                >
+                  และการใช้ชีวิตประจำวันอย่างมั่นใจ
+                </span>
               </div>
             </div>
           </div>
           <!-- ทำไมต้องเรียน winnner English -->
           <div class="row q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
-            <div
-              class="self-center row col-md-12 col-sm-12 col-xs-12 text-left"
-            >
+            <div class="self-center row col-md-12 col-sm-12 col-xs-12 text-left">
               <div
-                class=" text-h4 cl1 titile q-py-md full-width"
+                class="text-h4 cl1 titile q-py-md full-width"
                 :align="
                   $q.platform.is.desktop && innerWidth > 549 ? 'center' : ''
                 "
               >
-                ทำไมต้องเลือกเรียน<br v-if="innerWidth < 550" />
-                Winner English ?
+                ทำไมต้องเลือกเรียน
+                <br v-if="innerWidth < 550" />Winner English ?
               </div>
               <div class="q-py-md row col-md-4 col-sm-12 col-xs-12">
                 <q-img
@@ -90,8 +82,8 @@
                   "
                 >
                   <div>
-                    เนื้อหาตรงตามหลักสูตรแกนกลาง<br />
-                    ผ่านการนำเสนอบทเรียนที่ต่อยอด<br />
+                    เนื้อหาตรงตามหลักสูตรแกนกลาง
+                    ผ่านการนำเสนอบทเรียนที่ต่อยอด
                     การเรียนรู้ในโรงเรียน
                   </div>
                 </span>
@@ -111,8 +103,8 @@
                   "
                 >
                   <div>
-                    เรียนได้ไม่จำกัด ทุกที่ ทุกเวลา<br />
-                    เพียงเชื่อมต่ออินเตอร์เน็ต<br />
+                    เรียนได้ไม่จำกัด ทุกที่ ทุกเวลา
+                    เพียงเชื่อมต่ออินเตอร์เน็ต
                     ไม่ต้องดาวน์โหลดโปรแกรม
                   </div>
                 </span>
@@ -132,8 +124,8 @@
                   "
                 >
                   <div>
-                    Practice-based Learning<br />
-                    เรียนรู้ทักษะภาษาอังกฤษ<br />ผ่านการฝึกฝนและลงมือทำ
+                    Practice-based Learning
+                    เรียนรู้ทักษะภาษาอังกฤษ ผ่านการฝึกฝนและลงมือทำ
                   </div>
                 </span>
               </div>
@@ -152,7 +144,8 @@
                   "
                 >
                   <div>
-                    การวัดผลแม่นยำ <br />สามารถติดตามและรายงานผล<br />
+                    การวัดผลแม่นยำ
+                    สามารถติดตามและรายงานผล
                     การเรียนรายบุคคลได้แบบ Real-time
                   </div>
                 </span>
@@ -172,7 +165,8 @@
                   "
                 >
                   <div>
-                    เรียนครบทุกทักษะภาษาอังกฤษ <br />ฟัง พูด อ่าน เขียน คำศัพท์
+                    เรียนครบทุกทักษะภาษาอังกฤษ
+                    ฟัง พูด อ่าน เขียน คำศัพท์
                     ไวยากรณ์
                   </div>
                 </span>
@@ -192,7 +186,7 @@
                   "
                 >
                   <div>
-                    สอบวัดระดับภาษา (placement Test) ช่วยให้เนื้อหาเหมาะสมกับ<br />
+                    สอบวัดระดับภาษา (placement Test) ช่วยให้เนื้อหาเหมาะสมกับ
                     พื้นฐานนักเรียนแต่ละคน
                   </div>
                 </span>
@@ -209,21 +203,16 @@
             >
               <div>
                 <div class="cl1 titilecenter">
-                  สำหรับผู้ปกครอง<br v-if="innerWidth < 550" />
-                  และนักเรียน
+                  สำหรับผู้ปกครอง
+                  <br v-if="innerWidth < 550" />และนักเรียน
                 </div>
-                <span
-                  >โปรแกรมเรียนภาษาอังกฤษออนไลน์ที่สามารถจัดรูปแบบเรียนรู้
+                <span>
+                  โปรแกรมเรียนภาษาอังกฤษออนไลน์ที่สามารถจัดรูปแบบเรียนรู้
                   และทำแบบฝึกหัดได้ด้วยตนเอง เรียนรู้ได้ทุกที่ ทุกเวลา สนุก
                   เข้าใจง่าย ด้วยรูปแบบ VDO Animation และเทคโนโลยี Gamification
                 </span>
                 <div class="q-py-lg">
-                  <q-btn
-                    unelevated
-                    to="/adventures"
-                    rounded
-                    class="bgcl1 text-white"
-                  >
+                  <q-btn unelevated to="/adventures" rounded class="bgcl1 text-white">
                     <span class="text-h5">เรียนรู้เพิ่มเติม</span>
                   </q-btn>
                 </div>
@@ -240,21 +229,16 @@
             >
               <div>
                 <div class="cl1 titilecenter">
-                  สำหรับคุณครู <br v-if="innerWidth < 550" />
-                  และโรงเรียน
+                  สำหรับคุณครู
+                  <br v-if="innerWidth < 550" />และโรงเรียน
                 </div>
-                <span class="desktop-only"
-                  >แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ ผ่านเรื่องราวการผจญภัย
+                <span>
+                  แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ ผ่านเรื่องราวการผจญภัย
                   ที่สนุกสนาม กระตุ้นพัฒนาการเรียนรู้ของนักเรียน พร้อมระบบช่วย
                   สนับสนุนการสอนของคุณครูอย่างมีประสิทธิภาพ
                 </span>
                 <div class="q-py-lg">
-                  <q-btn
-                    unelevated
-                    to="/o-net"
-                    rounded
-                    class="bgcl1 text-white"
-                  >
+                  <q-btn unelevated to="/o-net" rounded class="bgcl1 text-white">
                     <span class="text-h5">เรียนรู้เพิ่มเติม</span>
                   </q-btn>
                 </div>
@@ -268,9 +252,7 @@
             style="margin-bottom:-100px"
             v-if="innerWidth > 1007"
             class="text-h3 cl1 q-py-xl"
-          >
-            ความคิดเห็นของผู้ใช้
-          </div>
+          >ความคิดเห็นของผู้ใช้</div>
         </div>
         <div
           v-if="innerWidth > 1007"
@@ -300,10 +282,10 @@
                   </div>
                   <div>
                     <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
-                    <span
-                      >สะดวก ทันสมัย ช่วยให้
-                      นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง</span
-                    >
+                    <span>
+                      สะดวก ทันสมัย ช่วยให้
+                      นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง
+                    </span>
                   </div>
                 </div>
               </div>
@@ -331,9 +313,7 @@
                   </div>
                   <div>
                     <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
-                    <span
-                      >ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษครูก็ได้รับประโยชน์จากการใช้สื่อใหม่ๆ</span
-                    >
+                    <span>ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษครูก็ได้รับประโยชน์จากการใช้สื่อใหม่ๆ</span>
                   </div>
                 </div>
               </div>
@@ -375,10 +355,7 @@
           </div>
         </div>
 
-        <div
-          v-if="innerWidth < 1008"
-          class="relative-position bgbottommb row justify-center"
-        >
+        <div v-if="innerWidth < 1008" class="relative-position bgbottommb row justify-center">
           <!-- ความคิดเห็น Mobile -->
           <div
             class="row absolute-bottom"
@@ -387,9 +364,7 @@
           >
             <!-- ความคิดเห็น Mobile -->
             <div class="self-center bgblue1 col-12">
-              <div class="bgblue1 text-h3 text-white q-pt-lg q-pb-lg">
-                ความคิดเห็นของผู้ใช้
-              </div>
+              <div class="bgblue1 text-h3 text-white q-pt-lg q-pb-lg">ความคิดเห็นของผู้ใช้</div>
               <div style="width:100% ">
                 <q-carousel
                   swipeable
@@ -424,13 +399,11 @@
                           </div>
                         </div>
                         <div>
-                          <span class="titilebold q-px-sm"
-                            >วินเนอร์ อิงลิช</span
-                          >
-                          <span
-                            >สะดวก ทันสมัย ช่วยให้
-                            นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง</span
-                          >
+                          <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
+                          <span>
+                            สะดวก ทันสมัย ช่วยให้
+                            นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -458,13 +431,11 @@
                           </div>
                         </div>
                         <div>
-                          <span class="titilebold q-px-sm"
-                            >วินเนอร์ อิงลิช</span
-                          >
-                          <span
-                            >ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษ
-                            ครูก็ได้รับประโยชน์จากการใช้สื่อการสอนใหม่ๆ</span
-                          >
+                          <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
+                          <span>
+                            ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษ
+                            ครูก็ได้รับประโยชน์จากการใช้สื่อการสอนใหม่ๆ
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -494,9 +465,7 @@
                         <div>
                           <span>
                             การเรียน
-                            <span class="titilebold q-px-xs"
-                              >วินเนอร์ อิงลิช</span
-                            >
+                            <span class="titilebold q-px-xs">วินเนอร์ อิงลิช</span>
                             <span>ทำให้วิชาภาษาอังกฤษสนุกขึ้น ง่ายขึ้น</span>
                           </span>
                         </div>
@@ -533,17 +502,17 @@ export default {
       message: "../statics/image/message.png",
       slide: 1,
       innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerHeight: window.innerHeight,
     };
   },
   components: {
-    appFooter
+    appFooter,
   },
   methods: {
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
-    }
-  }
+    },
+  },
 };
 </script>
 

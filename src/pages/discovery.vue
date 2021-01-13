@@ -488,23 +488,23 @@
               <div class="col txcl2 q-pl-sm fontn" >
                 <div align="left" class="q-mt-sm">
                   <div style="font-size:16px">ชื่อ-นามสกุล (ผู้ปกครอง)</div>
-                  <div><q-input ref="name" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="name" dense bg-color="white" style="width:350px"/></div>
+                  <div><q-input ref="name" class="no-padding"  outlined v-model="name" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
                   <div style="font-size:16px">เบอร์โทรศัพท์ (ผู้ปกครอง)</div>
-                  <div><q-input mask="##########" ref="tel" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="tel" dense bg-color="white" style="width:350px"/></div>
+                  <div><q-input mask="##########" ref="tel" class="no-padding"  outlined v-model="tel" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
                   <div style="font-size:16px">อีเมล (ผู้ปกครอง)</div>
-                  <div><q-input ref="email" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="email" dense bg-color="white" style="width:350px"/></div>
+                  <div><q-input ref="email" class="no-padding"  outlined v-model="email" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
                   <div style="font-size:16px">จังหวัด</div>
-                  <div><q-select ref="province" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="province" dense bg-color="white" style="width:350px" :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
+                  <div><q-select ref="province" class="no-padding"  outlined v-model="province" dense bg-color="white" style="width:350px" :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
                 </div>
                  <div align="left" class="q-mt-sm">
                   <div style="font-size:16px">ระดับชั้นที่กำลังศึกษา (ผู้เรียน)</div>
-                  <div><q-select ref="studentClass" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="studentClass" dense bg-color="white" style="width:350px" :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
+                  <div><q-select ref="studentClass" class="no-padding"  outlined v-model="studentClass" dense bg-color="white" style="width:350px" :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
                 </div>
                 <div class="q-mt-md">
                   <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" @click="sendData()" style="width:200px;font-size:20px" />
@@ -757,6 +757,7 @@
 <script>
 import { db } from "../router";
 import appFooter from "../components/footer.vue";
+const axios = require("axios").default;
 export default {
    components: {
     appFooter
@@ -880,19 +881,31 @@ export default {
     };
   },
   methods: {
-    sendData(){
-      //ปุ่มสำหรับส่งข้อมูล
-      let resultData = {
-        name: this.name,
-        tel: this.tel,
-        email: this.email,
-        province : this.province,
-        studentClass: this.studentClass
+    async sendData(){
+
+      //check input Data
+      if(this.name.trim().length == 0 || this.tel.trim().length == 0 || this.email.trim().length == 0 || this.province.trim().length == 0 ){
+        this.notifyRed("กรุณาใส่ข้อมูลให้ครบถ้วน")
+        return
       }
-      console.log(resultData);
-      db.collection("level").get().then(doc=>{
-        console.log(doc.size);
-      })
+      let resultData = {}
+      resultData.name = this.name
+      resultData.tel = this.tel
+      resultData.email = this.email
+      resultData.province = this.province
+      resultData.grade = this.studentClass
+
+  
+      let url =
+        "https://us-central1-winnerenglish2-e0f1b.cloudfunctions.net/wfunctions/addPlacementContact";
+
+      let res = await axios.post(url, resultData);
+      this.name = ""
+      this.tel = ""
+      this.email = ""
+      this.province = ""
+      this.studentClass = "ไม่ระบุ"
+      this.notifyGreen('ส่งข้อมูลเรียบร้อยแล้ว')
     },
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);

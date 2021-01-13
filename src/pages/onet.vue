@@ -165,8 +165,8 @@
                   <a
                     class="clblue1 phone"
                     style="text-decoration: none; border-bottom: 2px solid #3f51b5;"
-                    href="tel:084-323-2206"
-                  >084-323-2206</a>
+                    href="tel:02-252-2489"
+                  >02-252-2489</a>
                 </div>
               </span>
             </div>
@@ -183,8 +183,8 @@
                     <a
                       class="clblue1 phone"
                       style="text-decoration: none; border-bottom: 2px solid #3f51b5;"
-                      href="tel:084-323-2206"
-                    >084-323-2206</a>
+                      href="tel:02-252-2489"
+                    >02-252-2489</a>
                   </div>
                 </div>
               </div>
@@ -206,17 +206,17 @@ export default {
     return {
       slide: 1,
       innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerHeight: window.innerHeight,
     };
   },
   components: {
-    appFooter
+    appFooter,
   },
   methods: {
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
-    }
-  }
+    },
+  },
 };
 </script>
 
