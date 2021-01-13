@@ -12,6 +12,19 @@ Vue.use(VueRouter);
  * async/await or return a Promise which resolves
  * with the Router instance.
  */
+var firebaseConfig = {
+  apiKey: "AIzaSyAYLNGOWZtYLE0zS4nqVTVkvfilQ0QAraM",
+  authDomain: "winnerenglish2-e0f1b.firebaseapp.com",
+  databaseURL: "https://winnerenglish2-e0f1b.firebaseio.com",
+  projectId: "winnerenglish2-e0f1b",
+  storageBucket: "winnerenglish2-e0f1b.appspot.com",
+  messagingSenderId: "771031700651",
+  appId: "1:771031700651:web:a7f06b7595c5539a7b13ee",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+export const db = firebase.firestore();
 
 Vue.mixin({
   data() {

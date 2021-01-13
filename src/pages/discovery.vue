@@ -483,35 +483,39 @@
                 และการให้บริการแก่ท่าน ท่านสามารถอ่านข้อมูลเพิ่มเติม<br>
                 <u class="cursor-pointer" @click="openNewWindows(policyOrCondition = 'policy')">นโยบายความเป็นส่วนตัว</u> | <u class="cursor-pointer" @click="openNewWindows(policyOrCondition = 'condition')">เงื่อนไขและข้อตกลงในการใช้บริการ</u></div>
               </div>
-              <div class="col txcl2 q-pl-sm">
+
+              <!-- Form สำหรับการกรอกข้อมูล สำหรับจอใหญ่ -->
+              <div class="col txcl2 q-pl-sm fontn" >
                 <div align="left" class="q-mt-sm">
-                  <div style="font-size:20px">ชื่อ-นามสกุล (ผู้ปกครอง)</div>
+                  <div style="font-size:16px">ชื่อ-นามสกุล (ผู้ปกครอง)</div>
                   <div><q-input ref="name" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="name" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
-                  <div style="font-size:20px">เบอร์โทรศัพท์ (ผู้ปกครอง)</div>
+                  <div style="font-size:16px">เบอร์โทรศัพท์ (ผู้ปกครอง)</div>
                   <div><q-input mask="##########" ref="tel" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="tel" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
-                  <div style="font-size:20px">อีเมล (ผู้ปกครอง)</div>
+                  <div style="font-size:16px">อีเมล (ผู้ปกครอง)</div>
                   <div><q-input ref="email" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="email" dense bg-color="white" style="width:350px"/></div>
                 </div>
                 <div align="left" class="q-mt-sm">
-                  <div style="font-size:20px">จังหวัด</div>
+                  <div style="font-size:16px">จังหวัด</div>
                   <div><q-select ref="province" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="province" dense bg-color="white" style="width:350px" :options="provinceList" label="กรุณาเลือกจังหวัด" /></div>
                 </div>
                  <div align="left" class="q-mt-sm">
-                  <div style="font-size:20px">ระดับชั้นที่กำลังศึกษา (ผู้เรียน)</div>
+                  <div style="font-size:16px">ระดับชั้นที่กำลังศึกษา (ผู้เรียน)</div>
                   <div><q-select ref="studentClass" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="studentClass" dense bg-color="white" style="width:350px" :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
                 </div>
                 <div class="q-mt-md">
-                  <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" style="width:200px;font-size:20px" />
+                  <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" @click="sendData()" style="width:200px;font-size:20px" />
                 </div>
               </div>
+              <!-- จบ Form สำหรับกรอกข้อมูล -->
             </div>
             </q-img>
           </div>
-           <div  v-if="innerWidth < 1008" class="q-my-xl q-mb-lg q-pa-md bg-block">
+          <!-- Form สำหรับกรอกข้อมูลสำหรับจอเล็ก -->
+           <div  v-if="innerWidth < 1008" class="q-my-xl q-mb-lg q-pa-md bg-block fontn">
               <div class="text-primary">
                 <div class=" text-h4 titile  q-mb-md">วัดระดับภาษา ฟรี!!<br><div class="text-h5">สอบถามข้อมูลเพิ่มเติม</div></div>
               </div>
@@ -537,13 +541,14 @@
                   <div><q-select ref="studentClass" class="no-padding" :rules="[val => val.length > 0]" outlined v-model="studentClass" dense bg-color="white"  :options="studentList" label="กรุณาเลือกระดับชั้น" /></div>
                 </div>
                 <div class="q-my-lg">
-                  <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" style="width:200px;font-size:20px" />
+                  <q-btn unelevated rounded class="bgcl1 text-white" label="ส่งข้อมูล" @click="sendData()" style="width:200px;font-size:20px" />
                 </div>
               </div>
               <div class="q-mb-lg txcl1" style="font-size:16px">ข้อมูลส่วนบุคคลที่ท่านให้ บริษัทจะนำไปใช้เพื่อการติดต่อ <br>
                 และการให้บริการแก่ท่าน ท่านสามารถอ่านข้อมูลเพิ่มเติม<br>
                 <u class="cursor-pointer" @click="openNewWindows(policyOrCondition = 'policy')">นโยบายความเป็นส่วนตัว</u> | <u class="cursor-pointer" @click="openNewWindows(policyOrCondition = 'condition')">เงื่อนไขและข้อตกลงในการใช้บริการ</u></div>
           </div>
+          <!-- Form สำหรับกรอกข้อมูลสำหรับจอเล็ก -->
           <!-- ข้อความส่วนที่ห้า ความสามารถของ winner DESKTOP-->
           <div v-if="innerWidth > 1007" class="row q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
             <div
@@ -741,560 +746,7 @@
             </div>
             </q-img>
           
-          <!-- รูปภาพ สไลด์ -->
-          <!-- <div>
-            <div style="width:100%">
-              <q-carousel
-                animated
-                control-color="primary"
-                v-model="slide"
-                swipeable
-                navigation
-                infinite
-                autoplay
-                class="text-white bgbottomall"
-                style="width:100%;height:550px"
-                transition-prev="slide-right"
-                transition-next="slide-left"
-              >
-                <q-carousel-slide class="relative-position" :name="1">
-                  <div
-                    style="height:400px;margin-top:-20px;margin-left:-16px;margin-right:-16px"
-                    class="bgbottomall"
-                  ></div>
-                  <div
-                    style="height:154px;margin-left:-16px;margin-right:-16px"
-                    class="bggrey1"
-                  ></div>
-                  <div
-                    style="width:100%"
-                    class="absolute-center row reverse justify-center"
-                  >
-                    <div
-                      style="max-width:500px;"
-                      class="self-start text-left col-md-6 col-sm-12 col-xs-12 q-px-md"
-                    >
-                      <div class="q-px-sm">
-                        <div class="text-h4 boxtitile">VOCABULARY</div>
-                        <span
-                          >เรียนรู้คำศัพท์ต่าง ๆ และส่งเสริมทักษะความจำ
-                          โดยการทำโจทย์ที่นำคำศัพท์มาทบทวนซ้ำจากแบบฝึกหัดที่หลากหลาย
-                          เช่น ฝึกสะกดคำให้ถูกต้อง เป็นต้น</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="self-center col-md-5 col-sm-12 col-xs-12 q-py-lg"
-                    >
-                      <q-img
-                        v-if="innerWidth <= 1023"
-                        :src="vocabulary"
-                        style="max-width:400px;"
-                      />
-                      <q-img
-                        v-if="innerWidth > 1023"
-                        :src="vocabulary"
-                        style="max-width:500px;"
-                      />
-                    </div>
-                  </div>
-                </q-carousel-slide>
 
-                <q-carousel-slide class="relative-position" :name="2">
-                  <div
-                    style="height:400px;margin-top:-20px;margin-left:-16px;margin-right:-16px"
-                    class="bgbottomall"
-                  ></div>
-                  <div
-                    style="height:154px;margin-left:-16px;margin-right:-16px"
-                    class="bggrey1"
-                  ></div>
-                  <div
-                    style="width:100%"
-                    class="absolute-center row reverse justify-center"
-                  >
-                    <div
-                      style="max-width:500px;"
-                      class="self-start text-left col-md-6 col-sm-12 col-xs-12 q-px-md"
-                    >
-                      <div class="q-px-sm">
-                        <div class="text-h4 boxtitile">GRAMMAR</div>
-                        <span
-                          >นักเรียนจะได้นำความรู้จากบทเรียนไวยากรณ์มาประยุกต์ใช้จริงในแบบฝึกหัด
-                          เพื่อต่อยอดความเข้าใจในการเรียนของตนเองให้มากยิ่งขึ้น</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="self-center col-md-5 col-sm-12 col-xs-12 q-py-lg"
-                    >
-                      <q-img
-                        v-if="innerWidth <= 1023"
-                        :src="grammar"
-                        style="max-width:400px;"
-                      />
-                      <q-img
-                        v-if="innerWidth > 1023"
-                        :src="grammar"
-                        style="max-width:500px;"
-                      />
-                    </div>
-                  </div>
-                </q-carousel-slide>
-
-                <q-carousel-slide class="relative-position" :name="3">
-                  <div
-                    style="height:400px;margin-top:-20px;margin-left:-16px;margin-right:-16px"
-                    class="bgbottomall"
-                  ></div>
-                  <div
-                    style="height:154px;margin-left:-16px;margin-right:-16px"
-                    class="bggrey1"
-                  ></div>
-                  <div
-                    style="width:100%"
-                    class="absolute-center row reverse justify-center"
-                  >
-                    <div
-                      style="max-width:500px;"
-                      class="self-statr text-left col-md-6 col-sm-12 col-xs-12 q-px-md"
-                    >
-                      <div class="q-px-sm">
-                        <div class="text-h4 boxtitile">READING</div>
-                        <span
-                          >เรามีเนื้อเรื่องหลากหลายแนว ที่มีทั้งความสนุกและสาระ
-                          ให้เลือกอ่านตามความสนใจ
-                          โดยแต่ละเนื้อเรื่องจะมีคำศัพท์เสริมที่ช่วยให้นักเรียนเข้าใจคำศัพท์ที่ไม่รู้จัก</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="self-center col-md-5 col-sm-12 col-xs-12 q-py-lg"
-                    >
-                      <q-img
-                        v-if="innerWidth <= 1023"
-                        :src="reading"
-                        style="max-width:400px;"
-                      />
-                      <q-img
-                        v-if="innerWidth > 1023"
-                        :src="reading"
-                        style="max-width:500px;"
-                      />
-                    </div>
-                  </div>
-                </q-carousel-slide>
-
-                <q-carousel-slide class="relative-position" :name="4">
-                  <div
-                    style="height:400px;margin-top:-20px;margin-left:-16px;margin-right:-16px"
-                    class="bgbottomall"
-                  ></div>
-                  <div
-                    style="height:154px;margin-left:-16px;margin-right:-16px"
-                    class="bggrey1"
-                  ></div>
-                  <div
-                    style="width:100%"
-                    class="absolute-center row reverse justify-center"
-                  >
-                    <div
-                      style="max-width:500px;"
-                      class="self-statr text-left col-md-6 col-sm-12 col-xs-12 q-px-md"
-                    >
-                      <div class="q-px-sm">
-                        <div class="text-h4 boxtitile">WRITING</div>
-                        <span
-                          >นักเรียนจะได้ฝึกแต่งประโยคในบริบทที่แตกต่าง
-                          ด้วยระบบตรวจสอบความถูกต้องของแบบฝึกหัดที่ช่วยให้นักเรียนมีความเข้าใจและสามารถแต่งประโยคครั้งต่อไปได้ดีขึ้น</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="self-center col-md-5 col-sm-12 col-xs-12 q-py-lg"
-                    >
-                      <q-img
-                        v-if="innerWidth > 1023"
-                        :src="writing"
-                        style="max-width:500px;"
-                      />
-                      <q-img
-                        v-if="innerWidth <= 1023"
-                        :src="writing"
-                        style="max-width:400px;"
-                      />
-                    </div>
-                  </div>
-                </q-carousel-slide>
-
-                <q-carousel-slide class="relative-position" :name="5">
-                  <div
-                    style="height:400px;margin-top:-20px;margin-left:-16px;margin-right:-16px"
-                    class="bgbottomall"
-                  ></div>
-                  <div
-                    style="height:154px;margin-left:-16px;margin-right:-16px"
-                    class="bggrey1"
-                  ></div>
-                  <div
-                    style="width:100%"
-                    class="absolute-center row reverse justify-center"
-                  >
-                    <div
-                      style="max-width:500px;"
-                      class="self-statr text-left col-md-6 col-sm-12 col-xs-12 q-px-md"
-                    >
-                      <div class="q-px-sm">
-                        <div class="text-h4 boxtitile">
-                          LISTENING & SPEAKING
-                        </div>
-                        <span
-                          >นักเรียนจะได้ฝึกการฟังและการพูด
-                          จากวิดีโอสถานการณ์จริง เริ่มจากบทสนทนาง่ายๆ
-                          จนถึงบทสนทนาที่ใช้งานได้จริงสำหรับการทำงานในอนาคต</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="self-center col-md-5 col-sm-12 col-xs-12 q-py-lg"
-                    >
-                      <q-img
-                        v-if="innerWidth > 1023"
-                        :src="conversation"
-                        style="max-width:500px;"
-                      />
-                      <q-img
-                        v-if="innerWidth <= 1023"
-                        :src="conversation"
-                        style="max-width:400px;"
-                      />
-                    </div>
-                  </div>
-                </q-carousel-slide>
-              </q-carousel>
-            </div>
-          </div> -->
-          <!-- สนใจเรียน -->
-          <!-- <div>
-            <div class="q-py-md">
-              <div
-                v-if="innerWidth > 1022"
-                class="row shadow-2 q-my-lg"
-                style="width:90%;max-width:1200px;"
-              >
-                <div
-                  style="height:400px"
-                  class="self-center col-md-4 col-sm-12 col-xs-12 bggrey1"
-                >
-                  <div class="clblue1 text-h4 titilebold q-py-lg">
-                    ทดลองเรียนฟรี
-                  </div>
-                  <div class="row" style="width:250px">
-                    <span class="q-py-xs">
-                      <span class="q-px-sm">
-                        <q-icon
-                          class="color-grey-7"
-                          size="10px"
-                          name="fas fa-circle"
-                        />
-                      </span>
-                      <span>ไม่มีค่าใช้จ่าย</span>
-                    </span>
-                    <span class="q-py-xs">
-                      <span class="q-px-sm">
-                        <q-icon
-                          class="color-grey-7"
-                          size="10px"
-                          name="fas fa-circle"
-                        />
-                      </span>
-                      <span>เรียนได้ทุกที่ ทุกเวลา</span>
-                    </span>
-
-                    <span class="q-py-xs">
-                      <span class="q-px-sm">
-                        <q-icon
-                          class="color-grey-7"
-                          size="10px"
-                          name="fas fa-circle"
-                        />
-                      </span>
-                      <span>เรียนครบทุกทักษะ</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  style="height:400px"
-                  class="self-center col-md-4 col-sm-12 col-xs-12 bggrey2"
-                >
-                  <div class="clblue1 titilebold text-h4 q-py-lg">1 Level</div>
-                  <div class="row" style="width:280px">
-                    <span class="q-py-xs">
-                      <span class="q-px-sm">
-                        <q-icon
-                          class="color-grey-7"
-                          size="10px"
-                          name="fas fa-circle"
-                        />
-                      </span>
-                      <span>
-                        1,200 บาท (ปกติ
-                        <span style="color:red;text-decoration:line-through">
-                          <span style="color:grey">2,400</span>
-                        </span>
-                        บาท)
-                      </span>
-                    </span>
-                    <span class="q-py-xs">
-                      <span class="q-px-sm">
-                        <q-icon
-                          class="color-grey-7"
-                          size="10px"
-                          name="fas fa-circle"
-                        />
-                      </span>
-                      <span>เนื้อหา 16 unit</span>
-                    </span>
-                    <span class="q-py-xs">
-                      <span class="q-px-sm">
-                        <q-icon
-                          class="color-grey-7"
-                          size="10px"
-                          name="fas fa-circle"
-                        />
-                      </span>
-                      <span>เรียนครบทุกทักษะ</span>
-                    </span>
-                    <span class="q-py-xs">
-                      <span class="q-px-sm">
-                        <q-icon
-                          class="color-grey-7"
-                          size="10px"
-                          name="fas fa-circle"
-                        />
-                      </span>
-                      <span>ทดสอบวัดระดับ</span>
-                    </span>
-                    <span class="q-py-xs">
-                      <span class="q-px-sm">
-                        <q-icon
-                          class="color-grey-7"
-                          size="10px"
-                          name="fas fa-circle"
-                        />
-                      </span>
-                      <span>เรียนได้ทุกที่ ทุกเวลา</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  style="height:400px"
-                  class="bgblue self-center col-md-4 col-sm-12 col-xs-12 text-white text-h3 relative-position"
-                >
-                  <div class="absolute-center" style="width:100%;">
-                    <div>สนใจเรียน</div>
-                    <div>
-                      ติดต่อ:
-                      <a
-                        class="text-white phone"
-                        style="text-decoration: none; border-bottom: 2px solid white;"
-                        href="tel:084-323-2206"
-                        >084-323-2206</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-          <!-- จอเล็กสุด -->
-          <!-- <div style="width:90%;max-width:700px" v-if="innerWidth < 1023">
-              <div class="q-pb-md">
-                <div class="row">
-                  <q-card
-                    class="my-card"
-                    style="width:100%;border-radius: 20px;"
-                  >
-                    <div>
-                      <div
-                        class="bgblue text-white q-py-lg"
-                        style="border-top-left-radius: 20px;border-top-right-radius: 20px"
-                      >
-                        <span
-                          style="width:100%"
-                          class="titilebold text-h4 q-px-sm"
-                          >ทดลองเรียนฟรี</span
-                        >
-                      </div>
-                    </div>
-                    <div class="col bggrey1">
-                      <div
-                        class="row q-py-md q-pl-md text-h5"
-                        style="max-width:300px;"
-                      >
-                        <span class="q-py-xs">
-                          <span class="q-px-sm">
-                            <q-icon
-                              class="color-grey-7"
-                              size="10px"
-                              name="fas fa-circle"
-                            />
-                          </span>
-
-                          <span class="box">ไม่มีค่าใช้จ่าย</span>
-                        </span>
-                        <span class="q-py-xs">
-                          <span class="q-px-sm">
-                            <q-icon
-                              class="color-grey-7"
-                              size="10px"
-                              name="fas fa-circle"
-                            />
-                          </span>
-                          <span class="box">เรียนได้ทุกที่ ทุกเวลา</span>
-                        </span>
-
-                        <span class="q-py-xs">
-                          <span class="q-px-sm">
-                            <q-icon
-                              class="color-grey-7"
-                              size="10px"
-                              name="fas fa-circle"
-                            />
-                          </span>
-                          <span class="box">เรียนครบทุกทักษะ</span>
-                        </span>
-                      </div>
-                    </div>
-                  </q-card>
-                </div>
-              </div>
-              <div class="q-pt-md">
-                <div class="row">
-                  <q-card
-                    class="my-card"
-                    style="width:100%;border-radius: 20px;"
-                  >
-                    <div>
-                      <div
-                        class="bgblue text-white q-py-lg"
-                        style="border-top-left-radius: 20px;border-top-right-radius: 20px"
-                      >
-                        <span
-                          style="width:100%"
-                          class="titilebold text-h4 q-px-sm"
-                          >คอร์สเรียน 1 Level</span
-                        >
-                      </div>
-                    </div>
-                    <div class="col bggrey1">
-                      <div
-                        class="row q-py-md text-h5 q-pl-md"
-                        style="max-width:300px;"
-                      >
-                        <span class="q-py-xs">
-                          <span class="q-px-sm">
-                            <q-icon
-                              class="color-grey-7"
-                              size="10px"
-                              name="fas fa-circle"
-                            />
-                          </span>
-
-                          <span class="box">
-                            1,200 บาท (ปกติ
-                            <span
-                              style="color:red;text-decoration:line-through"
-                            >
-                              <span style="color:grey">2,400</span>
-                            </span>
-                            บาท)
-                          </span>
-                        </span>
-                        <span class="q-py-xs">
-                          <span class="q-px-sm">
-                            <q-icon
-                              class="color-grey-7"
-                              size="10px"
-                              name="fas fa-circle"
-                            />
-                          </span>
-                          <span class="box">เนื้อหา 16 unit</span>
-                        </span>
-                        <span class="q-py-xs">
-                          <span class="q-px-sm">
-                            <q-icon
-                              class="color-grey-7"
-                              size="10px"
-                              name="fas fa-circle"
-                            />
-                          </span>
-                          <span class="box">เรียนครบทุกทักษะ</span>
-                        </span>
-                        <span class="q-py-xs">
-                          <span class="q-px-sm">
-                            <q-icon
-                              class="color-grey-7"
-                              size="10px"
-                              name="fas fa-circle"
-                            />
-                          </span>
-                          <span class="box">ทดสอบวัดระดับ</span>
-                        </span>
-                        <span class="q-py-xs">
-                          <span class="q-px-sm">
-                            <q-icon
-                              class="color-grey-7"
-                              size="10px"
-                              name="fas fa-circle"
-                            />
-                          </span>
-                          <span class="box">เรียนได้ทุกที่ ทุกเวลา</span>
-                        </span>
-                      </div>
-                    </div>
-                  </q-card>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            style="height:250px"
-            v-if="innerWidth > 700 && innerWidth < 1023"
-            class="relative-position q-my-md"
-          >
-            <div class="absolute-center" style="width:100%">
-              <div class="fontphone clblue1 titilebold">
-                สนใจเรียนติดต่อ:
-                <a
-                  class="clblue1 phone"
-                  style="text-decoration: none; border-bottom: 2px solid #3f51b5;"
-                  href="tel:084-323-2206"
-                  >084-323-2206</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            style="height:250px"
-            v-if="innerWidth < 700"
-            class="relative-position q-my-md"
-          >
-            <div class="absolute-center" style="width:100%">
-              <div class="fontphone clblue1 titilebold">
-                <div>สนใจเรียน</div>
-                <div>
-                  ติดต่อ:
-                  <a
-                    class="clblue1 phone"
-                    style="text-decoration: none; border-bottom: 2px solid #3f51b5;"
-                    href="tel:084-323-2206"
-                    >084-323-2206</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- ส่วนล่าง -->
         </div>
         <app-footer></app-footer>
       </div>
@@ -1303,6 +755,7 @@
 </template>
 
 <script>
+import { db } from "../router";
 import appFooter from "../components/footer.vue";
 export default {
    components: {
@@ -1427,6 +880,20 @@ export default {
     };
   },
   methods: {
+    sendData(){
+      //ปุ่มสำหรับส่งข้อมูล
+      let resultData = {
+        name: this.name,
+        tel: this.tel,
+        email: this.email,
+        province : this.province,
+        studentClass: this.studentClass
+      }
+      console.log(resultData);
+      db.collection("level").get().then(doc=>{
+        console.log(doc.size);
+      })
+    },
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
     },
@@ -1485,5 +952,8 @@ export default {
   max-width: 300px;
   background: #FFFFFF;
   height: 300px;
+}
+.fontn{
+  font-family: "Times New Roman", Times, serif;
 }
 </style>

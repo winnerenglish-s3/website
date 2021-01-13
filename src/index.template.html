@@ -1,52 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= htmlWebpackPlugin.options.productName %></title>
 
-    <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="<%= htmlWebpackPlugin.options.productDescription %>"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta
-      name="viewport"
-      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (htmlWebpackPlugin.options.ctx.mode.cordova || htmlWebpackPlugin.options.ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>"
-    />
+<head>
+  <title>
+    <%= htmlWebpackPlugin.options.productName %>
+  </title>
 
-    <link rel="icon" type="image/png" href="statics/app-logo-128x128.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="statics/icons/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="statics/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="statics/icons/favicon-96x96.png"
-    />
-    <link rel="icon" type="image/ico" href="statics/icons/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-    />
-    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+  <meta charset="utf-8" />
+  <meta name="description" content="<%= htmlWebpackPlugin.options.productDescription %>" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (htmlWebpackPlugin.options.ctx.mode.cordova || htmlWebpackPlugin.options.ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>" />
 
-    <!-- Copy the code below and paste it onto every page of your website.
+  <link rel="icon" type="image/png" href="statics/app-logo-128x128.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="statics/icons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="statics/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="statics/icons/favicon-96x96.png" />
+  <link rel="icon" type="image/ico" href="statics/icons/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+
+  <!-- Copy the code below and paste it onto every page of your website.
 Paste this code as high in the <head> of the page as possible: -->
 
-    <!-- Google Tag Manager -->
-    <!-- <script>
+  <!-- Google Tag Manager -->
+  <!-- <script>
       (function(w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -58,13 +38,14 @@ Paste this code as high in the <head> of the page as possible: -->
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-NMXS5LM");
     </script> -->
-    <!-- End Google Tag Manager -->
+  <!-- End Google Tag Manager -->
 
-    <!-- Additionally, paste this code immediately after the opening <body> tag: -->
-  </head>
-  <body style="user-select: none;">
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript
+  <!-- Additionally, paste this code immediately after the opening <body> tag: -->
+</head>
+
+<body style="user-select: none;">
+  <!-- Google Tag Manager (noscript) -->
+  <!-- <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-NMXS5LM"
         height="0"
@@ -72,8 +53,9 @@ Paste this code as high in the <head> of the page as possible: -->
         style="display:none;visibility:hidden"
       ></iframe
     ></noscript> -->
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- DO NOT touch the following DIV -->
-    <div id="q-app"></div>
-  </body>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- DO NOT touch the following DIV -->
+  <div id="q-app"></div>
+</body>
+
 </html>
