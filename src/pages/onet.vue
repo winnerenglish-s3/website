@@ -10,12 +10,15 @@
             <div>
               <!-- ข้อความ หัวข้อหลัก -->
               <div class="q-pt-md" style="width:90%;max-width: 1200px">
-                <span v-if="innerWidth > 1023" class="text-h1 cl1 titile">WINNER O-NET</span>
+                <span v-if="innerWidth > 1023" class="text-h1 cl1 titile"
+                  >WINNER O-NET</span
+                >
                 <span
                   v-if="innerWidth < 1024"
                   style="font-size:calc(35px + 2vw);"
                   class="cl1 titile"
-                >WINNER O-NET</span>
+                  >WINNER O-NET</span
+                >
                 <br />
                 <div class="q-pt-sm q-px-md q-pb-md">
                   <span class="font">
@@ -118,13 +121,18 @@
                 v-if="innerWidth > 1023"
                 class="self-center col-md-6 col-sm-12 col-xs-12 q-px-md q-pt-md"
               >
-                <q-img src="../statics/image/onet/onet-4.png" style="max-width:450px;" />
+                <q-img
+                  src="../statics/image/onet/onet-4.png"
+                  style="max-width:450px;"
+                />
               </div>
               <div
                 class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md q-px-lg"
               >
                 <div>
-                  <div class="text-h4 cl1 titile q-pb-md">เตรียมความพร้อมในการสอบ O-net</div>
+                  <div class="text-h4 cl1 titile q-pb-md">
+                    เตรียมความพร้อมในการสอบ O-net
+                  </div>
                   <span>
                     ในระยะเวลา 16 ชั่วโมงเพื่อเตรียมความพร้อมก่อนลงสนามสอบ
                     นักเรียนจะได้ตะลุยโจทย์และเจาะลึกแนวข้อสอบในทุก ๆ
@@ -136,29 +144,48 @@
             </div>
             <!-- ข้อความส่วนที่สอง พัฒนาการที่เห็นผลจากนักเรียน-->
             <div class="row q-pt-md" style="width:90%;max-width:1200px;">
-              <div v-if="innerWidth < 1023" class="self-center col-md-6 col-sm-12 col-xs-12">
-                <q-img src="../statics/image/onet/onet5.png" style="max-width:450px;" />
+              <div
+                v-if="innerWidth < 1023"
+                class="self-center col-md-6 col-sm-12 col-xs-12"
+              >
+                <q-img
+                  src="../statics/image/onet/onet5.png"
+                  style="max-width:450px;"
+                />
               </div>
               <div
                 class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pt-md q-px-lg"
               >
                 <div>
-                  <div class="text-h4 cl1 titile q-pb-lg">ความสำเร็จของ winner O-net</div>
+                  <div class="text-h4 cl1 titile q-pb-lg">
+                    ความสำเร็จของ winner O-net
+                  </div>
                   <span>
-                    นักเรียนระดับชั้นประถมศึกษาปีที่ 6 ที่ติวเข้มด้วยโปรแกรมของเรา
+                    นักเรียนระดับชั้นประถมศึกษาปีที่ 6
+                    ที่ติวเข้มด้วยโปรแกรมของเรา
                     มีผลคะแนนในการสอบพัฒนาสูงขึ้นอย่างเห็นได้ชัด
                     วัดผลจากค่าเฉลี่ยของทุกเรียนในปี 2561 เพิ่มขึ้นร้อยละ 10.81
                     เมื่อเทียบกับการสอบในปี 2560
                   </span>
                 </div>
               </div>
-              <div v-if="innerWidth > 1022" class="self-center col-md-6 col-sm-12 col-xs-12">
-                <q-img src="../statics/image/onet/onet5.png" style="max-width:500px;" />
+              <div
+                v-if="innerWidth > 1022"
+                class="self-center col-md-6 col-sm-12 col-xs-12"
+              >
+                <q-img
+                  src="../statics/image/onet/onet5.png"
+                  style="max-width:500px;"
+                />
               </div>
             </div>
 
             <!-- สนใจโปรแกรม -->
-            <div v-if="innerWidth > 700" style="height:250px  " class="relative-position clblue1">
+            <div
+              v-if="innerWidth > 700"
+              style="height:250px  "
+              class="relative-position clblue1"
+            >
               <span class="text-h3 absolute-center" style="width:100%">
                 <div class="q-py-md">
                   สนใจโปรแกรมติดต่อ:
@@ -175,7 +202,10 @@
               style="height:250px "
               class="relative-position clblue1 q-mb-md"
             >
-              <div style="width:100%" class="fontphone absolute-center clblue1 titilebold">
+              <div
+                style="width:100%"
+                class="fontphone absolute-center clblue1 titilebold"
+              >
                 <div>
                   <div>สนใจเรียน</div>
                   <div>
