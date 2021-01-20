@@ -1,4 +1,4 @@
-import { register } from 'register-service-worker'
+import { register } from "register-service-worker";
 
 // The ready(), registered(), cached(), updatefound() and updated()
 // events passes a ServiceWorkerRegistration instance in their arguments.
@@ -13,48 +13,46 @@ register(process.env.SERVICE_WORKER_FILE, {
 
   ready() {
     if (process.env.DEV) {
-      console.log('App is being served from cache by a service worker.')
+      console.log("App is being served from cache by a service worker.");
     }
   },
 
   registered(/* registration */) {
     if (process.env.DEV) {
-      console.log('Service worker has been registered.')
+      console.log("Service worker has been registered.");
     }
   },
 
   cached(/* registration */) {
     if (process.env.DEV) {
-      console.log('Content has been cached for offline use.')
+      console.log("Content has been cached for offline use.");
     }
   },
 
   updatefound(/* registration */) {
     if (process.env.DEV) {
-      console.log('New content is downloading.')
+      console.log("New content is downloading.");
     }
   },
 
   updated(/* registration */) {
     if (process.env.DEV) {
-      console.log('updated version')
+      console.log("updated version");
     }
-    Window.location.reload(true)
-    // setTimeout(() => {
-    //   window.location.reload(true)
-    // }, 4000);
-
+    window.location.reload(true);
   },
 
   offline() {
     if (process.env.DEV) {
-      console.log('No internet connection found. App is running in offline mode.')
+      console.log(
+        "No internet connection found. App is running in offline mode."
+      );
     }
   },
 
   error(err) {
     if (process.env.DEV) {
-      console.error('Error during service worker registration:', err)
+      console.error("Error during service worker registration:", err);
     }
   }
-})
+});
