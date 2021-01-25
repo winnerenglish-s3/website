@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-12 self-end">
                   <a
-                    href="https://adventures-plus.web.app/"
+                    href="https://advtas.winner-english.com/"
                     target="_blank"
                     style="text-decoration:none;"
                   >
@@ -69,7 +69,7 @@
             <div>
               <a
                 v-if="!btnMB"
-                href="https://mainapp.winner-english.com/"
+                href="https://app.winner-english.com/"
                 target="_blank"
                 style="text-decoration:none;"
               >
@@ -98,7 +98,7 @@
             <div>
               <a
                 v-if="!btnMB"
-                href="https://tas.winner-english.com/"
+                href="https://advtas.winner-english.com/"
                 target="_blank"
                 style="text-decoration:none;"
               >
