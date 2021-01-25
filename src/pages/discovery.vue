@@ -417,7 +417,7 @@
                 <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
                   <div class="col-4"></div>
                   <div>
-                    <a href="../statics/pdf/lv1-2.pdf" download>ดูตัวอย่าง</a>
+                    <a href="../statics/pdf/lv1-2.pdf" target="_blank">ดูตัวอย่าง</a>
                   </div>
                 </u>
               </div>
@@ -441,7 +441,7 @@
               <div :class="$q.platform.is.mobile?'col-12 ':'q-mt-md'" class="txcl1">
                 <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
                   <div class="col-4"></div>
-                   <a href="../statics/pdf/lv5-6.pdf" download>ดูตัวอย่าง</a>
+                   <a href="../statics/pdf/lv5-6.pdf" target="_blank">ดูตัวอย่าง</a>
                   </u>
               </div>
             </div>
@@ -464,7 +464,7 @@
               <div :class="$q.platform.is.mobile?'col-12 ':'q-mt-md'" class="txcl1">
                 <u :class="$q.platform.is.mobile?'row':'cursor-pointer'">
                   <div class="col-4"></div>
-                   <a href="../statics/pdf/lv9-10.pdf" download>ดูตัวอย่าง</a>
+                   <a href="../statics/pdf/lv9-10.pdf" target="_blank">ดูตัวอย่าง</a>
                   </u>
               </div>
             </div>
