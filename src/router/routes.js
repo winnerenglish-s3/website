@@ -173,6 +173,16 @@ const routes = [
     path: "/condition",
     component: () => import("pages/condition.vue"),
     name: "condition"
+  },
+  {
+    path: "/thankyou",
+    component: () => import("pages/thankyou.vue"),
+    name: "thankyou"
+  },
+  {
+    path: "/test",
+    component: () => import("pages/test.vue"),
+    name: "test"
   }
 ];
 
