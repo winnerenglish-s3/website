@@ -1,7 +1,9 @@
 import Vue from "vue";
+import VueGtm from "vue-gtm";
 import VueRouter from "vue-router";
 
 import routes from "./routes";
+
 
 Vue.use(VueRouter);
 /*
@@ -12,6 +14,7 @@ Vue.use(VueRouter);
  * async/await or return a Promise which resolves
  * with the Router instance.
  */
+
 
 
 Vue.mixin({

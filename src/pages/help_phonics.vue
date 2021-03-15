@@ -334,7 +334,7 @@ export default {
   data() {
     return {
       popupPhonics: false,
-      innerWidth: window.innerWidth,
+      innerWidth: null,
       innerheigth: window.innerheigth
     };
   },

@@ -649,8 +649,8 @@ export default {
         "../statics/image/adventures/adventures-conversation.png",
       adventures3: "../statics/image/adventures/adventures-3.png",
       slide: 1,
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerWidth: null,
+      innerHeight: null
     };
   },
   components: {

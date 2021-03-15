@@ -224,7 +224,7 @@ export default {
     return {
       popupSpelling: false,
       popupMulti: false,
-      innerWidth: window.innerWidth,
+      innerWidth: null,
       innerheigth: window.innerheigth
     };
   },

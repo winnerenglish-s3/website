@@ -117,7 +117,7 @@ export default {
   data() {
     return {
       popupTran: false,
-      innerWidth: window.innerWidth,
+      innerWidth: null,
       innerheigth: window.innerheigth
     };
   },

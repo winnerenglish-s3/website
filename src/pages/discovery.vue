@@ -907,13 +907,11 @@
                     >จากราคา <strike>2,400</strike> ลดเหลือเพียง<br
                       v-if="innerWidth < 750"
                     />
-                    <span class="txcl3 text-h2"><b>1,200 บาท</b></span> เท่านั้น !<sup
-                      >*</sup
-                    ></b
+                    <span class="txcl3 text-h2"><b>1,200 บาท</b></span> เท่านั้น !</b
                   ></span
                 >
                 <div class="txcl2" :class="innerWidth > 750 ? 'text-h4' : 'text-h5'">
-                  *ระยะเวลาโปรโมชั่น <br v-if="innerWidth < 750" />
+                  ระยะเวลาโปรโมชั่น <br v-if="innerWidth < 750" />
                   1 มกราคม 2564 - 31 มกราคม 2564 นี้เท่านั้น!
                 </div>
               </div>
@@ -945,8 +943,8 @@ export default {
       conversation: "../statics/image/discovery/conversation.png",
       skillSlide: 1, //slide ทักษะทั้งหมด
       abilitySlide: 1, //slide ความสามารถของโปรแกรม
-      innerWidth: window.innerWidth, //ความกว้างหน้า
-      innerHeight: window.innerHeight, //ความสูงหน้าจอ
+      innerWidth: null, //ความกว้างหน้า
+      innerHeight: null, //ความสูงหน้าจอ
       policyOrCondition: "", //เปิดนโยบายหรือเงื่อนไข
       name: "", //ชื่อผู้ปกครอง
       tel: "", //เบอร์โทรผู้ปกครอง

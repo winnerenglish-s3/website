@@ -2,21 +2,24 @@
   <q-page>
     <q-resize-observer @resize="onResize" />
     <div align="center">
-      <div class="shadow-1" style="max-width:1280px">
+      <div class="shadow-1" style="max-width: 1280px">
         <div>
           <!-- ส่วนบน รูปปก -->
           <div v-if="innerWidth > 1023" class="bghome"></div>
           <!-- ข้อความ หัวข้อหลัก -->
-          <div class="q-pt-md" style="width:90%;max-width: 1200px">
-            <span v-if="innerWidth > 1023" class="text-h1 cl1 titile">WINNER ENGLISH</span>
+          <div class="q-pt-md" style="width: 90%; max-width: 1200px">
+            <span v-if="innerWidth > 1023" class="text-h1 cl1 titile"
+              >WINNER ENGLISH</span
+            >
             <span
               v-if="innerWidth < 1024"
-              style="font-size:calc(35px + 2vw);"
+              style="font-size: calc(35px + 2vw)"
               class="cl1 titile"
-            >WINNER ENGLISH</span>
+              >WINNER ENGLISH</span
+            >
             <br />
             <div class="q-py-sm q-px-md q-pb-xl">
-              <div class="font" style="max-width: 1000px;">
+              <div class="font" style="max-width: 1000px">
                 <span>
                   นวัตกรรมการเรียนภาษาอังกฤษอัจฉริยะแบบครบวงจร
                   ช่วยสนับสนุนการเรียนการสอนของคุณครูและนักเรียนในโรงเรียน
@@ -27,28 +30,28 @@
             </div>
           </div>
           <!-- winner English เหมาะสมกับใคร-->
-          <div class="row reverse q-py-md" style="width:95%;max-width:1200px;">
+          <div class="row reverse q-py-md" style="width: 95%; max-width: 1200px">
             <div class="self-center col-md-6 col-sm-12 col-xs-12">
-              <q-img :src="home2" style="max-width:500px;width:85%" />
+              <q-img :src="home2" style="max-width: 500px; width: 85%" />
             </div>
             <div
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md"
             >
               <div>
-                <div class="cl1 titilecenter" :class="$q.platform.is.desktop ? '' : 'q-mt-lg'">
+                <div
+                  class="cl1 titilecenter"
+                  :class="$q.platform.is.desktop ? '' : 'q-mt-lg'"
+                >
                   Winner English
                   <br v-if="innerWidth < 550" />เหมาะกับใคร ?
                 </div>
                 <span>
-                  Winner English
-                  เหมาะกับนักเรียนระดับชั้นประถมศึกษาและมัธยมศึกษา ตอนต้น คือ
-                  ช่วงอายุ 6-15 ปี เนื่องจากแพลตฟอร์มการเรียนการสอนของ Winner
-                  English เป็นการเรียนภาษาอังกฤษแบบออนไลน์ที่จะต้องเรียนกับ
-                  อุปกรณ์เทคโนโลยี
+                  Winner English เหมาะกับนักเรียนระดับชั้นประถมศึกษาและมัธยมศึกษา ตอนต้น
+                  คือ ช่วงอายุ 6-15 ปี เนื่องจากแพลตฟอร์มการเรียนการสอนของ Winner English
+                  เป็นการเรียนภาษาอังกฤษแบบออนไลน์ที่จะต้องเรียนกับ อุปกรณ์เทคโนโลยี
                   ช่วงวัยที่เหมาะสมและมีสมาธิในการเรียนรู้ผ่านระบบ
-                  ออนไลน์จึงอยู่ในช่วงอายุ 6 ปี ขึ้นไป
-                  และเนื้อหาที่ได้รับการพัฒนาสำหรับ นักเรียนวัยนี้โดยเฉพาะ
-                  สอดคล้องตามหลักสูตรแกนกลางกระทรวงศึกษาธิการ
+                  ออนไลน์จึงอยู่ในช่วงอายุ 6 ปี ขึ้นไป และเนื้อหาที่ได้รับการพัฒนาสำหรับ
+                  นักเรียนวัยนี้โดยเฉพาะ สอดคล้องตามหลักสูตรแกนกลางกระทรวงศึกษาธิการ
                   เพื่อปูพืนฐานภาษาอังกฤษให้นักเรียนสามารถนำไปใช้ได้จริงในโรงเรียน
                   และการใช้ชีวิตประจำวันอย่างมั่นใจ
                 </span>
@@ -56,13 +59,11 @@
             </div>
           </div>
           <!-- ทำไมต้องเรียน winnner English -->
-          <div class="row q-py-md q-mb-lg" style="width:90%;max-width:1200px;">
+          <div class="row q-py-md q-mb-lg" style="width: 90%; max-width: 1200px">
             <div class="self-center row col-md-12 col-sm-12 col-xs-12 text-left">
               <div
                 class="text-h4 cl1 titile q-py-md full-width"
-                :align="
-                  $q.platform.is.desktop && innerWidth > 549 ? 'center' : ''
-                "
+                :align="$q.platform.is.desktop && innerWidth > 549 ? 'center' : ''"
               >
                 ทำไมต้องเลือกเรียน
                 <br v-if="innerWidth < 550" />Winner English ?
@@ -76,14 +77,9 @@
                   "
                   src="../statics/image/icon1.png"
                 ></q-img>
-                <span
-                  :class="
-                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
-                  "
-                >
+                <span :class="$q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'">
                   <div>
-                    เนื้อหาตรงตามหลักสูตรแกนกลาง
-                    ผ่านการนำเสนอบทเรียนที่ต่อยอด
+                    เนื้อหาตรงตามหลักสูตรแกนกลาง ผ่านการนำเสนอบทเรียนที่ต่อยอด
                     การเรียนรู้ในโรงเรียน
                   </div>
                 </span>
@@ -97,14 +93,9 @@
                   "
                   src="../statics/image/icon2.png"
                 ></q-img>
-                <span
-                  :class="
-                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
-                  "
-                >
+                <span :class="$q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'">
                   <div>
-                    เรียนได้ไม่จำกัด ทุกที่ ทุกเวลา
-                    เพียงเชื่อมต่ออินเตอร์เน็ต
+                    เรียนได้ไม่จำกัด ทุกที่ ทุกเวลา เพียงเชื่อมต่ออินเตอร์เน็ต
                     ไม่ต้องดาวน์โหลดโปรแกรม
                   </div>
                 </span>
@@ -118,14 +109,9 @@
                   "
                   src="../statics/image/icon3.png"
                 ></q-img>
-                <span
-                  :class="
-                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
-                  "
-                >
+                <span :class="$q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'">
                   <div>
-                    Practice-based Learning
-                    เรียนรู้ทักษะภาษาอังกฤษ ผ่านการฝึกฝนและลงมือทำ
+                    Practice-based Learning เรียนรู้ทักษะภาษาอังกฤษ ผ่านการฝึกฝนและลงมือทำ
                   </div>
                 </span>
               </div>
@@ -138,15 +124,10 @@
                   "
                   src="../statics/image/icon4.png"
                 ></q-img>
-                <span
-                  :class="
-                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
-                  "
-                >
+                <span :class="$q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'">
                   <div>
-                    การวัดผลแม่นยำ
-                    สามารถติดตามและรายงานผล
-                    การเรียนรายบุคคลได้แบบ Real-time
+                    การวัดผลแม่นยำ สามารถติดตามและรายงานผล การเรียนรายบุคคลได้แบบ
+                    Real-time
                   </div>
                 </span>
               </div>
@@ -159,15 +140,9 @@
                   "
                   src="../statics/image/icon5.png"
                 ></q-img>
-                <span
-                  :class="
-                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
-                  "
-                >
+                <span :class="$q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'">
                   <div>
-                    เรียนครบทุกทักษะภาษาอังกฤษ
-                    ฟัง พูด อ่าน เขียน คำศัพท์
-                    ไวยากรณ์
+                    เรียนครบทุกทักษะภาษาอังกฤษ ฟัง พูด อ่าน เขียน คำศัพท์ ไวยากรณ์
                   </div>
                 </span>
               </div>
@@ -180,11 +155,7 @@
                   "
                   src="../statics/image/icon6.png"
                 ></q-img>
-                <span
-                  :class="
-                    $q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'
-                  "
-                >
+                <span :class="$q.platform.is.desktop ? 'col q-px-sm' : 'col q-px-md'">
                   <div>
                     สอบวัดระดับภาษา (placement Test) ช่วยให้เนื้อหาเหมาะสมกับ
                     พื้นฐานนักเรียนแต่ละคน
@@ -194,9 +165,9 @@
             </div>
           </div>
           <!-- สำหรับผู้ปกครอง และนักเรียน-->
-          <div class="row q-py-md" style="width:90%;max-width:1200px;">
+          <div class="row q-py-md" style="width: 90%; max-width: 1200px">
             <div class="self-center col-md-6 col-sm-12 col-xs-12">
-              <q-img :src="home3" style="max-width:500px;" />
+              <q-img :src="home3" style="max-width: 500px" />
             </div>
             <div
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md q-px-lg"
@@ -208,8 +179,8 @@
                 </div>
                 <span>
                   โปรแกรมเรียนภาษาอังกฤษออนไลน์ที่สามารถจัดรูปแบบเรียนรู้
-                  และทำแบบฝึกหัดได้ด้วยตนเอง เรียนรู้ได้ทุกที่ ทุกเวลา สนุก
-                  เข้าใจง่าย ด้วยรูปแบบ VDO Animation และเทคโนโลยี Gamification
+                  และทำแบบฝึกหัดได้ด้วยตนเอง เรียนรู้ได้ทุกที่ ทุกเวลา สนุก เข้าใจง่าย
+                  ด้วยรูปแบบ VDO Animation และเทคโนโลยี Gamification
                 </span>
                 <div class="q-py-lg">
                   <q-btn unelevated to="/adventures" rounded class="bgcl1 text-white">
@@ -220,9 +191,9 @@
             </div>
           </div>
           <!-- สำหรับคุณครู และโรงเรียน-->
-          <div class="row reverse q-pt-md" style="width:90%;max-width:1200px;">
+          <div class="row reverse q-pt-md" style="width: 90%; max-width: 1200px">
             <div class="self-center col-md-6 col-sm-12 col-xs-12 q-px-md">
-              <q-img :src="home4" style="max-width:500px;" />
+              <q-img :src="home4" style="max-width: 500px" />
             </div>
             <div
               class="self-center row justify-center col-md-6 col-sm-12 col-xs-12 text-left q-pa-md q-px-lg"
@@ -233,8 +204,8 @@
                   <br v-if="innerWidth < 550" />และโรงเรียน
                 </div>
                 <span>
-                  แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ ผ่านเรื่องราวการผจญภัย
-                  ที่สนุกสนาม กระตุ้นพัฒนาการเรียนรู้ของนักเรียน พร้อมระบบช่วย
+                  แพลตฟอร์มห้องเรียนดิจิทัลภาษาอังกฤษ ผ่านเรื่องราวการผจญภัย ที่สนุกสนาม
+                  กระตุ้นพัฒนาการเรียนรู้ของนักเรียน พร้อมระบบช่วย
                   สนับสนุนการสอนของคุณครูอย่างมีประสิทธิภาพ
                 </span>
                 <div class="q-py-lg">
@@ -249,25 +220,32 @@
         <!-- ความคิดเห็น PC -->
         <div class="q-pt-md">
           <div
-            style="margin-bottom:-100px"
+            style="margin-bottom: -100px"
             v-if="innerWidth > 1007"
             class="text-h3 cl1 q-py-xl"
-          >ความคิดเห็นของผู้ใช้</div>
+          >
+            ความคิดเห็นของผู้ใช้
+          </div>
         </div>
         <div
           v-if="innerWidth > 1007"
-          style="max-width:1280px"
+          style="max-width: 1280px"
           class="relative-position bgbottom row justify-center"
         >
           <!-- ความคิดเห็น PC -->
-          <div class="row" style="width:100%;max-width:1200px;">
+          <div class="row" style="width: 100%; max-width: 1200px">
             <div class="self-center col-4">
-              <div style="margin-top:160px" class="box q-pa-md">
+              <div style="margin-top: 160px" class="box q-pa-md">
                 <div
                   class="q-pa-sm"
-                  style="max-width:130px;border-radius:100px;background: #e7f7ff;margin-top:-80px;"
+                  style="
+                    max-width: 130px;
+                    border-radius: 100px;
+                    background: #e7f7ff;
+                    margin-top: -80px;
+                  "
                 >
-                  <q-img :src="testimonial1" style="width:100%;" />
+                  <q-img :src="testimonial1" style="width: 100%" />
                 </div>
 
                 <div class="q-py-md">
@@ -277,29 +255,31 @@
 
                   <div class="q-py-lg">
                     <div>
-                      <q-img :src="message" style="max-width:50px;" />
+                      <q-img :src="message" style="max-width: 50px" />
                     </div>
                   </div>
                   <div>
                     <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
-                    <span>
-                      สะดวก ทันสมัย ช่วยให้
-                      นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง
-                    </span>
+                    <span> สะดวก ทันสมัย ช่วยให้ นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง </span>
                   </div>
                 </div>
               </div>
-              <div style="margin-top:-65px;color: #e7f7ff;">
+              <div style="margin-top: -65px; color: #e7f7ff">
                 <q-icon size="100px" name="fas fa-sort-down" />
               </div>
             </div>
             <div class="self-center col-4">
-              <div style="margin-top:160px;" class="box q-pa-md">
+              <div style="margin-top: 160px" class="box q-pa-md">
                 <div
                   class="q-pa-sm"
-                  style="max-width:130px;border-radius:100px;background: #e7f7ff;margin-top:-80px;"
+                  style="
+                    max-width: 130px;
+                    border-radius: 100px;
+                    background: #e7f7ff;
+                    margin-top: -80px;
+                  "
                 >
-                  <q-img :src="testimonial2" style="width:100%;" />
+                  <q-img :src="testimonial2" style="width: 100%" />
                 </div>
                 <div class="q-py-md">
                   <div>
@@ -308,27 +288,34 @@
 
                   <div class="q-py-lg">
                     <div>
-                      <q-img :src="message" style="max-width:50px;" />
+                      <q-img :src="message" style="max-width: 50px" />
                     </div>
                   </div>
                   <div>
                     <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
-                    <span>ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษครูก็ได้รับประโยชน์จากการใช้สื่อใหม่ๆ</span>
+                    <span
+                      >ช่วยให้นักเรียนได้ครบทุกทักษะภาษาอังกฤษครูก็ได้รับประโยชน์จากการใช้สื่อใหม่ๆ</span
+                    >
                   </div>
                 </div>
               </div>
-              <div style="margin-top:-65px;color: #e7f7ff;">
+              <div style="margin-top: -65px; color: #e7f7ff">
                 <q-icon size="100px" name="fas fa-sort-down" />
               </div>
             </div>
 
             <div class="self-center col-4">
-              <div style="margin-top:160px" class="box q-pa-md">
+              <div style="margin-top: 160px" class="box q-pa-md">
                 <div
                   class="q-pa-sm"
-                  style="max-width:130px;border-radius:100px;background: #e7f7ff;margin-top:-80px;"
+                  style="
+                    max-width: 130px;
+                    border-radius: 100px;
+                    background: #e7f7ff;
+                    margin-top: -80px;
+                  "
                 >
-                  <q-img :src="testimonial3" style="width:100%;" />
+                  <q-img :src="testimonial3" style="width: 100%" />
                 </div>
                 <div class="q-py-md">
                   <div>
@@ -337,7 +324,7 @@
 
                   <div class="q-py-lg">
                     <div>
-                      <q-img :src="message" style="max-width:50px;" />
+                      <q-img :src="message" style="max-width: 50px" />
                     </div>
                   </div>
                   <div>
@@ -347,25 +334,30 @@
                   </div>
                 </div>
               </div>
-              <div style="margin-top:-65px;color: #e7f7ff;">
+              <div style="margin-top: -65px; color: #e7f7ff">
                 <q-icon size="100px" name="fas fa-sort-down" />
               </div>
             </div>
-            <div style="height:100px " class="col-12"></div>
+            <div style="height: 100px" class="col-12"></div>
           </div>
         </div>
 
-        <div v-if="innerWidth < 1008" class="relative-position bgbottommb row justify-center">
+        <div
+          v-if="innerWidth < 1008"
+          class="relative-position bgbottommb row justify-center"
+        >
           <!-- ความคิดเห็น Mobile -->
           <div
             class="row absolute-bottom"
             v-if="innerWidth < 1008"
-            style="width:100%;max-width:1200px;"
+            style="width: 100%; max-width: 1200px"
           >
             <!-- ความคิดเห็น Mobile -->
             <div class="self-center bgblue1 col-12">
-              <div class="bgblue1 text-h3 text-white q-pt-lg q-pb-lg">ความคิดเห็นของผู้ใช้</div>
-              <div style="width:100% ">
+              <div class="bgblue1 text-h3 text-white q-pt-lg q-pb-lg">
+                ความคิดเห็นของผู้ใช้
+              </div>
+              <div style="width: 100%">
                 <q-carousel
                   swipeable
                   animated
@@ -375,17 +367,22 @@
                   autoplay
                   control-color="primary"
                   class="bgblue1"
-                  style="width:100%;height:500px"
+                  style="width: 100%; height: 500px"
                   transition-prev="slide-right"
                   transition-next="slide-left"
                 >
                   <q-carousel-slide :name="1">
-                    <div style="margin-top:50px;" class="boxmb q-pa-md">
+                    <div style="margin-top: 50px" class="boxmb q-pa-md">
                       <div
                         class="q-pa-sm"
-                        style="max-width:120px;border-radius:100px;background: #e7f7ff;margin-top:-80px;"
+                        style="
+                          max-width: 120px;
+                          border-radius: 100px;
+                          background: #e7f7ff;
+                          margin-top: -80px;
+                        "
                       >
-                        <q-img :src="testimonial1" style="width:100%;" />
+                        <q-img :src="testimonial1" style="width: 100%" />
                       </div>
 
                       <div>
@@ -395,29 +392,33 @@
 
                         <div class="q-py-sm">
                           <div>
-                            <q-img :src="message" style="max-width:50px;" />
+                            <q-img :src="message" style="max-width: 50px" />
                           </div>
                         </div>
                         <div>
                           <span class="titilebold q-px-sm">วินเนอร์ อิงลิช</span>
                           <span>
-                            สะดวก ทันสมัย ช่วยให้
-                            นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง
+                            สะดวก ทันสมัย ช่วยให้ นักเรียนพัฒนาการเรียนรู้ด้วยตนเอง
                           </span>
                         </div>
                       </div>
                     </div>
-                    <div style="margin-top:-65px;color: #e7f7ff;">
+                    <div style="margin-top: -65px; color: #e7f7ff">
                       <q-icon size="100px" name="fas fa-sort-down" />
                     </div>
                   </q-carousel-slide>
                   <q-carousel-slide :name="2">
-                    <div style="margin-top:50px;" class="boxmb q-pa-md">
+                    <div style="margin-top: 50px" class="boxmb q-pa-md">
                       <div
                         class="q-pa-sm"
-                        style="max-width:120px;border-radius:100px;background: #e7f7ff;margin-top:-80px;"
+                        style="
+                          max-width: 120px;
+                          border-radius: 100px;
+                          background: #e7f7ff;
+                          margin-top: -80px;
+                        "
                       >
-                        <q-img :src="testimonial2" style="width:100%;" />
+                        <q-img :src="testimonial2" style="width: 100%" />
                       </div>
 
                       <div>
@@ -427,7 +428,7 @@
 
                         <div class="q-py-sm">
                           <div>
-                            <q-img :src="message" style="max-width:50px;" />
+                            <q-img :src="message" style="max-width: 50px" />
                           </div>
                         </div>
                         <div>
@@ -439,17 +440,22 @@
                         </div>
                       </div>
                     </div>
-                    <div style="margin-top:-65px;color: #e7f7ff;">
+                    <div style="margin-top: -65px; color: #e7f7ff">
                       <q-icon size="100px" name="fas fa-sort-down" />
                     </div>
                   </q-carousel-slide>
                   <q-carousel-slide :name="3">
-                    <div style="margin-top:50px;" class="boxmb q-pa-md">
+                    <div style="margin-top: 50px" class="boxmb q-pa-md">
                       <div
                         class="q-pa-sm"
-                        style="max-width:120px;border-radius:100px;background: #e7f7ff;margin-top:-80px;"
+                        style="
+                          max-width: 120px;
+                          border-radius: 100px;
+                          background: #e7f7ff;
+                          margin-top: -80px;
+                        "
                       >
-                        <q-img :src="testimonial3" style="width:100%;" />
+                        <q-img :src="testimonial3" style="width: 100%" />
                       </div>
 
                       <div>
@@ -459,7 +465,7 @@
 
                         <div class="q-py-sm">
                           <div>
-                            <q-img :src="message" style="max-width:50px;" />
+                            <q-img :src="message" style="max-width: 50px" />
                           </div>
                         </div>
                         <div>
@@ -471,7 +477,7 @@
                         </div>
                       </div>
                     </div>
-                    <div style="margin-top:-65px;color: #e7f7ff;">
+                    <div style="margin-top: -65px; color: #e7f7ff">
                       <q-icon size="100px" name="fas fa-sort-down" />
                     </div>
                   </q-carousel-slide>
@@ -501,8 +507,8 @@ export default {
       testimonial3: "../statics/image/testimonial3.png",
       message: "../statics/image/message.png",
       slide: 1,
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight,
+      innerWidth: null,
+      innerHeight: null,
     };
   },
   components: {

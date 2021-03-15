@@ -197,8 +197,8 @@ export default {
   data() {
     return {
       btnMB: false,
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerWidth: null,
+      innerHeight: null
     };
   },
   methods: {

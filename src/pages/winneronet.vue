@@ -79,8 +79,8 @@
 export default {
   data() {
     return {
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerWidth: null,
+      innerHeight: null
     };
   },
   methods: {

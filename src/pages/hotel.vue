@@ -168,8 +168,8 @@ export default {
       writing: "../statics/image/discovery/writing.png",
       conversation: "../statics/image/discovery/conversation.png",
       slide: 1,
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerWidth: null,
+      innerHeight: null
     };
   },
   components: {

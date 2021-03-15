@@ -235,8 +235,8 @@ export default {
   data() {
     return {
       slide: 1,
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight,
+      innerWidth: null,
+      innerHeight: null,
     };
   },
   components: {

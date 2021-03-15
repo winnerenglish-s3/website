@@ -79,38 +79,7 @@
             </span>
           </div>
           <div>
-            <!-- <div class="text-right" style="font-size:16px">v. {{version}}</div> -->
           </div>
-          <!-- <div v-if="innerWidth > 1023" class="absolute-top-right q-pt-sm row">
-            <div class="q-px-xs">
-              <span
-                class="cursor-pointer"
-                onclick="window.open('https://www.facebook.com/WinnerEng', '_blank')"
-              >
-                <q-icon size="50px" name="fab fa-facebook-square" />
-              </span>
-            </div>
-
-            <div class="q-px-xs cursor-pointer">
-              <q-icon size="50px" name="fab fa-line" />
-            </div>
-          </div>-->
-          <!-- <div v-if="innerWidth < 1024" class="q-pt-sm row">
-            <div class="q-pr-xs">
-              <span
-                class="cursor-pointer"
-                onclick="window.open('https://www.facebook.com/WinnerEng', '_blank')"
-              >
-                <q-icon size="50px" name="fab fa-facebook-square" />
-              </span>
-            </div>
-
-            <div class="q-px-xs">
-              <span class="cursor-pointer">
-                <q-icon size="50px" name="fab fa-line" />
-              </span>
-            </div>
-          </div>-->
         </div>
       </div>
     </div>
@@ -121,8 +90,8 @@
 export default {
   data() {
     return {
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight
+      innerWidth: null,
+      innerHeight: null
     };
   },
   methods: {

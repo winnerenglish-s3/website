@@ -4,24 +4,18 @@
     <div v-if="innerWidth > 1023">
       <q-header class="bg-white q-py-xs">
         <q-toolbar class="row justify-center">
-          <div
-            class="row justify-between"
-            style="width:100%;max-width: 1200px;"
-          >
+          <div class="row justify-between" style="width: 100%; max-width: 1200px">
             <div class="self-center row">
               <router-link
                 to="/"
                 @click="tab = 'home'"
                 :class="{
                   clblue1: tab == 'home',
-                  'text-blue-grey-10': tab != 'home'
+                  'text-blue-grey-10': tab != 'home',
                 }"
               >
                 <div class="self-center q-px-sm" @click="tab = 'home'">
-                  <q-img
-                    src="../statics/image/logo-winner.png"
-                    style="width:100px;"
-                  />
+                  <q-img src="../statics/image/logo-winner.png" style="width: 100px" />
                 </div>
               </router-link>
               <div class="self-center">
@@ -37,7 +31,7 @@
                     class="text-decoration"
                     :class="{
                       clblue1: tab == 'home',
-                      'text-blue-grey-10': tab != 'home'
+                      'text-blue-grey-10': tab != 'home',
                     }"
                     to="/"
                     @click="tab = 'home'"
@@ -51,13 +45,28 @@
                     class="text-decoration"
                     :class="{
                       clblue1: tab == 'discovery',
-                      'text-blue-grey-10': tab != 'discovery'
+                      'text-blue-grey-10': tab != 'discovery',
                     }"
-                    to="/discovery"
-                    @click="tab = 'discovery'"
+                    to=""
                   >
-                    <q-tab name="discovery">
+                    <q-tab
+                      name="discovery"
+                      @mouseover="(selectStudent = true), (select = false)"
+                      @click="selectStudent = false"
+                    >
                       <span>สำหรับนักเรียน</span>
+
+                      <q-menu v-model="selectStudent" @mouseleave="selectStudent = false">
+                        <q-list align="center" style="width: 200px">
+                          <q-item to="/discovery" clickable v-close-popup>
+                            <q-item-section><b>Winner English</b></q-item-section>
+                          </q-item>
+                          <q-separator />
+                          <q-item to="/tutor" @click="tab = 'adventures'" v-close-popup>
+                            <q-item-section><b>Winner Tutor</b></q-item-section>
+                          </q-item>
+                        </q-list>
+                      </q-menu>
                     </q-tab>
                   </router-link>
                   <!-- โรงเรียน -->
@@ -65,25 +74,23 @@
                     class="text-decoration"
                     :class="{
                       clblue1: tab == 'adventures',
-                      'text-blue-grey-10': tab != 'adventures'
+                      'text-blue-grey-10': tab != 'adventures',
                     }"
                     to=""
                   >
-                    <q-tab name="adventures" @mouseover="select = true">
+                    <q-tab
+                      name="adventures"
+                      @mouseover="(select = true), (selectStudent = false)"
+                      @click="select = false"
+                    >
                       <span>สําหรับโรงเรียน</span>
                       <q-menu v-model="select" @mouseleave="select = false">
-                        <q-list align="center" style="width:200px">
+                        <q-list align="center" style="width: 200px">
                           <q-item to="/adventures" clickable v-close-popup>
-                            <q-item-section
-                              ><b>Winner Adventures</b></q-item-section
-                            >
+                            <q-item-section><b>Winner Adventures</b></q-item-section>
                           </q-item>
                           <q-separator />
-                          <q-item
-                            to="/o-net"
-                            @click="tab = 'adventures'"
-                            v-close-popup
-                          >
+                          <q-item to="/o-net" @click="tab = 'adventures'" v-close-popup>
                             <q-item-section><b>Winner O-net</b></q-item-section>
                           </q-item>
                         </q-list>
@@ -95,7 +102,7 @@
                     class="text-decoration"
                     :class="{
                       clblue1: tab == 'hotel',
-                      'text-blue-grey-10': tab != 'hotel'
+                      'text-blue-grey-10': tab != 'hotel',
                     }"
                     to="/hotel"
                     @click="tab = 'hotel'"
@@ -123,7 +130,7 @@
                     class="text-decoration"
                     :class="{
                       clblue1: tab == 'contact',
-                      'text-blue-grey-10': tab != 'contact'
+                      'text-blue-grey-10': tab != 'contact',
                     }"
                     to="/contact"
                     @click="tab = 'contact'"
@@ -186,7 +193,7 @@
     <div v-if="innerWidth < 1024">
       <q-header class="bg-white q-py-xs">
         <q-toolbar class="row justify-center">
-          <div class="row" style="width:100%;max-width: 1200px;">
+          <div class="row" style="width: 100%; max-width: 1200px">
             <div>
               <div class="self-center">
                 <q-btn
@@ -206,14 +213,11 @@
                 @click="tab = 'home'"
                 :class="{
                   clblue1: tab == 'home',
-                  'text-blue-grey-10': tab != 'home'
+                  'text-blue-grey-10': tab != 'home',
                 }"
               >
                 <div class="self-center" @click="tab = 'home'">
-                  <q-img
-                    src="../statics/image/logo-winner.png"
-                    style="width:100px;"
-                  />
+                  <q-img src="../statics/image/logo-winner.png" style="width: 100px" />
                 </div>
               </router-link>
             </div>
@@ -231,10 +235,7 @@
         <q-scroll-area class="fit">
           <div align="center">
             <div class="q-pt-md q-pb-sm">
-              <q-img
-                src="../statics/image/logo-winner.png"
-                style="width:100px;"
-              />
+              <q-img src="../statics/image/logo-winner.png" style="width: 100px" />
             </div>
             <q-separator />
           </div>
@@ -246,12 +247,10 @@
               @click="(tab = 'home'), (leftDrawerOpen = false)"
               :class="{
                 clblue1: tab == 'home',
-                'text-blue-grey-7': tab != 'home'
+                'text-blue-grey-7': tab != 'home',
               }"
             >
-              <q-item-section class="font q-px-md q-py-sm"
-                >หน้าแรก</q-item-section
-              >
+              <q-item-section class="font q-px-md q-py-sm">หน้าแรก</q-item-section>
             </q-item>
             <q-separator />
             <q-item
@@ -261,12 +260,10 @@
               @click="(tab = 'discovery'), (leftDrawerOpen = false)"
               :class="{
                 clblue1: tab == 'discovery',
-                'text-blue-grey-7': tab != 'discovery'
+                'text-blue-grey-7': tab != 'discovery',
               }"
             >
-              <q-item-section class="font q-px-md q-py-sm"
-                >สำหรับนักเรียน</q-item-section
-              >
+              <q-item-section class="font q-px-md q-py-sm">สำหรับนักเรียน</q-item-section>
             </q-item>
             <q-separator />
             <q-item
@@ -274,7 +271,7 @@
               @click="tab = 'adventures'"
               :class="{
                 clblue1: tab == 'adventures',
-                'text-blue-grey-7': tab != 'adventures'
+                'text-blue-grey-7': tab != 'adventures',
               }"
             >
               <q-item-section class="font">
@@ -284,7 +281,7 @@
                   label="สำหรับโรงเรียน"
                 >
                   <q-separator />
-                  <q-list align="left" style="width:100%">
+                  <q-list align="left" style="width: 100%">
                     <q-item to="/adventures" @click="leftDrawerOpen = false">
                       <q-item-section>Winner Adventures</q-item-section>
                     </q-item>
@@ -307,12 +304,10 @@
               @click="(tab = 'hotel'), (leftDrawerOpen = false)"
               :class="{
                 clblue1: tab == 'hotel',
-                'text-blue-grey-7': tab != 'hotel'
+                'text-blue-grey-7': tab != 'hotel',
               }"
             >
-              <q-item-section class="font q-py-sm q-px-md"
-                >สำหรับธุรกิจ</q-item-section
-              >
+              <q-item-section class="font q-py-sm q-px-md">สำหรับธุรกิจ</q-item-section>
             </q-item>
             <!-- <q-separator />
             <q-item
@@ -337,12 +332,10 @@
               @click="(tab = 'contact'), (leftDrawerOpen = false)"
               :class="{
                 clblue1: tab == 'contact',
-                'text-blue-grey-7': tab != 'contact'
+                'text-blue-grey-7': tab != 'contact',
               }"
             >
-              <q-item-section class="font q-py-sm q-px-md"
-                >ติดต่อเรา</q-item-section
-              >
+              <q-item-section class="font q-py-sm q-px-md">ติดต่อเรา</q-item-section>
             </q-item>
             <q-separator />
             <q-item
@@ -352,12 +345,10 @@
               @click="(tab = 'login'), (leftDrawerOpen = false)"
               :class="{
                 clblue1: tab == 'login',
-                'text-blue-grey-7': tab != 'login'
+                'text-blue-grey-7': tab != 'login',
               }"
             >
-              <q-item-section class="font q-py-sm q-px-md"
-                >เข้าสู่ระบบ</q-item-section
-              >
+              <q-item-section class="font q-py-sm q-px-md">เข้าสู่ระบบ</q-item-section>
             </q-item>
             <q-separator />
           </q-list>
@@ -376,7 +367,7 @@ import EssentialLink from "components/EssentialLink";
 export default {
   name: "MainLayout",
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
   data() {
@@ -384,9 +375,10 @@ export default {
       expanded: false,
       select: false,
       tab: "home",
-      innerWidth: window.innerWidth,
-      innerHeight: window.innerHeight,
-      leftDrawerOpen: false
+      innerWidth: null,
+      innerHeight: null,
+      leftDrawerOpen: false,
+      selectStudent: false,
     };
   },
   methods: {
@@ -399,10 +391,10 @@ export default {
     },
     onResize(size) {
       (this.innerWidth = size.width), (this.innerHeight = size.height);
-    }
+    },
   },
   watch: {
-    "$route.name": function(data) {
+    "$route.name": function (data) {
       if (data == "home") {
         this.tab = "home";
       } else if (data == "discovery") {
@@ -418,7 +410,7 @@ export default {
       } else if (data == "contact") {
         this.tab == "contact";
       }
-    }
+    },
   },
   mounted() {
     if (this.$route.name == "home") {
@@ -456,7 +448,7 @@ export default {
     ) {
       this.tab = "adventures";
     }
-  }
+  },
 };
 </script>
 <style scoped>

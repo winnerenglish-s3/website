@@ -16,7 +16,9 @@
     "axios": "^0.21.1",
     "firebase-tools": "^8.1.1",
     "hover.css": "^2.3.2",
-    "quasar": "^1.0.0"
+    "quasar": "^1.0.0",
+    "vue-gtm": "^3.4.0",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@quasar/app": "^1.0.0"

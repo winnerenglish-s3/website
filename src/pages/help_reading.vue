@@ -371,7 +371,7 @@ export default {
   data() {
     return {
       popupReading: false,
-      innerWidth: window.innerWidth,
+      innerWidth: null,
       innerheigth: window.innerheigth
     };
   },

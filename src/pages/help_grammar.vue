@@ -684,7 +684,7 @@ export default {
       popupFillin: false,
       popupMulti: false,
       popupAction: false,
-      innerWidth: window.innerWidth,
+      innerWidth: null,
       innerheigth: window.innerheigth
     };
   },
